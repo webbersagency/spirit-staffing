@@ -1,9 +1,27 @@
 {
   "name": "spirit-staffing",
   "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "storybook": "turbo run storybook",
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+  },
+  "devDependencies": {
+    "config": "*",
+    "prettier": "^2.5.1",
+    "turbo": "latest",
+    "typescript": "^5.0.4"
+  },
+  "packageManager": "yarn@1.22.19",
   "dependencies": {
-    "create-turbo": "^1.9.3"
+    "ui": "workspace:^",
+    "workspace": "^0.0.1-preview.1"
   }
 }
