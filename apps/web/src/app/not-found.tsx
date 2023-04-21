@@ -10,7 +10,7 @@ export default async function NotFound() {
                 <p className="mt-6 text-base leading-7 ">Sorry, we konden de pagina waar je naar zocht niet vinden.</p>
                 <div className="mt-10 flex items-center justify-center gap-x-6">
                     <Button as={Link} href="/" variant="primary">
-                        Let's get in touch
+                        {`Let's get in touch`}
                     </Button>
                 </div>
             </div>
