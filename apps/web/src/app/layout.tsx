@@ -7,11 +7,11 @@ import { Header } from 'ui/components/Header'
 const recoleta = localFont({
     src: [
         {
-            path: './fonts/Recoleta-Medium.woff2',
+            path: './fonts/RecoletaMedium.woff2',
             weight: '500',
         },
         {
-            path: './fonts/Recoleta-Bold.woff2',
+            path: './fonts/RecoletaBold.woff2',
             weight: '600',
         },
     ],
@@ -19,11 +19,11 @@ const recoleta = localFont({
 const silka = localFont({
     src: [
         {
-            path: './fonts/Silka-Regular.woff2',
+            path: '/fonts/SilkaRegular.woff2',
             weight: '400',
         },
         {
-            path: './fonts/Silka-Bold.woff2',
+            path: './fonts/SilkaBold.woff2',
             weight: '700',
         },
     ],

@@ -70,7 +70,7 @@ export default function Page() {
                         <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Onze missie</h2>
                         <div className="mt-6 flex flex-col gap-x-8 gap-y-20 lg:flex-row">
                             <div className="lg:w-full lg:max-w-2xl lg:flex-1">
-                                <p className="text-xl leading-8">
+                                <p className="leading-8">
                                     We bieden flexibele oplossingen voor onze klanten. Het gaat hierbij om detachering,
                                     projectmatig werk en tijdelijk naar vaste aanstellingen. Ons brede netwerk van
                                     potentiële kandidaten, van junioren tot senioren, geeft ons de mogelijkheid om snel

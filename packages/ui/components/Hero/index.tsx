@@ -1,8 +1,12 @@
 import Button from '../Button'
 import Link from 'next/link'
 import { HeroProps } from './types'
+import classNames from 'classnames'
+import * as React from 'react'
 
 export const Hero = ({ title, description, link }: HeroProps) => {
+    // const { ref, inView } = useAnimations()
+
     return (
         <div className="bg-green800">
             <div className="relative">
@@ -17,7 +21,13 @@ export const Hero = ({ title, description, link }: HeroProps) => {
                             <polygon points="0,0 90,0 50,100 0,100" />
                         </svg>
 
-                        <div className="relative px-6 py-32 sm:py-40 lg:px-8 lg:py-56 lg:pr-0">
+                        <div
+                            // ref={ref}
+                            className={classNames(
+                                'relative px-6 py-32 sm:py-40 lg:px-8 lg:py-56 lg:pr-0'
+                                // SlideInBottom(inView)
+                            )}
+                        >
                             <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl">
                                 <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">{title}</h1>
                                 <p className="mt-6 text-lg leading-8 text-white">{description}</p>

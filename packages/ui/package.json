@@ -39,11 +39,13 @@
     "tailwindcss": "^3.3.1",
     "tsconfig": "1.0.0",
     "tsconfig-paths-webpack-plugin": "^4.0.1",
-    "webpack": "^5.79.0"
-  },
-  "dependencies": {
+    "webpack": "^5.79.0",
+    "@headlessui/react": "^1.7.14",
+    "@heroicons/react": "^2.0.17",
     "classnames": "^2.3.2",
+    "heroicons": "^2.0.17",
     "react-dom": "^18.2.0",
+    "react-intersection-observer": "^9.4.3",
     "tailwind-merge": "^1.12.0"
   }
 }
