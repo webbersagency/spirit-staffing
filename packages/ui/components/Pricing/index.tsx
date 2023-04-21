@@ -1,7 +1,10 @@
+'use client'
 import { CheckIcon } from '@heroicons/react/20/solid'
 import classNames from 'classnames'
 import Button from '../Button'
 import Link from 'next/link'
+import useAnimations from 'web/src/app/utils/animations/useAnimations'
+import { slideInBottom, slideInLeft, slideInRight } from 'web/src/app/utils/animations'
 
 const tiers = [
     {
@@ -36,6 +39,8 @@ const tiers = [
 ]
 
 export const Pricing = () => {
+    const { ref, inView } = useAnimations()
+
     return (
         <div className="relative isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
             <div
@@ -50,15 +55,20 @@ export const Pricing = () => {
                     }}
                 />
             </div>
-            <div className="mx-auto max-w-2xl text-center lg:max-w-4xl">
-                <h2 className="mt-2 text-4xl font-bold tracking-tight sm:text-5xl">*Placeholder Titel*</h2>
+            <div ref={ref} className="mx-auto max-w-2xl text-center lg:max-w-4xl">
+                <h2 className={classNames('mt-2 text-4xl font-bold tracking-tight sm:text-5xl', slideInBottom(inView))}>
+                    *Placeholder Titel*
+                </h2>
             </div>
-            <p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-8">*Placeholder tekst*</p>
+            <p className={classNames('mx-auto mt-6 max-w-2xl text-center text-lg leading-8', slideInBottom(inView))}>
+                *Placeholder tekst*
+            </p>
             <div className="mx-auto mt-16 grid max-w-lg grid-cols-1 items-center gap-y-6 sm:mt-20 sm:gap-y-0 lg:max-w-4xl lg:grid-cols-2">
                 {tiers.map((tier, tierIdx) => (
                     <div
                         key={tier.id}
                         className={classNames(
+                            tier.featured ? slideInLeft(inView) : slideInRight(inView),
                             tier.featured ? 'relative bg-white shadow-2xl' : 'bg-white/60 sm:mx-8 lg:mx-0',
                             tier.featured
                                 ? ''

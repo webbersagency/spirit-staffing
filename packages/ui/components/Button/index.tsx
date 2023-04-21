@@ -12,7 +12,8 @@ const Button = <T extends ButtonElementType>({
     children,
     ...props
 }: ButtonProps<T>) => {
-    const btn = 'rounded-full font-bold px-6 py-4 font-silka text-base transition-600 transition md:px-10 md:py-4'
+    const btn =
+        'rounded-full font-bold px-6 py-4 font-silka text-base transition-600 transition md:px-10 md:py-4 text-center'
     const primary = `${btn} bg-green500 hover:bg-dark hover:text-white`
     const outline = `${btn} bg-transparent border-green500`
 

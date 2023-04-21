@@ -1,11 +1,14 @@
+'use client'
 import Button from '../Button'
 import Link from 'next/link'
 import { HeroProps } from './types'
 import classNames from 'classnames'
 import * as React from 'react'
+import useAnimations from 'web/src/app/utils/animations/useAnimations'
+import { fadeIn, slideInBottom } from 'web/src/app/utils/animations'
 
-export const Hero = ({ title, description, link }: HeroProps) => {
-    // const { ref, inView } = useAnimations()
+export const Hero = ({ title, description, link, link2 }: HeroProps) => {
+    const { ref, inView } = useAnimations()
 
     return (
         <div className="bg-green800">
@@ -22,10 +25,10 @@ export const Hero = ({ title, description, link }: HeroProps) => {
                         </svg>
 
                         <div
-                            // ref={ref}
+                            ref={ref}
                             className={classNames(
-                                'relative px-6 py-32 sm:py-40 lg:px-8 lg:py-56 lg:pr-0'
-                                // SlideInBottom(inView)
+                                'relative px-6 py-32 sm:py-40 lg:px-8 lg:py-56 lg:pr-0',
+                                slideInBottom(inView)
                             )}
                         >
                             <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl">
@@ -37,12 +40,20 @@ export const Hero = ({ title, description, link }: HeroProps) => {
                                             {item.title}
                                         </Button>
                                     ))}
+                                    {link2?.map(item => (
+                                        <Link href={item.href} className="font-semibold leading-6 text-white">
+                                            {item.title} <span aria-hidden="true">→</span>
+                                        </Link>
+                                    ))}
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className="bg-gray-50 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+                <div
+                    ref={ref}
+                    className={classNames('bg-gray-50 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2', fadeIn(inView))}
+                >
                     <img
                         className="aspect-[3/2] object-cover lg:aspect-auto lg:h-full lg:w-full"
                         src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1587&q=80"

@@ -6,16 +6,23 @@ import { navigation } from '../../data/navigation'
 import { SpiritStaffingLogoWhite } from '../../static/SpiritStaffingLogoFullWhite'
 import { SpiritStaffingLogoBlack } from '../../static/SpiritStaffingLogoFullBlack'
 import Link from 'next/link'
+import useAnimations from 'web/src/app/utils/animations/useAnimations'
+import classNames from 'classnames'
+import { slideInLeft, slideInTop } from 'web/src/app/utils/animations'
 
 export const Header = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+    const { ref, inView } = useAnimations()
+
     return (
-        <header className="bg-green800 fixed inset-x-0 top-0 z-50">
+        <header ref={ref} className="bg-green800 fixed inset-x-0 top-0 z-50">
             <div className="px-6 py-2 lg:max-w-3xl lg:pl-8 lg:pr-0">
                 <nav className="flex items-center justify-between lg:justify-start" aria-label="Global">
                     <Link href="/" className="-m-1.5 p-1.5">
                         <span className="sr-only">Spirit Staffing</span>
-                        <SpiritStaffingLogoWhite className="w-[200px] md:w-[250px]" />
+                        <SpiritStaffingLogoWhite
+                            className={classNames('w-[200px] md:w-[250px]', slideInLeft(inView))}
+                        />
                     </Link>
                     <button
                         type="button"
@@ -25,7 +32,7 @@ export const Header = () => {
                         <span className="sr-only">Open main menu</span>
                         <Bars3Icon className="h-6 w-6 text-white" aria-hidden="true" />
                     </button>
-                    <div className="hidden lg:ml-12 lg:flex lg:gap-x-14">
+                    <div className={classNames('hidden lg:ml-12 lg:flex lg:gap-x-14', slideInTop(inView))}>
                         {navigation.map(item => (
                             <a key={item.name} href={item.href} className="text-sm font-semibold leading-6 text-white">
                                 {item.name}

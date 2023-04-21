@@ -1,13 +1,24 @@
+'use client'
 import { BuildingOffice2Icon, EnvelopeIcon, PhoneIcon } from '@heroicons/react/24/outline'
 import Button from '../Button'
+import useAnimations from 'web/src/app/utils/animations/useAnimations'
+import { fadeIn, slideInBottom, slideInLeft } from 'web/src/app/utils/animations'
+import classNames from 'classnames'
 
 export const ContactForm = () => {
+    const { ref, inView } = useAnimations()
+
     return (
-        <div className="relative isolate bg-white">
+        <div ref={ref} className="relative isolate bg-white">
             <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
                 <div className="relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-48">
                     <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
-                        <div className="absolute inset-y-0 left-0 -z-10 w-full overflow-hidden bg-gray-100 ring-1 ring-gray-900/10 lg:w-1/2">
+                        <div
+                            className={classNames(
+                                'absolute inset-y-0 left-0 -z-10 w-full overflow-hidden bg-gray-100 ring-1 ring-gray-900/10 lg:w-1/2',
+                                fadeIn(inView)
+                            )}
+                        >
                             <svg
                                 className="absolute inset-0 h-full w-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
                                 aria-hidden="true"
@@ -36,54 +47,56 @@ export const ContactForm = () => {
                                 />
                             </svg>
                         </div>
-                        <h2 className="text-3xl font-bold tracking-tight">Get in touch</h2>
-                        <p className="mt-6 leading-6">
-                            Proin volutpat consequat porttitor cras nullam gravida at. Orci molestie a eu arcu. Sed ut
-                            tincidunt integer elementum id sem. Arcu sed malesuada et magna.
-                        </p>
-                        <dl className="mt-10 space-y-4 text-base leading-7 text-gray-600">
-                            <div className="flex gap-x-4">
-                                <dt className="flex-none">
-                                    <span className="sr-only">Address</span>
-                                    <BuildingOffice2Icon className="h-7 w-6 text-gray-400" aria-hidden="true" />
-                                </dt>
-                                <dd>
-                                    545 Mavis Island
-                                    <br />
-                                    Chicago, IL 99191
-                                </dd>
-                            </div>
-                            <div className="flex gap-x-4">
-                                <dt className="flex-none">
-                                    <span className="sr-only">Telephone</span>
-                                    <PhoneIcon className="h-7 w-6 text-gray-400" aria-hidden="true" />
-                                </dt>
-                                <dd>
-                                    <a className="hover:text-gray-900" href="tel:+1 (555) 234-5678">
-                                        +1 (555) 234-5678
-                                    </a>
-                                </dd>
-                            </div>
-                            <div className="flex gap-x-4">
-                                <dt className="flex-none">
-                                    <span className="sr-only">Email</span>
-                                    <EnvelopeIcon className="h-7 w-6 text-gray-400" aria-hidden="true" />
-                                </dt>
-                                <dd>
-                                    <a className="hover:text-gray-900" href="mailto:hello@example.com">
-                                        hello@example.com
-                                    </a>
-                                </dd>
-                            </div>
-                        </dl>
+                        <div className={classNames(slideInLeft(inView))}>
+                            <h2 className="text-3xl font-bold tracking-tight">Get in touch</h2>
+                            <p className="mt-6 leading-6">
+                                Proin volutpat consequat porttitor cras nullam gravida at. Orci molestie a eu arcu. Sed
+                                ut tincidunt integer elementum id sem. Arcu sed malesuada et magna.
+                            </p>
+                            <dl className="text-dark mt-10 space-y-4 text-base leading-7">
+                                <div className="flex gap-x-4">
+                                    <dt className="flex-none">
+                                        <span className="sr-only">Address</span>
+                                        <BuildingOffice2Icon className="h-7 w-6" aria-hidden="true" />
+                                    </dt>
+                                    <dd>
+                                        545 Mavis Island
+                                        <br />
+                                        Chicago, IL 99191
+                                    </dd>
+                                </div>
+                                <div className="flex gap-x-4">
+                                    <dt className="flex-none">
+                                        <span className="sr-only">Telephone</span>
+                                        <PhoneIcon className="h-7 w-6 " aria-hidden="true" />
+                                    </dt>
+                                    <dd>
+                                        <a className="hover:text-gray-900" href="tel:+1 (555) 234-5678">
+                                            +1 (555) 234-5678
+                                        </a>
+                                    </dd>
+                                </div>
+                                <div className="flex gap-x-4">
+                                    <dt className="flex-none">
+                                        <span className="sr-only">Email</span>
+                                        <EnvelopeIcon className="h-7 w-6" aria-hidden="true" />
+                                    </dt>
+                                    <dd>
+                                        <a className="hover:text-gray-900" href="mailto:hello@example.com">
+                                            hello@example.com
+                                        </a>
+                                    </dd>
+                                </div>
+                            </dl>
+                        </div>
                     </div>
                 </div>
                 <form action="#" method="POST" className="px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-48">
-                    <div className="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
+                    <div className={classNames('mx-auto max-w-xl lg:mr-0 lg:max-w-lg', slideInBottom(inView))}>
                         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                             <div>
                                 <label htmlFor="first-name" className="block text-sm font-semibold leading-6 ">
-                                    First name
+                                    Voornaam
                                 </label>
                                 <div className="mt-2.5">
                                     <input
@@ -97,7 +110,7 @@ export const ContactForm = () => {
                             </div>
                             <div>
                                 <label htmlFor="last-name" className="block text-sm font-semibold leading-6 ">
-                                    Last name
+                                    Achternaam
                                 </label>
                                 <div className="mt-2.5">
                                     <input
@@ -125,7 +138,7 @@ export const ContactForm = () => {
                             </div>
                             <div className="sm:col-span-2">
                                 <label htmlFor="phone-number" className="block text-sm font-semibold leading-6">
-                                    Phone number
+                                    Telefoonnummer
                                 </label>
                                 <div className="mt-2.5">
                                     <input
@@ -139,7 +152,7 @@ export const ContactForm = () => {
                             </div>
                             <div className="sm:col-span-2">
                                 <label htmlFor="message" className="block text-sm font-semibold leading-6">
-                                    Message
+                                    Bericht
                                 </label>
                                 <div className="mt-2.5">
                                     <textarea

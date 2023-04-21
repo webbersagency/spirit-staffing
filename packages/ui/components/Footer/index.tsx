@@ -1,5 +1,10 @@
+'use client'
+
 import Link from 'next/link'
 import { SpiritStaffingLogoBlack } from '../../static/SpiritStaffingLogoFullBlack'
+import useAnimations from 'web/src/app/utils/animations/useAnimations'
+import classNames from 'classnames'
+import { slideInBottom } from 'web/src/app/utils/animations'
 
 const navigation = {
     main: [
@@ -80,12 +85,19 @@ const navigation = {
 }
 
 export const Footer = () => {
+    const { ref, inView } = useAnimations()
+
     return (
-        <footer className="bg-white" aria-labelledby="footer-heading">
+        <footer ref={ref} className="bg-white" aria-labelledby="footer-heading">
             <h2 id="footer-heading" className="sr-only">
                 Footer
             </h2>
-            <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-10">
+            <div
+                className={classNames(
+                    'mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-10',
+                    slideInBottom(inView)
+                )}
+            >
                 <div className="space-y-12 xl:grid xl:grid-cols-4 xl:gap-8">
                     <div className="col-span-2">
                         <Link href="/" className="-m-1.5 p-1.5">
@@ -105,16 +117,20 @@ export const Footer = () => {
                     <div className="space-y-8">
                         <h3 className="text-green800 text-xl font-semibold leading-6">Bezoekadres</h3>
                         <div>
-                            <p>*Placeholder plaats*</p>
-                            <p>*Placeholder adres*</p>
+                            <p>Spiritlaan 2</p>
+                            <p>1001AA Spiritstad</p>
                         </div>
                         <div>
-                            <p>*Placeholder plaats*</p>
-                            <p>*Placeholder adres*</p>
+                            <p>Spiritstraat 1</p>
+                            <p>2002BB Spiritstad</p>
                         </div>
                         <div>
-                            <p>*Placeholder plaats*</p>
-                            <p>*Placeholder adres*</p>
+                            <p>
+                                M <a href="mailto:contact@spiritstaffing.com">contact@spiritstaffing.com</a>
+                            </p>
+                            <p>
+                                T <a href="0123456789">0123456789</a>
+                            </p>
                         </div>
                     </div>
                     <div>

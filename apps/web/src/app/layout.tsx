@@ -15,6 +15,8 @@ const recoleta = localFont({
             weight: '600',
         },
     ],
+    variable: '--font-recoleta',
+    display: 'swap',
 })
 const silka = localFont({
     src: [
@@ -27,11 +29,13 @@ const silka = localFont({
             weight: '700',
         },
     ],
+    variable: '--font-silka',
+    display: 'swap',
 })
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
-        <html className={`${recoleta.className} ${silka.className}`} lang="nl">
+        <html className={`${recoleta.variable} ${silka.variable}`} lang="nl">
             <body>
                 <Header />
                 <main>{children}</main>

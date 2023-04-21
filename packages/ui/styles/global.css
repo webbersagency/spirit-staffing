@@ -10,7 +10,7 @@
     *:focus {
         outline: none;
     }
-    
+
     h1,
     h2,
     h3,
@@ -28,6 +28,10 @@
     h5,
     h6 {
         @apply text-green800;
+    }
+
+    a {
+        @apply text-green800 font-semibold
     }
 
     p {

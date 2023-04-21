@@ -1,4 +1,9 @@
+'use client'
+
 import { InboxIcon, TrashIcon, UsersIcon } from '@heroicons/react/24/outline'
+import useAnimations from 'web/src/app/utils/animations/useAnimations'
+import classNames from 'classnames'
+import { slideInLeft, stagger } from 'web/src/app/utils/animations'
 
 const features = [
     {
@@ -24,10 +29,13 @@ const features = [
     },
 ]
 export const FeatureColumns = () => {
+    const { ref, inView } = useAnimations()
+    const staggerDelay = 100
+
     return (
-        <div className="bg-white py-24 sm:py-32">
+        <div ref={ref} className="bg-white py-24 sm:py-32">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
-                <div className="mx-auto max-w-2xl lg:mx-0">
+                <div className={classNames('mx-auto max-w-2xl lg:mx-0', slideInLeft(inView))}>
                     <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Kernwaarden van SpiritStaffing</h2>
                     <p className="mt-6 text-lg leading-8">
                         Onze missie is om de beste ICT professionals te vinden om de digitalisering voor het publieke
@@ -37,8 +45,12 @@ export const FeatureColumns = () => {
                 </div>
                 <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
                     <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
-                        {features.map(feature => (
-                            <div key={feature.name} className="flex flex-col">
+                        {features.map((feature, index) => (
+                            <div
+                                key={feature.name}
+                                style={stagger(index, staggerDelay)}
+                                className={classNames('flex flex-col', slideInLeft(inView))}
+                            >
                                 <dt className="text-base font-semibold leading-7 text-gray-900">
                                     <div className="bg-green800 mb-6 flex h-10 w-10 items-center justify-center rounded-lg">
                                         <feature.icon className="h-6 w-6 text-white" aria-hidden="true" />
