@@ -32,7 +32,6 @@ const Button = <T extends ButtonElementType>({
             {children}
         </Element>
     )
->>>>>>> Stashed changes
 }
 
 export default Button
