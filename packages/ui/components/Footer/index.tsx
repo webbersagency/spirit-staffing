@@ -66,11 +66,11 @@ export const Footer = () => {
     const { ref, inView } = useAnimations()
 
     return (
-        <footer ref={ref} className="bg-white" aria-labelledby="footer-heading">
+        <footer ref={ref} className="container bg-white" aria-labelledby="footer-heading">
             <h2 id="footer-heading" className="sr-only">
                 Footer
             </h2>
-            <div className="container">
+            <div>
                 <div className={classNames('space-y-12 xl:grid xl:grid-cols-4 xl:gap-8', slideInBottom(inView))}>
                     <div className="col-span-2">
                         <Link href="/" className="-m-1.5 p-1.5">

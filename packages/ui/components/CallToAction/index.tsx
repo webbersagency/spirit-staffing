@@ -11,7 +11,7 @@ export const CallToAction = ({ title, description, link }: CallToActionProps) =>
 
     return (
         <div ref={ref} className="bg-green800">
-            <div className={classNames('container mx-auto max-w-2xl text-center', slideInBottom(inView))}>
+            <div className={classNames('container  text-center', slideInBottom(inView))}>
                 <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">{title}</h2>
                 <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-white">{description}</p>
                 <div className="mt-6 flex items-center justify-center gap-x-6">

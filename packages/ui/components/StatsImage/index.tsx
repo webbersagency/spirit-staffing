@@ -19,7 +19,7 @@ export const StatsImage = ({ title, description, link, link2, variant, mirrored,
                 variant === 'dark' ? 'bg-green800' : variant === 'light' ? 'bg-green200' : 'bg-white'
             )}
         >
-            <div className="lg:container">
+            <div className="">
                 <img
                     className={classNames(
                         'h-56 w-full bg-gray-50 object-cover lg:absolute lg:inset-y-0 lg:h-full lg:w-1/2',
@@ -29,12 +29,9 @@ export const StatsImage = ({ title, description, link, link2, variant, mirrored,
                     src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2850&q=80"
                     alt=""
                 />
-                <div className="mx-auto grid lg:grid-cols-2">
+                <div className="container mx-auto grid lg:grid-cols-2">
                     <div
-                        className={classNames(
-                            'px-6 py-12 lg:px-8 lg:py-0',
-                            mirrored ? 'lg:col-start-1' : 'lg:col-start-2'
-                        )}
+                        className={classNames('px-0 lg:px-10 xl:px-0', mirrored ? 'lg:col-start-1' : 'lg:col-start-2')}
                     >
                         <div
                             className={classNames(
