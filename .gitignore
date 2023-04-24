@@ -120,3 +120,4 @@ ssl
 .idea
 .idea/*
 .vscode
+.vercel
