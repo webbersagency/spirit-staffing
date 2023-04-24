@@ -7,9 +7,9 @@ export const Testimonials = () => {
     const { ref, inView } = useAnimations()
 
     return (
-        <div ref={ref} className="bg-white pb-16 pt-24 sm:pb-24 sm:pt-32 xl:pb-32">
-            <div className="bg-green200 pb-20 sm:pb-24 xl:pb-0">
-                <div className="mx-auto flex max-w-7xl flex-col items-center gap-x-8 gap-y-10 px-6 sm:gap-y-8 lg:px-8 xl:flex-row xl:items-stretch">
+        <div ref={ref} className="mt-10 bg-white md:mt-0">
+            <div className="bg-green200 pb-20 sm:pb-14 xl:pb-0">
+                <div className="container mx-auto flex max-w-7xl flex-col items-center gap-x-8 gap-y-10 px-6 py-0 sm:gap-y-8 lg:px-8 xl:flex-row xl:items-stretch">
                     <div className="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
                         <div
                             className={classNames(
@@ -46,13 +46,11 @@ export const Testimonials = () => {
                             <h2 className="mb-4 text-2xl">Voor opdrachtgevers die impact willen maken</h2>
                             <blockquote className="text-xl font-semibold leading-8 text-white sm:text-2xl sm:leading-9">
                                 <p>
-                                    Wij bouwen samen aan duurzame relaties met onze klanten. Dat doen we door eerst goed
-                                    te luisteren en daarna mensen te verbinden die passen bij de organisatie en de
-                                    opdracht. Onze professionals werken met de juiste Spirit, om jullie verder te
-                                    helpen. Wij schakelen snel om huidige teams te versterken en nieuwe inzichten te
-                                    bieden, of gewoon om tijdelijk de inhuur van vakmensen te verzorgen.
-                                    <br /> <br />
-                                    Wij zijn SpiritStaffing, en onze mensen maken het verschil!
+                                    Samen bouwen we aan duurzame relaties met onze opdrachtgevers. <br /> <br /> Dat
+                                    doen we door eerst goed te luisteren en daarna mensen te verbinden die passen bij de
+                                    organisatie en de opdracht. <br /> <br /> Onze professionals werken met de juiste
+                                    Spirit. Ze schakelen snel. Versterken teams. En bieden altijd nieuwe inzichten.
+                                    <br /> <br /> Wij zijn SpiritStaffing, en onze mensen maken het verschil!
                                 </p>
                             </blockquote>
                             <figcaption className="mt-8 text-base">

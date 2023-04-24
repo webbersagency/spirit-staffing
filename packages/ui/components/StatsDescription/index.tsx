@@ -11,15 +11,20 @@ export const StatsDescription = ({ title, description, stats, features }: StatsD
     const staggerDelay = 100
 
     return (
-        <div ref={ref} className="bg-white py-32">
-            <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div ref={ref} className="container bg-white">
+            <div>
                 <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
-                    <h2 className={classNames('text-3xl font-bold tracking-tight sm:text-4xl', slideInLeft(inView))}>
-                        {title}
-                    </h2>
                     <div className="mt-6 flex flex-col gap-x-8 gap-y-20 lg:flex-row">
                         <div className={classNames('lg:w-full lg:max-w-2xl lg:flex-1', slideInLeft(inView))}>
-                            <p className="leading-8">{description}</p>
+                            <h2
+                                className={classNames(
+                                    'pb-4 text-3xl font-bold tracking-tight sm:text-4xl',
+                                    slideInLeft(inView)
+                                )}
+                            >
+                                {title}
+                            </h2>
+                            <p className="whitespace-pre-wrap leading-8">{description}</p>
                         </div>
                         <div className="lg:flex lg:flex-1 lg:justify-center">
                             <dl className="space-y-8 xl:w-80">

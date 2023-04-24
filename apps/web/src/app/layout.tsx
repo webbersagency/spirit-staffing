@@ -35,7 +35,7 @@ const silka = localFont({
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
-        <html className={`${recoleta.variable} ${silka.variable}`} lang="nl">
+        <html className={`${recoleta.variable} ${silka.variable} !scroll-smooth`} lang="nl">
             <body>
                 <Header />
                 <main>{children}</main>

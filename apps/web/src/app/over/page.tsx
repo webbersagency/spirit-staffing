@@ -9,16 +9,15 @@ export default function Page() {
         <>
             <Hero
                 title="Welkom bij SpiritStaffing"
-                description="Bij SpiritStaffing zien we dat veel werkprocessen volledig digitaliseren.
-                              Fantastisch natuurlijk, met een wereld vol kansen. Maar we moeten ook
-                              realistisch zijn. Het risico op misbruik van gegevens groeit en daarom is het
-                              vergroten van digitale weerbaarheid in organisaties essentieel. Het vraagt om
-                              aanpassingsvermogen, waarvoor de komende jaren meer kundige ICT professionals
-                               nodig zijn."
+                description={
+                    'Veel werkprocessen digitaliseren digitaliseren. Fantastisch natuurlijk, met een wereld vol kansen. Maar het vraagt ook om aanpassingsvermogen.\n' +
+                    '\n' +
+                    'Onze missie is dan ook de beste ICT professionals te vinden om de digitalisering voor het (semi) publieke domein te accelereren.  '
+                }
                 link={[
                     {
-                        title: 'Bekijk onze dienstverlening',
-                        href: '/dienstverlening',
+                        title: 'Bekijk onze opdrachtgevers',
+                        href: '/opdrachtgevers',
                     },
                 ]}
             />

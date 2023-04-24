@@ -3,6 +3,10 @@ const { fontFamily } = require('tailwindcss/defaultTheme')
 
 module.exports = {
     theme: {
+        container: {
+            center: true,
+            padding: '20px',
+        },
         extend: {
             colors: {
                 dark: '#111111',

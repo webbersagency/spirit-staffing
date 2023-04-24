@@ -11,9 +11,18 @@ export default function Page() {
     return (
         <>
             <Hero
-                title="Jouw carrière met impact!"
-                description="Samen is alles mogelijk. Vanaf de start investeren we in de ontwikkeling van onze mensen. En we houden niet op! Samen maken we een ontwikkelplan en zorgen voor een uitdagende werk -en leeromgeving. We doen dat met de juiste Spirit, binnen de juiste privé- werkbalans balans, om elke dag de beste versie van onszelf te kunnen zijn!
-                    Wij zijn SpiritStaffing en onze mensen maken het verschil binnen de digitale transitie van Nederland."
+                title="Jouw ICT carrière met impact!"
+                description={
+                    'Wij zijn SpiritStaffing en onze mensen maken het verschil binnen de digitale transitie van Nederland. Samen is alles mogelijk. Dat is waar wij in geloven! \n' +
+                    '\n' +
+                    'Investeren in ontwikkeling, binnen een uitdagende werk- en leeromgeving. Dat is onze basis. ﻿\n' +
+                    '\n' +
+                    'Met de juiste Spirit en de perfecte privé- werkbalans. Zo kunnen we elke dag de beste versie van onszelf zijn.\n' +
+                    '\n' +
+                    'Dat geldt voor elke professional, op elk niveau, gedurende de hele carrière. \n' +
+                    '\n' +
+                    'Onze starters krijgen extra begeleiding om succesvol door te groeien! Daarom onderscheiden wij SpiritStart en SpiritPro.'
+                }
                 link={[
                     {
                         title: 'Ik heb de juiste spirit!',
@@ -23,11 +32,14 @@ export default function Page() {
             />
             <StatsDescription
                 title="Onze missie"
-                description="Bij SpiritStaffing zien we dat veel werkprocessen volledig digitaliseren. Fantastisch natuurlijk, met een wereld vol kansen. Maar we moeten ook realistisch zijn. Het risico op misbruik van gegevens groeit en daarom is het vergroten van digitale weerbaarheid in organisaties essentieel. Het vraagt om aanpassingsvermogen, waarvoor de komende jaren meer kundige ICT professionals nodig zijn.
-                   Onze missie is dan ook de beste ICT professionals te vinden om de digitalisering voor het publieke domein te accelereren, waarbij we ons in de eerste plaats concentreren op een verhoging van de digitale weerbaarheid."
+                description={
+                    'Veel werkprocessen digitaliseren. Fantastisch natuurlijk, met een wereld vol kansen. Maar het vraagt ook om aanpassingsvermogen.\n' +
+                    '\n' +
+                    'Onze missie is om de beste ICT professionals te vinden om de digitalisering te accelereren, door permanente ontwikkeling van onze professionals, door persoonlijke begeleiding.'
+                }
                 stats={[
                     {
-                        label: 'Een echte toegevoegde waarde leveren aan de digitale transitie van Nederland.',
+                        label: 'Echte toegevoegde waarde leveren aan de digitale transitie van Nederland.',
                         value: 'Impact maken',
                     },
                     {
@@ -35,20 +47,33 @@ export default function Page() {
                         value: 'Boost jouw carriere',
                     },
                     {
-                        label: 'Als je je niet meer kan ontwikkelen is het tijd om iets anders te gaan doen.',
+                        label: 'Als je je niet meer kunt ontwikkelen is het tijd om iets anders te gaan doen.',
                         value: 'Altijd blijven ontwikkelen\n',
                     },
                 ]}
             />
             <StatsImage
                 title="Professionals die het verschil maken"
-                description="Het vinden van een juiste werkomgeving is uitdagend. Dat realiseren wij ons iedere dag.
-                             Het betekent veel meer dan een plek om alleen te werken. Het gaat over het ontwikkelen
-                             van jouw talent, het ontdekken van nieuwe mogelijkheden en het maken van impact. Het
-                             gaat om het maken van connecties, waarbij je ook een goede balans tussen jouw privéleven
-                             en professionele ambities realiseert. Binnen SpiritStaffing begeleiden we twee groepen
-                             professionals: de startende professionals binnen SpiritStart, en de meer ervaren medior
-                             en senior professionals binnen SpiritPro."
+                description={
+                    'Het vinden van een juiste werkomgeving is uitdagend. \n' +
+                    '\n' +
+                    'Het betekent veel meer dan een plek om alleen te werken. Het gaat over het ontwikkelen van talent. Het ontdekken van nieuwe mogelijkheden. Het maken van impact. \n' +
+                    '\n' +
+                    'Het gaat om het maken van connecties, binnen een goede balans van privé en professionele ambities. '
+                }
+                variant="light"
+                link={[
+                    {
+                        title: 'SpiritPro',
+                        to: '/opdrachtgevers/#spiritPro',
+                    },
+                ]}
+                link2={[
+                    {
+                        title: 'SpiritStart',
+                        to: '/opdrachtgevers/#spiritStart',
+                    },
+                ]}
             />
             <CallToAction
                 title="Ben jij klaar voor een carrière met de juiste Spirit?"

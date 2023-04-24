@@ -16,7 +16,7 @@ export const Header = () => {
 
     return (
         <header ref={ref} className="bg-green800 fixed inset-x-0 top-0 z-50">
-            <div className="px-6 py-2 lg:max-w-3xl lg:pl-8 lg:pr-0">
+            <div className="px-6 py-2 lg:pl-8 lg:pr-0">
                 <nav className="flex items-center justify-between lg:justify-start" aria-label="Global">
                     <Link href="/" className="-m-1.5 p-1.5">
                         <span className="sr-only">Spirit Staffing</span>

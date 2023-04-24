@@ -7,11 +7,11 @@ import * as React from 'react'
 import useAnimations from 'web/src/app/utils/animations/useAnimations'
 import { fadeIn, slideInBottom } from 'web/src/app/utils/animations'
 
-export const Hero = ({ title, description, link, link2 }: HeroProps) => {
+export const Hero = ({ title, description, link }: HeroProps) => {
     const { ref, inView } = useAnimations()
 
     return (
-        <div className="bg-green800">
+        <div ref={ref} className="bg-green800">
             <div className="relative">
                 <div className="mx-auto max-w-7xl">
                     <div className="relative z-10 pt-14 lg:w-full lg:max-w-2xl">
@@ -23,9 +23,7 @@ export const Hero = ({ title, description, link, link2 }: HeroProps) => {
                         >
                             <polygon points="0,0 90,0 50,100 0,100" />
                         </svg>
-
                         <div
-                            ref={ref}
                             className={classNames(
                                 'relative px-6 py-32 sm:py-40 lg:px-8 lg:py-56 lg:pr-0',
                                 slideInBottom(inView)

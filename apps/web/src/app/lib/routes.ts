@@ -1,6 +1,6 @@
 export const routes = {
     about: '/over',
-    services: '/dienstverlening',
+    services: '/opdrachtgevers',
     subjectsAreas: '/vakgebieden',
     vacany: '/vacature',
     candidates: '/kandidaten',

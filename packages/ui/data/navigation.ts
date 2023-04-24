@@ -1,7 +1,7 @@
 export const navigation = [
-    { name: 'Over', href: '/over' },
-    { name: 'Dienstverlening', href: '/dienstverlening' },
+    { name: 'Opdrachtgevers', href: '/opdrachtgevers' },
     { name: 'Vakgebieden', href: '/vakgebieden' },
     { name: 'Kandidaten', href: '/kandidaten' },
+    { name: 'Over Spiritstaffing', href: '/over' },
     { name: 'Contact', href: '/contact' },
 ]
