@@ -7,7 +7,7 @@ import * as React from 'react'
 import useAnimations from 'web/src/app/utils/animations/useAnimations'
 import { fadeIn, slideInBottom } from 'web/src/app/utils/animations'
 
-export const Hero = ({ title, description, link }: HeroProps) => {
+export const Hero = ({ title, description, link, link2 }: HeroProps) => {
     const { ref, inView } = useAnimations()
 
     return (
@@ -23,6 +23,7 @@ export const Hero = ({ title, description, link }: HeroProps) => {
                         >
                             <polygon points="0,0 90,0 50,100 0,100" />
                         </svg>
+
                         <div
                             className={classNames(
                                 'relative px-6 py-32 sm:py-40 lg:px-8 lg:py-56 lg:pr-0',
@@ -34,6 +35,11 @@ export const Hero = ({ title, description, link }: HeroProps) => {
                                 <p className="mt-6 text-lg leading-8 text-white">{description}</p>
                                 <div className="mt-10 flex items-center gap-x-6">
                                     {link?.map(item => (
+                                        <Button as={Link} href={item.href} variant="primary">
+                                            {item.title}
+                                        </Button>
+                                    ))}
+                                    {link2?.map(item => (
                                         <Button as={Link} href={item.href} variant="primary">
                                             {item.title}
                                         </Button>
