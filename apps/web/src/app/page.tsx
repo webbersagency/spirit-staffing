@@ -20,12 +20,6 @@ export default function Page() {
                         href: 'contact',
                     },
                 ]}
-                link2={[
-                    {
-                        title: 'Ik zoek de juiste spirit!',
-                        href: 'contact',
-                    },
-                ]}
             />
             <StatsDescription
                 title="Onze missie"

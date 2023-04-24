@@ -40,11 +40,6 @@ export const Hero = ({ title, description, link, link2 }: HeroProps) => {
                                             {item.title}
                                         </Button>
                                     ))}
-                                    {link2?.map(item => (
-                                        <Link href={item.href} className="font-semibold leading-6 text-white">
-                                            {item.title} <span aria-hidden="true">→</span>
-                                        </Link>
-                                    ))}
                                 </div>
                             </div>
                         </div>
