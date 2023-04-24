@@ -10,7 +10,7 @@ export const Testimonials = () => {
         <div ref={ref} className="mt-10 bg-white md:mt-0">
             <div className="bg-green200 pb-20 sm:pb-14 xl:pb-0">
                 <div className="container mx-auto flex flex-col items-center gap-x-8 gap-y-10 py-0 sm:gap-y-8 xl:flex-row xl:items-stretch">
-                    <div className="-mt-8 w-full px-6 lg:px-8 xl:-mb-8 xl:w-96 xl:flex-none xl:px-10">
+                    <div className="-mt-8 w-full xl:-mb-8 xl:w-96 xl:flex-none ">
                         <div
                             className={classNames(
                                 'relative aspect-[2/1] h-full md:-mx-8 xl:mx-0 xl:aspect-auto',
