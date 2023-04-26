@@ -33,12 +33,7 @@ export const StatsImage = ({ title, description, link, variant, mirrored, subtit
                     <div
                         className={classNames('px-0 lg:px-10 xl:px-0', mirrored ? 'lg:col-start-1' : 'lg:col-start-2')}
                     >
-                        <div
-                            className={classNames(
-                                'max-w-2xl lg:max-w-xl',
-                                mirrored ? 'mx-auto xl:ml-0 xl:mr-auto' : 'mx-auto xl:ml-auto xl:mr-0'
-                            )}
-                        >
+                        <div className={classNames('max-w-2xl lg:max-w-xl', mirrored ? 'mx-auto xl:ml-0' : 'mx-auto')}>
                             <p className={classNames('font-regular mb-6 text-2xl leading-8', slideInLeft(inView))}>
                                 {subtitle}
                             </p>
