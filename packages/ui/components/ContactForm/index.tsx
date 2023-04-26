@@ -20,7 +20,7 @@ export const ContactForm = () => {
                             )}
                         ></div>
                         <div className={classNames(slideInLeft(inView))}>
-                            <h2 className="text-3xl font-bold tracking-tight">Get in touch</h2>
+                            <h2 className="text-3xl font-medium tracking-tight sm:text-5xl">Get in touch</h2>
                             <p className="mt-6 leading-6">
                                 We komen graag met je in contact. Als je graag wilt solliciteren, maar je ziet nog geen
                                 passende vacature, stuur ons dan een open sollicitatie. We kijken dan samen naar de
