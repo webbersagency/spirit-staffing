@@ -3,8 +3,6 @@
 @tailwind utilities;
 
 @layer base {
-
-
     body {
         @apply font-silka font-normal text-base text-dark bg-white;
     }
@@ -29,11 +27,11 @@
     h4,
     h5,
     h6 {
-        @apply text-green800;
+        @apply text-green800 font-medium font-recoleta text-4xl;
     }
 
     a {
-        @apply text-green800 font-semibold
+        @apply text-green800
     }
 
     p {

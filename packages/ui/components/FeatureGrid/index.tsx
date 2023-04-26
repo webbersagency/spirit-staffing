@@ -1,8 +1,8 @@
 'use client'
 import { FeatureGridProps } from './types'
-import useAnimations from 'web/src/app/utils/animations/useAnimations'
 import classNames from 'classnames'
-import { slideInBottom, slideInTop, stagger } from 'web/src/app/utils/animations'
+import { slideInBottom, slideInTop, stagger } from 'web/src/app/utils/animations/'
+import useAnimations from 'web/src/app/utils/animations/useAnimations'
 
 export const FeatureGrid = ({ title, description, features }: FeatureGridProps) => {
     const { ref, inView } = useAnimations()
@@ -14,7 +14,7 @@ export const FeatureGrid = ({ title, description, features }: FeatureGridProps) 
                 <div className="mx-auto max-w-3xl lg:text-center">
                     <h2
                         className={classNames(
-                            'text-gray-90 mt-2 text-3xl font-bold tracking-tight sm:text-4xl',
+                            'text-gray-90 mt-2 text-3xl font-medium tracking-tight sm:text-5xl',
                             slideInBottom(inView)
                         )}
                     >
@@ -30,11 +30,11 @@ export const FeatureGrid = ({ title, description, features }: FeatureGridProps) 
                             <div
                                 key={feature.name}
                                 style={stagger(index, staggerDelay)}
-                                className={classNames('relative pl-16', slideInTop(inView))}
+                                className={classNames('relative pl-20', slideInTop(inView))}
                             >
                                 <dt className="text-base font-semibold leading-7">
-                                    <div className="bg-green800 absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg">
-                                        <div className="h-6 w-6 text-white">{feature.icon}</div>
+                                    <div className="bg-green800 absolute left-0 top-0 flex h-12 w-12 items-center justify-center rounded-lg">
+                                        <div className="h-8 w-8 text-white">{feature.icon}</div>
                                     </div>
                                     {feature.name}
                                 </dt>

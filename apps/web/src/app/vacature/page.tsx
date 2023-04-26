@@ -5,7 +5,10 @@ import { Metadata } from 'next'
 export default function Page() {
     return (
         <>
-            <Hero title="*Vacature Titel*" />
+            <Hero
+                coverImage={<img src={'../../images/heroCoverImage.png'} alt="cover image" />}
+                title="*Vacature Titel*"
+            />
             <ContentSection />
         </>
     )

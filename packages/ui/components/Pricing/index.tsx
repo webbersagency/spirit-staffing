@@ -4,7 +4,7 @@ import classNames from 'classnames'
 import Button from '../Button'
 import Link from 'next/link'
 import useAnimations from 'web/src/app/utils/animations/useAnimations'
-import { slideInBottom, slideInTop } from 'web/src/app/utils/animations'
+import { slideInBottom, slideInTop } from 'web/src/app/utils/animations/'
 
 const tiers = [
     {
@@ -57,11 +57,16 @@ export const Pricing = () => {
                 />
             </div>
             <div ref={ref} className="mx-auto max-w-2xl text-center lg:max-w-4xl">
-                <h2 className={classNames('mt-2 text-4xl font-bold tracking-tight sm:text-5xl', slideInBottom(inView))}>
+                <h2
+                    className={classNames(
+                        'mt-2 text-4xl font-medium tracking-tight sm:text-5xl',
+                        slideInBottom(inView)
+                    )}
+                >
                     Dit is hoe SpiritStaffing echt impact maakt
                 </h2>
             </div>
-            <p className={classNames('mx-auto mt-6 max-w-2xl text-center text-lg leading-8', slideInBottom(inView))}>
+            <p className={classNames('mx-auto mt-6 max-w-2xl text-center leading-8', slideInBottom(inView))}>
                 SpiritStaffing begeleidt startende professionals binnen SpiritStart, en meer ervaren professionals
                 binnen SpiritPro.
             </p>
@@ -77,7 +82,7 @@ export const Pricing = () => {
                                 : 'rounded-3xl lg:rounded-l-none lg:rounded-r-3xl'
                         )}
                     >
-                        <h3 id={tier.id} className="text-green800 text-3xl font-semibold leading-7">
+                        <h3 id={tier.id} className="text-green800 text-3xl font-medium leading-7">
                             {tier.name}
                         </h3>
                         <ul role="list" className="text-dark mb-10 mt-8 space-y-3 text-sm leading-6 sm:mt-10">

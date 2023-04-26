@@ -1,3 +1,5 @@
+import { ReactNode } from 'react'
+
 type links = {
     title: string
     href: string
@@ -8,4 +10,5 @@ export type HeroProps = {
     description?: string
     link?: links[]
     link2?: links[]
+    coverImage: ReactNode
 }

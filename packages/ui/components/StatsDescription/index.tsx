@@ -4,7 +4,7 @@ import React from 'react'
 import { StatsDescriptionProps } from './types'
 import classNames from 'classnames'
 import useAnimations from 'web/src/app/utils/animations/useAnimations'
-import { slideInLeft, slideInTop, stagger } from 'web/src/app/utils/animations'
+import { slideInLeft, slideInTop, stagger } from 'web/src/app/utils/animations/'
 
 export const StatsDescription = ({ title, description, stats, features }: StatsDescriptionProps) => {
     const { ref, inView } = useAnimations()
@@ -14,11 +14,11 @@ export const StatsDescription = ({ title, description, stats, features }: StatsD
         <div ref={ref} className="container bg-white">
             <div>
                 <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
-                    <div className="mt-6 flex flex-col gap-x-8 gap-y-20 lg:flex-row">
+                    <div className="mt-6 flex flex-col gap-x-8 gap-y-20">
                         <div className={classNames('lg:w-full lg:max-w-2xl lg:flex-1', slideInLeft(inView))}>
                             <h2
                                 className={classNames(
-                                    'pb-4 text-3xl font-bold tracking-tight sm:text-4xl',
+                                    'pb-4 text-3xl font-bold tracking-tight sm:text-5xl',
                                     slideInLeft(inView)
                                 )}
                             >
@@ -26,8 +26,8 @@ export const StatsDescription = ({ title, description, stats, features }: StatsD
                             </h2>
                             <p className="whitespace-pre-wrap leading-8">{description}</p>
                         </div>
-                        <div className="lg:flex lg:flex-1 lg:justify-center">
-                            <dl className="space-y-8 xl:w-80">
+                        <div className="lg:flex ">
+                            <dl className="flex flex-col justify-between space-x-14 space-y-8 lg:flex-row">
                                 {stats.map((stat, index) => (
                                     <div
                                         key={stat.value}

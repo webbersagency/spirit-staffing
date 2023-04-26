@@ -1,7 +1,7 @@
 'use client'
 import useAnimations from 'web/src/app/utils/animations/useAnimations'
 import classNames from 'classnames'
-import { fadeIn, slideInTop } from 'web/src/app/utils/animations'
+import { fadeIn, slideInTop } from 'web/src/app/utils/animations/'
 
 export const Testimonials = () => {
     const { ref, inView } = useAnimations()
@@ -43,7 +43,9 @@ export const Testimonials = () => {
                                 />
                                 <use href="#b56e9dab-6ccb-4d32-ad02-6b4bb5d9bbeb" x={86} />
                             </svg>
-                            <h2 className="mb-4 text-2xl">Voor opdrachtgevers die impact willen maken</h2>
+                            <h2 className="mb-4 text-3xl font-medium lg:text-5xl">
+                                Voor opdrachtgevers die impact willen maken
+                            </h2>
                             <blockquote className="text-xl font-semibold leading-8 text-white sm:text-2xl sm:leading-9">
                                 <p>
                                     Samen bouwen we aan duurzame relaties met onze opdrachtgevers. <br /> <br /> Dat
@@ -53,10 +55,6 @@ export const Testimonials = () => {
                                     <br /> <br /> Wij zijn SpiritStaffing, en onze mensen maken het verschil!
                                 </p>
                             </blockquote>
-                            <figcaption className="mt-8 text-base">
-                                <div className="font-semibold ">Kevin Jochems</div>
-                                <div className="mt-1 ">Partner SpiritStaffing</div>
-                            </figcaption>
                         </figure>
                     </div>
                 </div>

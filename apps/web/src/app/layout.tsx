@@ -25,6 +25,10 @@ const silka = localFont({
             weight: '400',
         },
         {
+            path: '/fonts/SilkaMedium.woff2',
+            weight: '500',
+        },
+        {
             path: './fonts/SilkaBold.woff2',
             weight: '700',
         },

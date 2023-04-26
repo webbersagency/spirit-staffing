@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { StatsImageProps } from './types'
 import useAnimations from 'web/src/app/utils/animations/useAnimations'
 import classNames from 'classnames'
-import { fadeIn, slideInLeft } from 'web/src/app/utils/animations'
+import { fadeIn, slideInLeft } from 'web/src/app/utils/animations/'
 
 export const StatsImage = ({ title, description, link, link2, variant, mirrored, subtitle, id }: StatsImageProps) => {
     const { ref, inView } = useAnimations()
@@ -35,16 +35,16 @@ export const StatsImage = ({ title, description, link, link2, variant, mirrored,
                     >
                         <div
                             className={classNames(
-                                'mx-auto max-w-2xl lg:max-w-lg',
-                                mirrored ? 'lg:text-right' : 'text-left'
+                                'max-w-2xl lg:max-w-xl',
+                                mirrored ? 'mx-auto xl:ml-0 xl:mr-auto' : 'mx-auto xl:ml-auto xl:mr-0'
                             )}
                         >
-                            <p className={classNames('mb-6 text-2xl font-semibold leading-8', slideInLeft(inView))}>
+                            <p className={classNames('font-regular mb-6 text-2xl leading-8', slideInLeft(inView))}>
                                 {subtitle}
                             </p>
                             <h2
                                 className={classNames(
-                                    'mt-2 text-3xl font-bold tracking-tight sm:text-4xl',
+                                    'mt-2 text-3xl font-medium leading-9 tracking-tight sm:text-5xl',
                                     variant === 'dark' ? 'text-white' : 'text-green800',
                                     slideInLeft(inView)
                                 )}
@@ -60,12 +60,7 @@ export const StatsImage = ({ title, description, link, link2, variant, mirrored,
                             >
                                 {description}
                             </p>
-                            <div
-                                className={classNames(
-                                    'flex items-center gap-x-6',
-                                    mirrored && 'justify-start lg:justify-end'
-                                )}
-                            >
+                            <div className={classNames('flex items-center gap-x-6')}>
                                 {link?.map(link => (
                                     <Button as={Link} href={link.to} variant="primary">
                                         {link.title}

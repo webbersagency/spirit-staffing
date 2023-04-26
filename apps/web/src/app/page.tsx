@@ -3,52 +3,57 @@ import { Testimonials } from 'ui/components/Testimonials'
 import { Pricing } from 'ui/components/Pricing'
 import React from 'react'
 import { Hero } from 'ui/components/Hero'
-import { StatsDescription } from 'ui/components/StatsDescription'
 import { StatsImage } from 'ui/components/StatsImage'
 import { Metadata } from 'next'
+import { FeatureColumns } from 'ui/components/FeatureColumns'
+import { ArrowTrendingUpIcon, BoltIcon, RocketLaunchIcon } from '@heroicons/react/24/outline'
 
 export default function Page() {
     return (
         <>
             <Hero
+                coverImage={<img src={'/images/heroCoverImage.png'} alt="cover image" />}
                 title="Jouw ICT carrière met impact!"
                 description={
                     'Wij zijn SpiritStaffing en onze mensen maken het verschil binnen de digitale transitie van Nederland. Samen is alles mogelijk. Dat is waar wij in geloven! \n' +
                     '\n' +
-                    'Investeren in ontwikkeling, binnen een uitdagende werk- en leeromgeving. Dat is onze basis. ﻿\n' +
-                    '\n' +
-                    'Met de juiste Spirit en de perfecte privé- werkbalans. Zo kunnen we elke dag de beste versie van onszelf zijn.\n' +
-                    '\n' +
-                    'Dat geldt voor elke professional, op elk niveau, gedurende de hele carrière. \n' +
-                    '\n' +
-                    'Onze starters krijgen extra begeleiding om succesvol door te groeien! Daarom onderscheiden wij SpiritStart en SpiritPro.'
+                    'Investeren in ontwikkeling, binnen een uitdagende werk- en leeromgeving. Dat is onze basis. Met de juiste Spirit en de perfecte privé- werkbalans. Zo kunnen we elke dag de beste versie van onszelf zijn. Dat geldt voor elke professional, op elk niveau, gedurende de hele carrière.Onze starters krijgen extra begeleiding om succesvol door te groeien! Daarom onderscheiden wij SpiritStart en SpiritPro.'
                 }
                 link={[
                     {
-                        title: 'Ik heb de juiste spirit!',
-                        href: 'contact',
+                        title: 'SpiritStart',
+                        href: '/kandidaten/#spiritStart',
+                    },
+                ]}
+                link2={[
+                    {
+                        title: 'SpiritPro',
+                        href: '/kandidaten/#spiritPro',
                     },
                 ]}
             />
-            <StatsDescription
+            <FeatureColumns
                 title="Onze missie"
                 description={
                     'Veel werkprocessen digitaliseren. Fantastisch natuurlijk, met een wereld vol kansen. Maar het vraagt ook om aanpassingsvermogen.\n' +
                     '\n' +
                     'Onze missie is om de beste ICT professionals te vinden om de digitalisering te accelereren, door permanente ontwikkeling van onze professionals, door persoonlijke begeleiding.'
                 }
-                stats={[
+                features={[
                     {
-                        label: 'Echte toegevoegde waarde leveren aan de digitale transitie van Nederland.',
-                        value: 'Impact maken',
+                        name: 'Impact maken',
+                        description: `Echte toegevoegde waarde leveren aan de digitale transitie van Nederland.`,
+                        icon: <BoltIcon />,
                     },
                     {
-                        label: 'Wij helpen je om jouw carrière naar de volgende fase te brengen.',
-                        value: 'Boost jouw carriere',
+                        name: 'Boost jouw carriere',
+                        description: 'Wij helpen je om jouw carrière naar de volgende fase te brengen.',
+                        icon: <RocketLaunchIcon />,
                     },
                     {
-                        label: 'Als je je niet meer kunt ontwikkelen is het tijd om iets anders te gaan doen.',
-                        value: 'Altijd blijven ontwikkelen\n',
+                        name: 'Altijd blijven ontwikkelen',
+                        description: 'Als je je niet meer kunt ontwikkelen is het tijd om iets anders te gaan doen.',
+                        icon: <ArrowTrendingUpIcon />,
                     },
                 ]}
             />
@@ -64,14 +69,14 @@ export default function Page() {
                 variant="light"
                 link={[
                     {
-                        title: 'SpiritPro',
-                        to: '/opdrachtgevers/#spiritPro',
+                        title: 'SpiritStart',
+                        to: '/kandidaten/#spiritStart',
                     },
                 ]}
                 link2={[
                     {
-                        title: 'SpiritStart',
-                        to: '/opdrachtgevers/#spiritStart',
+                        title: 'SpiritPro',
+                        to: '/kandidaten/#spiritPro',
                     },
                 ]}
             />

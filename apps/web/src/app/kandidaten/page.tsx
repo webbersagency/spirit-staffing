@@ -1,38 +1,37 @@
 import { CallToAction } from 'ui/components/CallToAction'
 import { Hero } from 'ui/components/Hero'
 import { Metadata } from 'next'
-import { StatsDescription } from 'ui/components/StatsDescription'
 import React from 'react'
 import { StatsImage } from 'ui/components/StatsImage'
+import { FeatureColumns } from 'ui/components/FeatureColumns'
+import { AcademicCapIcon, DocumentTextIcon, FaceSmileIcon, ShieldCheckIcon } from '@heroicons/react/24/outline'
 
 export default function Page() {
     return (
         <>
             <Hero
+                coverImage={<img src={'../../images/heroCoverImage.png'} alt="cover image" />}
                 title="Kandidaten"
                 description={
                     'Bij SpiritStaffing staat de mens echt centraal. Wij geloven in talent, constante ontwikkeling en investeren daarom enorm in onze professionals. \n' +
                     '\n' +
-                    'Via SpiritStart creëren we een begeleid ontwikkelplan, waarbij naast uitdagende opdrachten ook een HBO-niveau opleidingstraject opgezet wordt. Dus, direct geld verdienen en doorstuderen tegelijk! \n' +
-                    '\n' +
-                    'Binnen SpiritPro bouwen we door op jouw kennis. We traininen jouw hard- en softskills, om door te ontwikkelen naar de professional die jij wilt zijn. Dus, direct jouw impact vergroten via verschillende opdrachtgevers!\n' +
-                    '\n' +
-                    'Dat maakt werken bij SpiritStaffing zo geweldig. '
+                    'Via SpiritStart creëren we een begeleid ontwikkelplan, waarbij naast uitdagende opdrachten ook een HBO-niveau opleidingstraject opgezet wordt. Dus, direct geld verdienen en doorstuderen tegelijk! Binnen SpiritPro bouwen we door op jouw kennis. We traininen jouw hard- en softskills, om door te ontwikkelen naar de professional die jij wilt zijn. Dus, direct jouw impact vergroten via verschillende opdrachtgevers!\n' +
+                    '\n Dat maakt werken bij SpiritStaffing zo geweldig. '
                 }
                 link={[
-                    {
-                        title: 'SpiritPro',
-                        href: '/kandidaten/#spiritPro',
-                    },
-                ]}
-                link2={[
                     {
                         title: 'SpiritStart',
                         href: '/kandidaten/#spiritStart',
                     },
                 ]}
+                link2={[
+                    {
+                        title: 'SpiritPro',
+                        href: '/kandidaten/#spiritPro',
+                    },
+                ]}
             />
-            <StatsDescription
+            <FeatureColumns
                 title="Jouw ontwikkeling staat centraal"
                 description={
                     'Als je niet meer ontwikkelt, moet je wat anders gaan doen. \n' +
@@ -41,13 +40,24 @@ export default function Page() {
                     '\n' +
                     'Daar maken onze gedreven professionals het verschil.'
                 }
-                stats={[
-                    { value: 'Uitdagende opdrachten' },
-                    { value: 'Complete arbeidsvoorwaarden' },
-                    { value: 'Altijd doorontwikkelen door studie' },
-                    { value: 'Aandacht voor werk en privé' },
+                features={[
+                    {
+                        name: 'Uitdagende opdrachten',
+                        icon: <DocumentTextIcon />,
+                    },
+                    {
+                        name: 'Complete arbeidsvoorwaarden',
+                        icon: <ShieldCheckIcon />,
+                    },
+                    {
+                        name: 'Altijd doorontwikkelen door studie',
+                        icon: <AcademicCapIcon />,
+                    },
+                    {
+                        name: 'Aandacht voor werk en prive',
+                        icon: <FaceSmileIcon />,
+                    },
                 ]}
-                features
             />
             <StatsImage
                 id="spiritStart"

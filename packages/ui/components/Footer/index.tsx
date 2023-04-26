@@ -1,23 +1,23 @@
 'use client'
 
 import Link from 'next/link'
-import { SpiritStaffingLogoBlack } from '../../static/SpiritStaffingLogoFullBlack'
-import useAnimations from 'web/src/app/utils/animations/useAnimations'
+import { SpiritStaffingLogoGreen } from '../../static/SpiritStaffingLogoFullGreen'
 import classNames from 'classnames'
-import { slideInBottom } from 'web/src/app/utils/animations'
+import { slideInBottom } from 'web/src/app/utils/animations/'
+import useAnimations from 'web/src/app/utils/animations/useAnimations'
 
 const navigation = {
     main: [
         { name: 'Opdrachtgevers', href: '/opdrachtgevers' },
         { name: 'Vakgebieden', href: '/vakgebieden' },
         { name: 'Kandidaten', href: '/kandidaten' },
-        { name: 'Over Spiritstaffing', href: '/over' },
+        { name: 'Over SpiritStaffing', href: '/over' },
         { name: 'Contact', href: '/contact' },
     ],
     social: [
         {
             name: 'Instagram',
-            href: '#',
+            href: 'https://www.instagram.com/spiritstaffing/',
             icon: (props: any) => (
                 <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
                     <path
@@ -30,7 +30,7 @@ const navigation = {
         },
         {
             name: 'Mail',
-            href: '#',
+            href: 'mailto:info@spiritstaffing.nl',
             icon: (props: any) => (
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -46,7 +46,7 @@ const navigation = {
         },
         {
             name: 'LinkedIn',
-            href: '#',
+            href: 'https://www.linkedin.com/company/spiritstaffing',
             icon: (props: any) => (
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -66,7 +66,7 @@ export const Footer = () => {
     const { ref, inView } = useAnimations()
 
     return (
-        <footer ref={ref} className="container bg-white" aria-labelledby="footer-heading">
+        <footer ref={ref} className="container bg-white py-6 pt-28" aria-labelledby="footer-heading">
             <h2 id="footer-heading" className="sr-only">
                 Footer
             </h2>
@@ -75,28 +75,26 @@ export const Footer = () => {
                     <div className="col-span-2">
                         <Link href="/" className="-m-1.5 p-1.5">
                             <span className="sr-only">Spirit Staffing</span>
-                            <SpiritStaffingLogoBlack className="w-[200px] md:w-[250px]" />
+                            <SpiritStaffingLogoGreen className="w-[200px] md:w-[220px]" />
                         </Link>
-                        <p className="mb-8 text-sm leading-6 md:w-3/4">*Placeholder tekst*</p>
+                        <p className="text-md mb-8 leading-6 md:w-3/4">Samen is alles mogelijk</p>
                         <div className="flex space-x-6">
                             {navigation.social.map(item => (
-                                <a key={item.name} href={item.href} className="hover:text-green800">
+                                <Link
+                                    key={item.name}
+                                    href={item.href}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="hover:text-green800"
+                                >
                                     <span className="sr-only">{item.name}</span>
                                     <item.icon className="h-6 w-6" aria-hidden="true" />
-                                </a>
+                                </Link>
                             ))}
                         </div>
                     </div>
                     <div className="space-y-8">
-                        <h3 className="text-green800 text-xl font-semibold leading-6">Bezoekadres</h3>
-                        <div>
-                            <p>Spiritlaan 2</p>
-                            <p>1001AA Spiritstad</p>
-                        </div>
-                        <div>
-                            <p>Spiritstraat 1</p>
-                            <p>2002BB Spiritstad</p>
-                        </div>
+                        <h3 className="text-green800 text-xl font-semibold leading-6">Contact</h3>
                         <div>
                             <p>
                                 M <a href="mailto:contact@spiritstaffing.com">contact@spiritstaffing.com</a>
@@ -112,9 +110,9 @@ export const Footer = () => {
                             <ul role="list" className="mt-6 space-y-4">
                                 {navigation.main.map(item => (
                                     <li key={item.name}>
-                                        <a href={item.href} className="hover:text-green800 text-sm leading-6">
+                                        <Link href={item.href} className="hover:text-green800 text-sm leading-6">
                                             {item.name}
-                                        </a>
+                                        </Link>
                                     </li>
                                 ))}
                             </ul>

@@ -8,7 +8,7 @@ import { SpiritStaffingLogoBlack } from '../../static/SpiritStaffingLogoFullBlac
 import Link from 'next/link'
 import useAnimations from 'web/src/app/utils/animations/useAnimations'
 import classNames from 'classnames'
-import { slideInLeft, slideInTop } from 'web/src/app/utils/animations'
+import { slideInLeft, slideInTop } from 'web/src/app/utils/animations/'
 
 export const Header = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -17,11 +17,11 @@ export const Header = () => {
     return (
         <header ref={ref} className="bg-green800 fixed inset-x-0 top-0 z-50">
             <div className="container py-2">
-                <nav className="flex items-center justify-between lg:justify-start" aria-label="Global">
+                <nav className="flex items-center justify-between" aria-label="Global">
                     <Link href="/">
                         <span className="sr-only">Spirit Staffing</span>
                         <SpiritStaffingLogoWhite
-                            className={classNames('w-[200px] md:w-[250px]', slideInLeft(inView))}
+                            className={classNames('w-[200px] md:w-[220px]', slideInLeft(inView))}
                         />
                     </Link>
                     <button

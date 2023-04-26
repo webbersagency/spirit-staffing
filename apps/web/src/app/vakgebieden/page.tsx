@@ -3,12 +3,20 @@ import { Hero } from 'ui/components/Hero'
 import { Metadata } from 'next'
 import React from 'react'
 import { FeatureGrid } from 'ui/components/FeatureGrid'
-import { ArrowPathIcon, CloudArrowUpIcon, FingerPrintIcon, LockClosedIcon } from '@heroicons/react/24/outline'
+import {
+    CircleStackIcon,
+    CodeBracketIcon,
+    CogIcon,
+    CommandLineIcon,
+    ComputerDesktopIcon,
+    LockClosedIcon,
+} from '@heroicons/react/24/outline'
 
 export default function Page() {
     return (
         <>
             <Hero
+                coverImage={<img src={'../../images/heroCoverImage.png'} alt="cover image" />}
                 title="Vakgebieden waar wij impact maken"
                 description={
                     'Wij hebben de Spirit om het verschil te maken binnen de digitale transitie van Nederland. \n' +
@@ -32,25 +40,25 @@ export default function Page() {
                         name: 'Fullstack Development',
                         description:
                             'Een allrounder die met gemak een hele applicatie ontwikkelt, van design tot database.',
-                        icon: <CloudArrowUpIcon />,
+                        icon: <CodeBracketIcon />,
                     },
                     {
                         name: 'Functioneel beheer',
                         description:
                             'Binnen het domein van informatisering wordt de informatievoorziening ten behoeve van een gebruikersorganisatie beheerd.',
-                        icon: <LockClosedIcon />,
+                        icon: <CogIcon />,
                     },
                     {
                         name: 'DevOps',
                         description:
                             'DevOps heeft tot doel softwareontwikkeling en softwareoperaties samen te brengen.',
-                        icon: <ArrowPathIcon />,
+                        icon: <CommandLineIcon />,
                     },
                     {
                         name: 'Data Management en BI',
                         description:
                             'Een data engineer of data-analist houdt zich bezig met het destilleren van waardevolle conclusies uit grote datasets.',
-                        icon: <FingerPrintIcon />,
+                        icon: <CircleStackIcon />,
                     },
                     {
                         name: 'Cyber Security',
@@ -62,7 +70,7 @@ export default function Page() {
                         name: 'IT Architectuur',
                         description:
                             'IT-architectuur is een verzameling van regels en standaarden op basis waarvan systemen worden ontwikkeld.',
-                        icon: <ArrowPathIcon />,
+                        icon: <ComputerDesktopIcon />,
                     },
                 ]}
             />

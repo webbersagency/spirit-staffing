@@ -6,13 +6,14 @@ export default function Page() {
     return (
         <>
             <Hero
+                coverImage={<img src={'../../images/heroCoverImage.png'} alt="cover image" />}
                 title="Contact opnemen"
                 description={
-                    'Wil je meer weten over SpiritStaffing, onze vacatures, opdrachtgevers, of onze diensten? \n' +
+                    'Wil je meer weten over SpiritStaffing, onze vacatures of opdrachtgevers? Laten we een afspraak maken, om gewoon een keer kennis te maken. We komen graag met je in contact. \n' +
                     '\n' +
-                    'Laten we een afspraak maken, om gewoon een keer kennis te maken. We komen graag met je in contact. \n' +
+                    'Of je nu een een Starter of Pro bent: stuur ons een open sollicitatie of laat een terugbel verzoek achter.\n' +
                     '\n' +
-                    'Als je graag wilt solliciteren, maar je ziet nog geen passende vacature, stuur ons dan een open sollicitatie. We kijken dan samen naar de mogelijkheden die bij jou passen.'
+                    'We kijken dan samen naar de mogelijkheden die bij jou passen.'
                 }
                 link={[
                     {
