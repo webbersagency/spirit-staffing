@@ -100,7 +100,7 @@ export const Footer = () => {
                                 M <a href="mailto:info@spiritstaffing.nl">info@spiritstaffing.nl</a>
                             </p>
                             <p>
-                                T <a href="0123456789">0123456789</a>
+                                T <a href="tel:+31 6 15543235">+31 6 15543235</a>
                             </p>
                         </div>
                     </div>

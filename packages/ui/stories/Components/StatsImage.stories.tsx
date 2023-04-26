@@ -8,6 +8,7 @@ export default {
 export const statsImage = () => {
     return (
         <StatsImage
+            image={<img src={'/images/heroCoverImage.png'} alt="cover image" />}
             title="Professionals die het verschil maken"
             description={
                 'Het vinden van een juiste werkomgeving is uitdagend. \n' +
@@ -20,13 +21,11 @@ export const statsImage = () => {
             link={[
                 {
                     title: 'SpiritStart',
-                    to: '/kandidaten/#spiritStart',
+                    href: '/kandidaten/#spiritStart',
                 },
-            ]}
-            link2={[
                 {
                     title: 'SpiritPro',
-                    to: '/kandidaten/#spiritPro',
+                    href: '/kandidaten/#spiritPro',
                 },
             ]}
         />

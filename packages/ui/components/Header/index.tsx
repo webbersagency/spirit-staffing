@@ -16,7 +16,6 @@ export const Header = () => {
     const [navbarScroll, setNavBarScroll] = useState<boolean>(false)
 
     const changeBackground = () => {
-        console.log(window.scrollY)
         if (window.scrollY >= 66) {
             setNavBarScroll(true)
         } else {

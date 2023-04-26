@@ -33,8 +33,8 @@ export const ContactForm = () => {
                                         <PhoneIcon className="h-7 w-6 " aria-hidden="true" />
                                     </dt>
                                     <dd>
-                                        <a className="hover:text-gray-900" href="tel:+1 (555) 234-5678">
-                                            +1 (555) 234-5678
+                                        <a className="hover:text-gray-900" href="tel:+31 6 15543235">
+                                            +31 6 15543235
                                         </a>
                                     </dd>
                                 </div>
