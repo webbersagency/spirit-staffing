@@ -44,14 +44,15 @@ export const Hero = ({ title, description, link, link2, coverImage }: HeroProps)
                 </div>
                 <div className={classNames('bg-gray-50 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2', fadeIn(inView))}>
                     <svg
-                        className="fill-green800 absolute inset-y-0 -left-40 hidden h-full w-80 translate-x-1/2 transform  lg:block xl:-left-80"
+                        className="fill-green800 absolute inset-y-0 -left-40 z-[2] hidden h-full w-80 translate-x-1/2 transform  lg:block xl:-left-80"
                         viewBox="0 0 100 100"
                         preserveAspectRatio="none"
                         aria-hidden="true"
                     >
                         <polygon points="0,0 90,0 50,100 0,100" />
                     </svg>
-                    <div className="[&>img]lg:aspect-auto [&>img]lg:w-full lg:h-full [&>img]:aspect-[3/2] [&>img]:object-cover [&>img]:lg:h-full">
+                    <div className="bg-heroGradient absolute inset-0 z-[1] hidden h-[300px] w-full lg:block"></div>
+                    <div className="[&>img]lg:aspect-auto  [&>img]lg:w-full lg:h-full [&>img]:aspect-[3/2] [&>img]:object-cover [&>img]:lg:h-full">
                         {coverImage}
                     </div>
                 </div>

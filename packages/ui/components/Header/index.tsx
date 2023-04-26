@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { navigation } from '../../data/navigation'
@@ -13,9 +13,30 @@ import { slideInLeft, slideInTop } from 'web/src/app/utils/animations/'
 export const Header = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
     const { ref, inView } = useAnimations()
+    const [navbarScroll, setNavBarScroll] = useState<boolean>(false)
+
+    const changeBackground = () => {
+        console.log(window.scrollY)
+        if (window.scrollY >= 66) {
+            setNavBarScroll(true)
+        } else {
+            setNavBarScroll(false)
+        }
+    }
+
+    useEffect(() => {
+        changeBackground()
+        window.addEventListener('scroll', changeBackground)
+    })
 
     return (
-        <header ref={ref} className="bg-green800 fixed inset-x-0 top-0 z-50">
+        <header
+            ref={ref}
+            className={classNames(
+                'fixed inset-x-0 top-0 z-50 transition-all duration-200',
+                navbarScroll ? 'bg-dark' : 'bg-transparent'
+            )}
+        >
             <div className="container py-2">
                 <nav className="flex items-center justify-between" aria-label="Global">
                     <Link href="/">
