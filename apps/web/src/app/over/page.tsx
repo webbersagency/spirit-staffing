@@ -1,4 +1,3 @@
-/* Todo iconen zoeken en zijn links nodig? */
 import { CallToAction } from 'ui/components/CallToAction'
 import { FeatureColumns } from 'ui/components/FeatureColumns'
 import { Hero } from 'ui/components/Hero'
@@ -64,7 +63,7 @@ export default function Page() {
                 link={[
                     {
                         title: 'Bel mij terug',
-                        to: '/contact',
+                        href: '/contact',
                     },
                 ]}
             />
@@ -73,6 +72,6 @@ export default function Page() {
 }
 
 export const metadata: Metadata = {
-    title: 'Over',
-    description: 'Over',
+    title: 'Over SpiritStaffing | SpiritStaffing',
+    description: 'Over SpiritStaffing | SpiritStaffing',
 }

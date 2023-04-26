@@ -26,6 +26,6 @@ export default function Page() {
 }
 
 export const metadata: Metadata = {
-    title: 'Vacature',
-    description: 'Vacature',
+    title: 'Vacature | SpiritStaffing',
+    description: 'Vacature | SpiritStaffing',
 }

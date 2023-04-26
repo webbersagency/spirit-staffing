@@ -5,7 +5,6 @@ export type StatsImageProps = {
     title: string
     description: string
     link?: links[]
-    link2?: links[]
     variant?: string
     mirrored?: boolean
     subtitle?: string
@@ -14,5 +13,5 @@ export type StatsImageProps = {
 
 type links = {
     title: string
-    to: string
+    href: string
 }

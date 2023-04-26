@@ -33,8 +33,6 @@ export default function Page() {
                         title: 'SpiritStart',
                         href: '/kandidaten/#spiritStart',
                     },
-                ]}
-                link2={[
                     {
                         title: 'SpiritPro',
                         href: '/kandidaten/#spiritPro',
@@ -90,7 +88,7 @@ export default function Page() {
                 link={[
                     {
                         title: 'Wij bellen jou graag terug!',
-                        to: '/contact',
+                        href: '/contact',
                     },
                 ]}
                 variant="light"
@@ -114,7 +112,7 @@ export default function Page() {
                 link={[
                     {
                         title: 'Wij bellen jou graag terug!',
-                        to: '/contact',
+                        href: '/contact',
                     },
                 ]}
                 mirrored
@@ -125,7 +123,7 @@ export default function Page() {
                 link={[
                     {
                         title: 'Bel mij terug!',
-                        to: '/contact',
+                        href: '/contact',
                     },
                 ]}
             />
@@ -134,6 +132,6 @@ export default function Page() {
 }
 
 export const metadata: Metadata = {
-    title: 'Kandidaten',
-    description: 'Kandidaten',
+    title: 'Kandidaten | SpiritStaffing',
+    description: 'Kandidaten | SpiritStaffing',
 }

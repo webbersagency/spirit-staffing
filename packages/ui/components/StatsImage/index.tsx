@@ -7,17 +7,7 @@ import useAnimations from 'web/src/app/utils/animations/useAnimations'
 import classNames from 'classnames'
 import { fadeIn, slideInLeft } from 'web/src/app/utils/animations/'
 
-export const StatsImage = ({
-    title,
-    description,
-    link,
-    link2,
-    variant,
-    mirrored,
-    subtitle,
-    id,
-    image,
-}: StatsImageProps) => {
+export const StatsImage = ({ title, description, link, variant, mirrored, subtitle, id, image }: StatsImageProps) => {
     const { ref, inView } = useAnimations()
 
     return (
@@ -71,13 +61,8 @@ export const StatsImage = ({
                                 {description}
                             </p>
                             <div className={classNames('flex items-center gap-x-6')}>
-                                {link?.map(link => (
-                                    <Button as={Link} href={link.to} variant="primary">
-                                        {link.title}
-                                    </Button>
-                                ))}
-                                {link2?.map(link => (
-                                    <Button as={Link} href={link.to} variant="primary">
+                                {link?.map((link, index) => (
+                                    <Button as={Link} key={index} href={link.href} variant="primary">
                                         {link.title}
                                     </Button>
                                 ))}

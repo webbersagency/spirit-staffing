@@ -32,8 +32,6 @@ export default function Page() {
                         title: 'SpiritStart',
                         href: '/opdrachtgevers/#spiritStart',
                     },
-                ]}
-                link2={[
                     {
                         title: 'SpiritPro',
                         href: '/opdrachtgevers/#spiritPro',
@@ -56,7 +54,7 @@ export default function Page() {
                 link={[
                     {
                         title: 'Meer weten? Lets go!',
-                        to: '/contact',
+                        href: '/contact',
                     },
                 ]}
                 variant="light"
@@ -75,7 +73,7 @@ export default function Page() {
                 link={[
                     {
                         title: 'Meer weten? Lets go!',
-                        to: '/contact',
+                        href: '/contact',
                     },
                 ]}
                 variant="dark"
@@ -116,7 +114,7 @@ export default function Page() {
                 link={[
                     {
                         title: 'Bel mij terug',
-                        to: '/contact',
+                        href: '/contact',
                     },
                 ]}
             />
@@ -125,6 +123,6 @@ export default function Page() {
 }
 
 export const metadata: Metadata = {
-    title: 'Dienstverlening',
-    description: 'Dienstverlening',
+    title: 'Opdrachtgevers | SpiritStaffing',
+    description: 'Opdrachtgevers | SpiritStaffing',
 }

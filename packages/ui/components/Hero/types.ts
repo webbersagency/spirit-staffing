@@ -9,6 +9,5 @@ export type HeroProps = {
     title: string
     description?: string
     link?: links[]
-    link2?: links[]
     coverImage: ReactNode
 }

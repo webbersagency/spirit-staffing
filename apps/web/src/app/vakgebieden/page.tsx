@@ -89,7 +89,7 @@ export default function Page() {
                 link={[
                     {
                         title: 'Neem dan contact op!',
-                        to: '/contact',
+                        href: '/contact',
                     },
                 ]}
             />
@@ -98,6 +98,6 @@ export default function Page() {
 }
 
 export const metadata: Metadata = {
-    title: 'Vakgebieden',
-    description: 'Vakgebieden',
+    title: 'Vakgebieden | SpiritStaffing',
+    description: 'Vakgebieden | SpiritStaffing',
 }

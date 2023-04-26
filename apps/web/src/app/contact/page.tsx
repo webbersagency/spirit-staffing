@@ -28,8 +28,6 @@ export default function Page() {
                         title: 'Open sollicitatie',
                         href: '/contact/#contactform',
                     },
-                ]}
-                link2={[
                     {
                         title: 'Bel mij terug',
                         href: '/contact/#contactform',
@@ -42,6 +40,6 @@ export default function Page() {
 }
 
 export const metadata: Metadata = {
-    title: 'Contact',
-    description: 'Contact',
+    title: 'Contact | SpiritStaffing',
+    description: 'Contact | SpiritStaffing',
 }

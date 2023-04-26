@@ -8,7 +8,7 @@ import { usePathname } from 'next/navigation'
 import useAnimations from 'web/src/app/utils/animations/useAnimations'
 import { fadeIn, slideInBottom } from 'web/src/app/utils/animations/'
 
-export const Hero = ({ title, description, link, link2, coverImage }: HeroProps) => {
+export const Hero = ({ title, description, link, coverImage }: HeroProps) => {
     const { ref, inView } = useAnimations()
     const pathName = usePathname()
 
@@ -27,13 +27,8 @@ export const Hero = ({ title, description, link, link2, coverImage }: HeroProps)
                                 <h1 className="text-4xl font-medium tracking-tight text-white sm:text-6xl">{title}</h1>
                                 <p className="mt-6 whitespace-pre-wrap text-white">{description}</p>
                                 <div className="mt-10 flex items-center gap-x-6">
-                                    {link?.map(item => (
-                                        <Button as={Link} href={item.href} variant="primary">
-                                            {item.title}
-                                        </Button>
-                                    ))}
-                                    {link2?.map(item => (
-                                        <Button as={Link} href={item.href} variant="primary">
+                                    {link?.map((item, index) => (
+                                        <Button as={Link} key={index} href={item.href} variant="primary">
                                             {item.title}
                                         </Button>
                                     ))}

@@ -34,8 +34,6 @@ export default function Page() {
                         title: 'SpiritStart',
                         href: '/kandidaten/#spiritStart',
                     },
-                ]}
-                link2={[
                     {
                         title: 'SpiritPro',
                         href: '/kandidaten/#spiritPro',
@@ -81,13 +79,11 @@ export default function Page() {
                 link={[
                     {
                         title: 'SpiritStart',
-                        to: '/kandidaten/#spiritStart',
+                        href: '/kandidaten/#spiritStart',
                     },
-                ]}
-                link2={[
                     {
                         title: 'SpiritPro',
-                        to: '/kandidaten/#spiritPro',
+                        href: '/kandidaten/#spiritPro',
                     },
                 ]}
             />
@@ -97,7 +93,7 @@ export default function Page() {
                 link={[
                     {
                         title: 'Bel me terug',
-                        to: '/contact',
+                        href: '/contact',
                     },
                 ]}
             />
@@ -108,6 +104,6 @@ export default function Page() {
 }
 
 export const metadata: Metadata = {
-    title: 'Home',
-    description: 'Homr',
+    title: 'Home | SpiritStaffing',
+    description: 'Home | SpiritStaffing',
 }
