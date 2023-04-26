@@ -18,7 +18,7 @@ export const Hero = ({ title, description, link, coverImage }: HeroProps) => {
                 <div
                     className={classNames(
                         'container flex items-center',
-                        pathName === '/' ? 'h-full xl:min-h-[98vh]' : 'h-[70vh]'
+                        pathName === '/' ? 'h-full xl:min-h-[98vh]' : 'h-full sm:h-[70vh]'
                     )}
                 >
                     <div className="relative z-10 pt-14 lg:w-full lg:max-w-2xl">

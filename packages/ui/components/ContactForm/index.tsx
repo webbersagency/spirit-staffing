@@ -10,12 +10,12 @@ export const ContactForm = () => {
 
     return (
         <div ref={ref} className="relative isolate bg-white">
-            <div className="container mx-auto grid  grid-cols-1 lg:grid-cols-2">
-                <div className="relative lg:static">
-                    <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
+            <div className="mx-auto grid grid-cols-1 xl:container lg:grid-cols-2">
+                <div className="bg-green200 relative lg:static">
+                    <div className="container xl:py-0">
                         <div
                             className={classNames(
-                                'bg-green200 absolute inset-y-0 left-0 -z-10 w-full overflow-hidden bg-gray-100 ring-1 ring-gray-900/10 lg:w-1/2',
+                                'bg-green200 absolute inset-y-0 left-0 -z-10 w-full overflow-hidden lg:w-1/2',
                                 fadeIn(inView)
                             )}
                         ></div>
@@ -53,8 +53,8 @@ export const ContactForm = () => {
                         </div>
                     </div>
                 </div>
-                <form action="#" method="POST" className="mx-auto">
-                    <div className={classNames('mx-auto max-w-xl lg:mr-0 ', slideInBottom(inView))}>
+                <form action="#" method="POST" className="container xl:max-w-xl xl:py-0">
+                    <div className={classNames('mx-auto lg:mr-0 ', slideInBottom(inView))}>
                         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                             <div>
                                 <label htmlFor="first-name" className="block text-sm font-semibold leading-6 ">

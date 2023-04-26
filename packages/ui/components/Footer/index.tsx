@@ -66,7 +66,7 @@ export const Footer = () => {
     const { ref, inView } = useAnimations()
 
     return (
-        <footer ref={ref} className="container bg-white py-6 pt-28" aria-labelledby="footer-heading">
+        <footer ref={ref} className="container bg-white py-6 pt-8 lg:pt-28" aria-labelledby="footer-heading">
             <h2 id="footer-heading" className="sr-only">
                 Footer
             </h2>
