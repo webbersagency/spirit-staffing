@@ -10,21 +10,18 @@ export default function Page() {
                 title="Contact opnemen"
                 description={
                     'Wil je meer weten over SpiritStaffing, onze vacatures of opdrachtgevers? Laten we een afspraak maken, om gewoon een keer kennis te maken. We komen graag met je in contact. \n' +
-                    '\n' +
-                    'Of je nu een een Starter of Pro bent: stuur ons een open sollicitatie of laat een terugbel verzoek achter.\n' +
-                    '\n' +
-                    'We kijken dan samen naar de mogelijkheden die bij jou passen.'
+                    '\n'
                 }
                 link={[
                     {
                         title: 'Open sollicitatie',
-                        href: '/contact',
+                        href: '/contact/#contactform',
                     },
                 ]}
                 link2={[
                     {
                         title: 'Bel mij terug',
-                        href: '/contact',
+                        href: '/contact/#contactform',
                     },
                 ]}
             />
