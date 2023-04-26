@@ -5,12 +5,22 @@ import React from 'react'
 import { StatsImage } from 'ui/components/StatsImage'
 import { FeatureColumns } from 'ui/components/FeatureColumns'
 import { AcademicCapIcon, DocumentTextIcon, FaceSmileIcon, ShieldCheckIcon } from '@heroicons/react/24/outline'
+import Image from 'next/image'
 
 export default function Page() {
     return (
         <>
             <Hero
-                coverImage={<img src={'../../images/heroCoverImage.png'} alt="cover image" />}
+                coverImage={
+                    <Image
+                        src={'/images/heroCoverImage.png'}
+                        alt="cover image"
+                        width={900}
+                        height={1200}
+                        priority
+                        loading={'eager'}
+                    />
+                }
                 title="Kandidaten"
                 description={
                     'Bij SpiritStaffing staat de mens echt centraal. Wij geloven in talent, constante ontwikkeling en investeren daarom enorm in onze professionals. \n' +
@@ -60,6 +70,7 @@ export default function Page() {
                 ]}
             />
             <StatsImage
+                image={<Image src={'/images/heroCoverImage.png'} alt="cover image" width={1000} height={1000} />}
                 id="spiritStart"
                 title="Jouw carrière begeleid van Start"
                 subtitle="SpiritStart"
@@ -85,6 +96,7 @@ export default function Page() {
                 variant="light"
             />
             <StatsImage
+                image={<Image src={'/images/heroCoverImage.png'} alt="cover image" width={1000} height={1000} />}
                 id="spiritPro"
                 title="Uitdagende opdrachten om door te groeien als professional"
                 subtitle="SpiritPro"

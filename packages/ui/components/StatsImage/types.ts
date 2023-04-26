@@ -1,3 +1,5 @@
+import { ReactNode } from 'react'
+
 export type StatsImageProps = {
     id?: string
     title: string
@@ -7,6 +9,7 @@ export type StatsImageProps = {
     variant?: string
     mirrored?: boolean
     subtitle?: string
+    image: ReactNode
 }
 
 type links = {

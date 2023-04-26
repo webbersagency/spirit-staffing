@@ -4,12 +4,23 @@ import { FeatureColumns } from 'ui/components/FeatureColumns'
 import { Hero } from 'ui/components/Hero'
 import { Metadata } from 'next'
 import { InboxIcon, TrashIcon, UsersIcon } from '@heroicons/react/24/outline'
+import Image from 'next/image'
+import React from 'react'
 
 export default function Page() {
     return (
         <>
             <Hero
-                coverImage={<img src={'../../images/heroCoverImage.png'} alt="cover image" />}
+                coverImage={
+                    <Image
+                        src={'/images/heroCoverImage.png'}
+                        alt="cover image"
+                        width={900}
+                        height={1200}
+                        priority
+                        loading={'eager'}
+                    />
+                }
                 title="Welkom bij SpiritStaffing"
                 description={
                     'Veel werkprocessen digitaliseren digitaliseren. Fantastisch natuurlijk, met een wereld vol kansen. Maar het vraagt ook om aanpassingsvermogen.\n' +

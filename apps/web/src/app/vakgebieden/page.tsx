@@ -11,12 +11,22 @@ import {
     ComputerDesktopIcon,
     LockClosedIcon,
 } from '@heroicons/react/24/outline'
+import Image from 'next/image'
 
 export default function Page() {
     return (
         <>
             <Hero
-                coverImage={<img src={'../../images/heroCoverImage.png'} alt="cover image" />}
+                coverImage={
+                    <Image
+                        src={'/images/heroCoverImage.png'}
+                        alt="cover image"
+                        width={900}
+                        height={1200}
+                        priority
+                        loading={'eager'}
+                    />
+                }
                 title="Vakgebieden waar wij impact maken"
                 description={
                     'Wij hebben de Spirit om het verschil te maken binnen de digitale transitie van Nederland. \n' +

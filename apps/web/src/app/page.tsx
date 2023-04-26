@@ -3,6 +3,7 @@ import { Testimonials } from 'ui/components/Testimonials'
 import { Pricing } from 'ui/components/Pricing'
 import React from 'react'
 import { Hero } from 'ui/components/Hero'
+import Image from 'next/image'
 import { StatsImage } from 'ui/components/StatsImage'
 import { Metadata } from 'next'
 import { FeatureColumns } from 'ui/components/FeatureColumns'
@@ -12,7 +13,16 @@ export default function Page() {
     return (
         <>
             <Hero
-                coverImage={<img src={'/images/heroCoverImage.png'} alt="cover image" />}
+                coverImage={
+                    <Image
+                        src={'/images/heroCoverImage.png'}
+                        alt="cover image"
+                        width={900}
+                        height={1200}
+                        priority
+                        loading={'eager'}
+                    />
+                }
                 title="Jouw ICT carrière met impact!"
                 description={
                     'Wij zijn SpiritStaffing en onze mensen maken het verschil binnen de digitale transitie van Nederland. Samen is alles mogelijk. Dat is waar wij in geloven! \n' +
@@ -58,6 +68,7 @@ export default function Page() {
                 ]}
             />
             <StatsImage
+                image={<Image src={'/images/heroCoverImage.png'} alt="cover image" width={1000} height={1000} />}
                 title="Professionals die het verschil maken"
                 description={
                     'Het vinden van een juiste werkomgeving is uitdagend. \n' +

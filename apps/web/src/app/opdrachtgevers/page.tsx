@@ -5,12 +5,22 @@ import { Metadata } from 'next'
 import React from 'react'
 import { StatsImage } from 'ui/components/StatsImage'
 import { FeatureGrid } from 'ui/components/FeatureGrid'
+import Image from 'next/image'
 
 export default function Page() {
     return (
         <>
             <Hero
-                coverImage={<img src={'../../images/heroCoverImage.png'} alt="cover image" />}
+                coverImage={
+                    <Image
+                        src={'/images/heroCoverImage.png'}
+                        alt="cover image"
+                        width={900}
+                        height={1200}
+                        priority
+                        loading={'eager'}
+                    />
+                }
                 title="Onze dienstverlening"
                 description={
                     'Onze opdrachtgevers hebben te maken diverse ICT vraagstukken. Onze dienstverlening is per definitie maatwerk.\n' +
@@ -31,6 +41,7 @@ export default function Page() {
                 ]}
             />
             <StatsImage
+                image={<Image src={'/images/heroCoverImage.png'} alt="cover image" width={1000} height={1000} />}
                 id="spiritStart"
                 title="SpiritStart"
                 description={
@@ -51,6 +62,7 @@ export default function Page() {
                 variant="light"
             />
             <StatsImage
+                image={<Image src={'/images/heroCoverImage.png'} alt="cover image" width={1000} height={1000} />}
                 id="spiritPro"
                 title="SpiritPro"
                 description={

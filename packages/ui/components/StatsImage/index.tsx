@@ -7,7 +7,17 @@ import useAnimations from 'web/src/app/utils/animations/useAnimations'
 import classNames from 'classnames'
 import { fadeIn, slideInLeft } from 'web/src/app/utils/animations/'
 
-export const StatsImage = ({ title, description, link, link2, variant, mirrored, subtitle, id }: StatsImageProps) => {
+export const StatsImage = ({
+    title,
+    description,
+    link,
+    link2,
+    variant,
+    mirrored,
+    subtitle,
+    id,
+    image,
+}: StatsImageProps) => {
     const { ref, inView } = useAnimations()
 
     return (
@@ -20,15 +30,15 @@ export const StatsImage = ({ title, description, link, link2, variant, mirrored,
             )}
         >
             <div className="">
-                <img
+                <div
                     className={classNames(
-                        'h-56 w-full bg-gray-50 object-cover lg:absolute lg:inset-y-0 lg:h-full lg:w-1/2',
+                        'bg-gray-50 lg:absolute lg:inset-y-0 lg:w-1/2 [&>img]:h-56 [&>img]:w-full [&>img]:object-cover [&>img]:lg:h-full',
                         mirrored ? 'lg:right-0' : 'lg:left-0',
                         fadeIn(inView)
                     )}
-                    src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2850&q=80"
-                    alt=""
-                />
+                >
+                    {image}
+                </div>
                 <div className="container mx-auto grid lg:grid-cols-2">
                     <div
                         className={classNames('px-0 lg:px-10 xl:px-0', mirrored ? 'lg:col-start-1' : 'lg:col-start-2')}

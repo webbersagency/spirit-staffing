@@ -97,7 +97,7 @@ export const Footer = () => {
                         <h3 className="text-green800 text-xl font-semibold leading-6">Contact</h3>
                         <div>
                             <p>
-                                M <a href="mailto:contact@spiritstaffing.com">contact@spiritstaffing.com</a>
+                                M <a href="mailto:info@spiritstaffing.nl">info@spiritstaffing.nl</a>
                             </p>
                             <p>
                                 T <a href="0123456789">0123456789</a>
