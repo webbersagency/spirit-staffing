@@ -1,178 +1,155 @@
 'use client'
-import { BuildingOffice2Icon, EnvelopeIcon, PhoneIcon } from '@heroicons/react/24/outline'
+import { EnvelopeIcon, PhoneIcon } from '@heroicons/react/24/outline'
 import Button from '../Button'
-import useAnimations from 'web/src/app/utils/animations/useAnimations'
-import { fadeIn, slideInBottom, slideInLeft } from 'web/src/app/utils/animations'
+import { fadeIn, slideInBottom, slideInLeft } from 'web/src/utils/animations'
 import classNames from 'classnames'
+import useAnimations from 'web/src/utils/animations/useAnimations'
+import { contactFormSchema, ContactFormSchema } from './schema'
+import { FormProvider, useForm } from 'react-hook-form'
+import { yupResolver } from '@hookform/resolvers/yup'
+import { getBaseUrl } from 'web/src/utils/getBaseUrl'
+import { routes } from 'web/src/lib/routes'
+import { useState } from 'react'
+import InputField from '../FormFields/InputField'
+import TextareaField from '../FormFields/TextareaField'
+import SnackBar from '../SnackBar'
+import FileUploadField from '../FormFields/FileUploadField'
+import { getBase64 } from '../../utils/getBase64'
 
 export const ContactForm = () => {
     const { ref, inView } = useAnimations()
+    const [formMessage, setFormMessage] = useState<{ isSuccess: boolean; message: string } | undefined>(undefined)
+
+    const methods = useForm<ContactFormSchema>({
+        resolver: yupResolver(contactFormSchema),
+    })
+
+    const {
+        formState: { errors, isSubmitting },
+        register,
+        reset,
+        watch,
+        handleSubmit,
+    } = methods
+
+    const setGenericError = () => {
+        setFormMessage({
+            isSuccess: false,
+            message: `Er is een fout opgetreden, probeer het opnieuw.`,
+        })
+    }
+
+    const onSubmit = async (data: ContactFormSchema) => {
+        setFormMessage(undefined)
+
+        const attachment = data.attachment as FileList
+        data.attachment =
+            attachment && attachment.length
+                ? {
+                      fileName: attachment[0].name,
+                      data: await getBase64(attachment[0]),
+                  }
+                : undefined
+
+        await fetch(`${getBaseUrl()}/${routes.contact}/request`, {
+            method: 'POST',
+            body: JSON.stringify(data),
+        })
+            .then(response => response.json())
+            .then(result => {
+                setFormMessage({
+                    isSuccess: true,
+                    message: `Thank you, we will get back to you as soon as possible`,
+                })
+                reset()
+            })
+            .catch(error => {
+                setGenericError()
+            })
+    }
 
     return (
-        <div ref={ref} className="relative isolate bg-white">
-            <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
-                <div className="relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-48">
-                    <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
-                        <div
-                            className={classNames(
-                                'absolute inset-y-0 left-0 -z-10 w-full overflow-hidden bg-gray-100 ring-1 ring-gray-900/10 lg:w-1/2',
-                                fadeIn(inView)
-                            )}
-                        >
-                            <svg
-                                className="absolute inset-0 h-full w-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
-                                aria-hidden="true"
-                            >
-                                <defs>
-                                    <pattern
-                                        id="83fd4e5a-9d52-42fc-97b6-718e5d7ee527"
-                                        width={200}
-                                        height={200}
-                                        x="100%"
-                                        y={-1}
-                                        patternUnits="userSpaceOnUse"
-                                    >
-                                        <path d="M130 200V.5M.5 .5H200" fill="none" />
-                                    </pattern>
-                                </defs>
-                                <rect width="100%" height="100%" strokeWidth={0} fill="white" />
-                                <svg x="100%" y={-1} className="overflow-visible fill-gray-50">
-                                    <path d="M-470.5 0h201v201h-201Z" strokeWidth={0} />
-                                </svg>
-                                <rect
-                                    width="100%"
-                                    height="100%"
-                                    strokeWidth={0}
-                                    fill="url(#83fd4e5a-9d52-42fc-97b6-718e5d7ee527)"
-                                />
-                            </svg>
-                        </div>
-                        <div className={classNames(slideInLeft(inView))}>
-                            <h2 className="text-3xl font-bold tracking-tight">Get in touch</h2>
-                            <p className="mt-6 leading-6">
-                                Proin volutpat consequat porttitor cras nullam gravida at. Orci molestie a eu arcu. Sed
-                                ut tincidunt integer elementum id sem. Arcu sed malesuada et magna.
-                            </p>
-                            <dl className="text-dark mt-10 space-y-4 text-base leading-7">
-                                <div className="flex gap-x-4">
-                                    <dt className="flex-none">
-                                        <span className="sr-only">Address</span>
-                                        <BuildingOffice2Icon className="h-7 w-6" aria-hidden="true" />
-                                    </dt>
-                                    <dd>
-                                        545 Mavis Island
-                                        <br />
-                                        Chicago, IL 99191
-                                    </dd>
-                                </div>
-                                <div className="flex gap-x-4">
-                                    <dt className="flex-none">
-                                        <span className="sr-only">Telephone</span>
-                                        <PhoneIcon className="h-7 w-6 " aria-hidden="true" />
-                                    </dt>
-                                    <dd>
-                                        <a className="hover:text-gray-900" href="tel:+1 (555) 234-5678">
-                                            +1 (555) 234-5678
-                                        </a>
-                                    </dd>
-                                </div>
-                                <div className="flex gap-x-4">
-                                    <dt className="flex-none">
-                                        <span className="sr-only">Email</span>
-                                        <EnvelopeIcon className="h-7 w-6" aria-hidden="true" />
-                                    </dt>
-                                    <dd>
-                                        <a className="hover:text-gray-900" href="mailto:hello@example.com">
-                                            hello@example.com
-                                        </a>
-                                    </dd>
-                                </div>
-                            </dl>
+        <>
+            <div ref={ref} className="relative isolate bg-white">
+                <div className="mx-auto grid grid-cols-1 xl:container lg:grid-cols-2">
+                    <div className="bg-green200 relative lg:static">
+                        <div className="container xl:py-0">
+                            <div
+                                className={classNames(
+                                    'bg-green200 absolute inset-y-0 left-0 -z-10 w-full overflow-hidden lg:w-1/2',
+                                    fadeIn(inView)
+                                )}
+                            ></div>
+                            <div className={classNames(slideInLeft(inView))}>
+                                <h2 className="text-3xl font-medium tracking-tight sm:text-5xl">
+                                    Stuur ons een bericht{' '}
+                                </h2>
+                                <p className="mt-6 leading-6">
+                                    We komen graag met je in contact. Als je graag wilt solliciteren, maar je ziet nog
+                                    geen passende vacature, stuur ons dan een open sollicitatie. We kijken dan samen
+                                    naar de mogelijkheden die bij jou passen.
+                                </p>
+                                <dl className="text-dark mt-10 space-y-4 text-base leading-7">
+                                    <div className="flex gap-x-4">
+                                        <dt className="flex-none">
+                                            <span className="sr-only">Telephone</span>
+                                            <PhoneIcon className="h-7 w-6 " aria-hidden="true" />
+                                        </dt>
+                                        <dd>
+                                            <a className="hover:text-gray-900" href="tel:+31 6 15543235">
+                                                +31 6 15543235
+                                            </a>
+                                        </dd>
+                                    </div>
+                                    <div className="flex gap-x-4">
+                                        <dt className="flex-none">
+                                            <span className="sr-only">Email</span>
+                                            <EnvelopeIcon className="h-7 w-6" aria-hidden="true" />
+                                        </dt>
+                                        <dd>
+                                            <a className="hover:text-gray-900" href="mailto:info@spiritstaffing.nl">
+                                                info@spiritstaffing.nl
+                                            </a>
+                                        </dd>
+                                    </div>
+                                </dl>
+                            </div>
                         </div>
                     </div>
+                    <FormProvider {...methods}>
+                        <form onSubmit={handleSubmit(onSubmit)} className="container xl:max-w-xl xl:py-0">
+                            <div className={classNames('mx-auto lg:mr-0 ', slideInBottom(inView))}>
+                                <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+                                    <div>
+                                        <InputField {...register('firstName')} label="Voornaam" />
+                                    </div>
+                                    <div>
+                                        <InputField {...register('lastName')} label="Achternaam" />
+                                    </div>
+                                    <div className="sm:col-span-2">
+                                        <InputField {...register('email')} type="email" label="E-mail" />
+                                    </div>
+                                    <div className="sm:col-span-2">
+                                        <InputField {...register('phone')} type="phone" label="Telefoonnummer" />
+                                    </div>
+                                    <div className="sm:col-span-2">
+                                        <TextareaField {...register('message')} label="Bericht" />
+                                    </div>
+                                    <div className="col-span-full">
+                                        <FileUploadField {...register('attachment')} label="Bijlage" />
+                                    </div>
+                                </div>
+                                <div className="mt-8 flex justify-end">
+                                    <Button as="button" type="submit" variant="primary" loading={isSubmitting}>
+                                        Let's get in touch
+                                    </Button>
+                                </div>
+                            </div>
+                        </form>
+                    </FormProvider>
                 </div>
-                <form action="#" method="POST" className="px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-48">
-                    <div className={classNames('mx-auto max-w-xl lg:mr-0 lg:max-w-lg', slideInBottom(inView))}>
-                        <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
-                            <div>
-                                <label htmlFor="first-name" className="block text-sm font-semibold leading-6 ">
-                                    Voornaam
-                                </label>
-                                <div className="mt-2.5">
-                                    <input
-                                        type="text"
-                                        name="first-name"
-                                        id="first-name"
-                                        autoComplete="given-name"
-                                        className="focus:ring-green800 block w-full rounded-md border-0 px-3.5  py-2 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6"
-                                    />
-                                </div>
-                            </div>
-                            <div>
-                                <label htmlFor="last-name" className="block text-sm font-semibold leading-6 ">
-                                    Achternaam
-                                </label>
-                                <div className="mt-2.5">
-                                    <input
-                                        type="text"
-                                        name="last-name"
-                                        id="last-name"
-                                        autoComplete="family-name"
-                                        className="focus:ring-green800 block w-full rounded-md border-0 px-3.5  py-2 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6"
-                                    />
-                                </div>
-                            </div>
-                            <div className="sm:col-span-2">
-                                <label htmlFor="email" className="block text-sm font-semibold leading-6">
-                                    Email
-                                </label>
-                                <div className="mt-2.5">
-                                    <input
-                                        type="email"
-                                        name="email"
-                                        id="email"
-                                        autoComplete="email"
-                                        className="focus:ring-green800 block w-full rounded-md border-0 px-3.5  py-2 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6"
-                                    />
-                                </div>
-                            </div>
-                            <div className="sm:col-span-2">
-                                <label htmlFor="phone-number" className="block text-sm font-semibold leading-6">
-                                    Telefoonnummer
-                                </label>
-                                <div className="mt-2.5">
-                                    <input
-                                        type="tel"
-                                        name="phone-number"
-                                        id="phone-number"
-                                        autoComplete="tel"
-                                        className="focus:ring-green800 block w-full rounded-md border-0 px-3.5  py-2 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6"
-                                    />
-                                </div>
-                            </div>
-                            <div className="sm:col-span-2">
-                                <label htmlFor="message" className="block text-sm font-semibold leading-6">
-                                    Bericht
-                                </label>
-                                <div className="mt-2.5">
-                                    <textarea
-                                        name="message"
-                                        id="message"
-                                        rows={4}
-                                        className="focus:ring-green800 block w-full rounded-md border-0 px-3.5  py-2 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6"
-                                        defaultValue={''}
-                                    />
-                                </div>
-                            </div>
-                        </div>
-                        <div className="mt-8 flex justify-end">
-                            <Button as="button" type="submit" variant="primary">
-                                Let's get in touch
-                            </Button>
-                        </div>
-                    </div>
-                </form>
             </div>
-        </div>
+            {!!formMessage && <SnackBar {...formMessage} />}
+        </>
     )
 }

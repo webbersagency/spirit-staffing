@@ -3,16 +3,16 @@ import { CheckIcon } from '@heroicons/react/20/solid'
 import classNames from 'classnames'
 import Button from '../Button'
 import Link from 'next/link'
-import useAnimations from 'web/src/app/utils/animations/useAnimations'
-import { slideInBottom, slideInLeft, slideInRight } from 'web/src/app/utils/animations'
+import useAnimations from 'web/src/utils/animations/useAnimations'
+import { slideInBottom, slideInTop } from 'web/src/utils/animations/'
 
 const tiers = [
     {
         name: 'SpiritStart',
         id: 'tier-personal',
-        href: '/dienstverlening',
+        href: '/opdrachtgevers',
         features: [
-            'ROC en MBO studenten\n',
+            'Minimaal een afgeronde MBO niveau 4 studie',
             'Meerjaren ontwikkelplan',
             'Direct een goed salaris verdienen',
             'Gratis studeren op HBO niveau',
@@ -25,8 +25,9 @@ const tiers = [
     {
         name: 'SpiritPro',
         id: 'tier-team',
-        href: '/dienstverlening',
+        href: '/opdrachtgevers',
         features: [
+            'Medior en senior level',
             'Direct inzetbaar\n',
             'Direct goed verdienen',
             'Uitdagende project opdrachten',
@@ -42,7 +43,7 @@ export const Pricing = () => {
     const { ref, inView } = useAnimations()
 
     return (
-        <div className="relative isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
+        <div className="container relative isolate bg-white">
             <div
                 className="absolute inset-x-0 -top-3 -z-10 transform-gpu overflow-hidden px-36 blur-3xl"
                 aria-hidden="true"
@@ -56,29 +57,32 @@ export const Pricing = () => {
                 />
             </div>
             <div ref={ref} className="mx-auto max-w-2xl text-center lg:max-w-4xl">
-                <h2 className={classNames('mt-2 text-4xl font-bold tracking-tight sm:text-5xl', slideInBottom(inView))}>
-                    *Placeholder Titel*
+                <h2
+                    className={classNames(
+                        'mt-2 text-4xl font-medium tracking-tight sm:text-5xl',
+                        slideInBottom(inView)
+                    )}
+                >
+                    Dit is hoe SpiritStaffing echt impact maakt
                 </h2>
             </div>
-            <p className={classNames('mx-auto mt-6 max-w-2xl text-center text-lg leading-8', slideInBottom(inView))}>
-                *Placeholder tekst*
+            <p className={classNames('mx-auto mt-6 max-w-2xl text-center leading-8', slideInBottom(inView))}>
+                SpiritStaffing begeleidt startende professionals binnen SpiritStart, en meer ervaren professionals
+                binnen SpiritPro.
             </p>
-            <div className="mx-auto mt-16 grid max-w-lg grid-cols-1 items-center gap-y-6 sm:mt-20 sm:gap-y-0 lg:max-w-4xl lg:grid-cols-2">
+            <div className="mx-auto mt-16 grid max-w-lg grid-cols-1 gap-y-6 gap-y-8 sm:mt-12 lg:max-w-4xl lg:grid-cols-2">
                 {tiers.map((tier, tierIdx) => (
                     <div
                         key={tier.id}
                         className={classNames(
-                            tier.featured ? slideInLeft(inView) : slideInRight(inView),
-                            tier.featured ? 'relative bg-white shadow-2xl' : 'bg-white/60 sm:mx-8 lg:mx-0',
+                            tier.featured ? slideInTop(inView) : slideInBottom(inView),
+                            ' bg-white/60 p-8 ring-1 ring-gray-900/10 sm:mx-8 sm:p-10 lg:mx-0 ',
                             tier.featured
-                                ? ''
-                                : tierIdx === 0
-                                ? 'rounded-t-3xl sm:rounded-b-none lg:rounded-bl-3xl lg:rounded-tr-none'
-                                : 'sm:rounded-t-none lg:rounded-bl-none lg:rounded-tr-3xl',
-                            'rounded-3xl p-8 ring-1 ring-gray-900/10 sm:p-10'
+                                ? 'rounded-3xl lg:rounded-l-3xl lg:rounded-r-none'
+                                : 'rounded-3xl lg:rounded-l-none lg:rounded-r-3xl'
                         )}
                     >
-                        <h3 id={tier.id} className="text-green800 text-3xl font-semibold leading-7">
+                        <h3 id={tier.id} className="text-green800 text-3xl font-medium leading-7">
                             {tier.name}
                         </h3>
                         <ul role="list" className="text-dark mb-10 mt-8 space-y-3 text-sm leading-6 sm:mt-10">

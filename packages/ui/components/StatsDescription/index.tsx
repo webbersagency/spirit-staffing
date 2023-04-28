@@ -3,26 +3,31 @@ import { CheckIcon } from '@heroicons/react/24/outline'
 import React from 'react'
 import { StatsDescriptionProps } from './types'
 import classNames from 'classnames'
-import useAnimations from 'web/src/app/utils/animations/useAnimations'
-import { slideInLeft, slideInTop, stagger } from 'web/src/app/utils/animations'
+import useAnimations from 'web/src/utils/animations/useAnimations'
+import { slideInLeft, slideInTop, stagger } from 'web/src/utils/animations/'
 
 export const StatsDescription = ({ title, description, stats, features }: StatsDescriptionProps) => {
     const { ref, inView } = useAnimations()
     const staggerDelay = 100
 
     return (
-        <div ref={ref} className="bg-white py-32">
-            <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div ref={ref} className="container bg-white">
+            <div>
                 <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
-                    <h2 className={classNames('text-3xl font-bold tracking-tight sm:text-4xl', slideInLeft(inView))}>
-                        {title}
-                    </h2>
-                    <div className="mt-6 flex flex-col gap-x-8 gap-y-20 lg:flex-row">
+                    <div className="mt-6 flex flex-col gap-x-8 gap-y-20">
                         <div className={classNames('lg:w-full lg:max-w-2xl lg:flex-1', slideInLeft(inView))}>
-                            <p className="leading-8">{description}</p>
+                            <h2
+                                className={classNames(
+                                    'pb-4 text-3xl font-bold tracking-tight sm:text-5xl',
+                                    slideInLeft(inView)
+                                )}
+                            >
+                                {title}
+                            </h2>
+                            <p className="whitespace-pre-wrap leading-8">{description}</p>
                         </div>
-                        <div className="lg:flex lg:flex-1 lg:justify-center">
-                            <dl className="space-y-8 xl:w-80">
+                        <div className="lg:flex ">
+                            <dl className="flex flex-col justify-between space-x-14 space-y-8 lg:flex-row">
                                 {stats.map((stat, index) => (
                                     <div
                                         key={stat.value}

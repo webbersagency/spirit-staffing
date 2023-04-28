@@ -4,39 +4,34 @@ import Link from 'next/link'
 import { HeroProps } from './types'
 import classNames from 'classnames'
 import * as React from 'react'
-import useAnimations from 'web/src/app/utils/animations/useAnimations'
-import { fadeIn, slideInBottom } from 'web/src/app/utils/animations'
+import { usePathname } from 'next/navigation'
+import useAnimations from 'web/src/utils/animations/useAnimations'
+import { fadeIn, slideInBottom } from 'web/src/utils/animations/'
+import { routes } from 'web/src/lib/routes'
 
-export const Hero = ({ title, description, link, link2 }: HeroProps) => {
+export const Hero = ({ title, description, link, coverImage }: HeroProps) => {
     const { ref, inView } = useAnimations()
+    const pathName = usePathname()
 
     return (
-        <div className="bg-green800">
+        <div ref={ref} className="bg-green800">
             <div className="relative">
-                <div className="mx-auto max-w-7xl">
+                <div
+                    className={classNames(
+                        'container flex items-center',
+                        [routes.home, routes.services].includes(pathName)
+                            ? 'h-full xl:min-h-[98vh]'
+                            : 'h-full sm:h-[70vh]'
+                    )}
+                >
                     <div className="relative z-10 pt-14 lg:w-full lg:max-w-2xl">
-                        <svg
-                            className="fill-green800 absolute inset-y-0 right-8 hidden h-full w-80 translate-x-1/2 transform lg:block"
-                            viewBox="0 0 100 100"
-                            preserveAspectRatio="none"
-                            aria-hidden="true"
-                        >
-                            <polygon points="0,0 90,0 50,100 0,100" />
-                        </svg>
-
-                        <div
-                            ref={ref}
-                            className={classNames(
-                                'relative px-6 py-32 sm:py-40 lg:px-8 lg:py-56 lg:pr-0',
-                                slideInBottom(inView)
-                            )}
-                        >
-                            <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl">
-                                <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">{title}</h1>
-                                <p className="mt-6 text-lg leading-8 text-white">{description}</p>
+                        <div className={classNames('relative lg:pr-0', slideInBottom(inView))}>
+                            <div className="mx-auto lg:mx-0 lg:max-w-6xl">
+                                <h1 className="text-4xl font-medium tracking-tight text-white sm:text-6xl">{title}</h1>
+                                <p className="mt-6 whitespace-pre-wrap text-white">{description}</p>
                                 <div className="mt-10 flex items-center gap-x-6">
-                                    {link?.map(item => (
-                                        <Button as={Link} href={item.href} variant="primary">
+                                    {link?.map((item, index) => (
+                                        <Button as={Link} key={index} href={item.href} variant="primary">
                                             {item.title}
                                         </Button>
                                     ))}
@@ -45,15 +40,17 @@ export const Hero = ({ title, description, link, link2 }: HeroProps) => {
                         </div>
                     </div>
                 </div>
-                <div
-                    ref={ref}
-                    className={classNames('bg-gray-50 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2', fadeIn(inView))}
-                >
-                    <img
-                        className="aspect-[3/2] object-cover lg:aspect-auto lg:h-full lg:w-full"
-                        src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1587&q=80"
-                        alt=""
-                    />
+                <div className={classNames('bg-gray-50 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2', fadeIn(inView))}>
+                    <svg
+                        className="fill-green800 absolute inset-y-0 -left-40 z-[2] hidden h-full w-80 translate-x-1/2 transform  lg:block xl:-left-80"
+                        viewBox="0 0 100 100"
+                        preserveAspectRatio="none"
+                        aria-hidden="true"
+                    >
+                        <polygon points="0,0 90,0 50,100 0,100" />
+                    </svg>
+                    <div className="bg-heroGradient absolute inset-0 z-[1] hidden h-[300px] w-full lg:block"></div>
+                    <div className="w-full h-full [&_img]:w-full [&_img]:h-full [&_img]:object-cover">{coverImage}</div>
                 </div>
             </div>
         </div>

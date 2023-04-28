@@ -3,52 +3,99 @@ import { Testimonials } from 'ui/components/Testimonials'
 import { Pricing } from 'ui/components/Pricing'
 import React from 'react'
 import { Hero } from 'ui/components/Hero'
-import { StatsDescription } from 'ui/components/StatsDescription'
+import Image from 'next/image'
 import { StatsImage } from 'ui/components/StatsImage'
 import { Metadata } from 'next'
+import { FeatureColumns } from 'ui/components/FeatureColumns'
+import { ArrowTrendingUpIcon, BoltIcon, RocketLaunchIcon } from '@heroicons/react/24/outline'
+import { routes } from '../lib/routes'
 
 export default function Page() {
     return (
         <>
             <Hero
-                title="Jouw carrière met impact!"
-                description="Samen is alles mogelijk. Vanaf de start investeren we in de ontwikkeling van onze mensen. En we houden niet op! Samen maken we een ontwikkelplan en zorgen voor een uitdagende werk -en leeromgeving. We doen dat met de juiste Spirit, binnen de juiste privé- werkbalans balans, om elke dag de beste versie van onszelf te kunnen zijn!
-                    Wij zijn SpiritStaffing en onze mensen maken het verschil binnen de digitale transitie van Nederland."
+                coverImage={
+                    <Image
+                        src={'/images/spirit-staffing-visual7.jpg'}
+                        alt="Jouw IT carrière met impact"
+                        width={1920}
+                        height={1280}
+                        priority
+                        loading={'eager'}
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                    />
+                }
+                title="Jouw IT carrière met impact!"
+                description={
+                    'Wij zijn SpiritStaffing en onze mensen maken het verschil binnen de digitale transitie van Nederland. Samen is alles mogelijk. Dat is waar wij in geloven! \n' +
+                    '\n' +
+                    'Investeren in ontwikkeling, binnen een uitdagende werk- en leeromgeving. Dat is onze basis. Met de juiste Spirit en de perfecte privé- werkbalans. Zo kunnen we elke dag de beste versie van onszelf zijn. Dat geldt voor elke professional, op elk niveau, gedurende de hele carrière. Onze starters krijgen extra begeleiding om succesvol door te groeien! Daarom onderscheiden wij SpiritStart en SpiritPro.'
+                }
                 link={[
                     {
-                        title: 'Ik heb de juiste spirit!',
-                        href: 'contact',
+                        title: 'SpiritStart',
+                        href: `${routes.candidates}/#spiritStart`,
+                    },
+                    {
+                        title: 'SpiritPro',
+                        href: `${routes.candidates}/#spiritPro`,
                     },
                 ]}
             />
-            <StatsDescription
+            <FeatureColumns
                 title="Onze missie"
-                description="Bij SpiritStaffing zien we dat veel werkprocessen volledig digitaliseren. Fantastisch natuurlijk, met een wereld vol kansen. Maar we moeten ook realistisch zijn. Het risico op misbruik van gegevens groeit en daarom is het vergroten van digitale weerbaarheid in organisaties essentieel. Het vraagt om aanpassingsvermogen, waarvoor de komende jaren meer kundige ICT professionals nodig zijn.
-                   Onze missie is dan ook de beste ICT professionals te vinden om de digitalisering voor het publieke domein te accelereren, waarbij we ons in de eerste plaats concentreren op een verhoging van de digitale weerbaarheid."
-                stats={[
+                description={
+                    'Veel werkprocessen digitaliseren. Fantastisch natuurlijk, met een wereld vol kansen. Maar het vraagt ook om aanpassingsvermogen.\n' +
+                    '\n' +
+                    'Onze missie is om de beste IT professionals te vinden om de digitalisering te accelereren, door permanente ontwikkeling van onze professionals, door persoonlijke begeleiding.'
+                }
+                features={[
                     {
-                        label: 'Een echte toegevoegde waarde leveren aan de digitale transitie van Nederland.',
-                        value: 'Impact maken',
+                        name: 'Impact maken',
+                        description: `Echte toegevoegde waarde leveren aan de digitale transitie van Nederland.`,
+                        icon: <BoltIcon />,
                     },
                     {
-                        label: 'Wij helpen je om jouw carrière naar de volgende fase te brengen.',
-                        value: 'Boost jouw carriere',
+                        name: 'Boost jouw carriere',
+                        description: 'Wij helpen je om jouw carrière naar de volgende fase te brengen.',
+                        icon: <RocketLaunchIcon />,
                     },
                     {
-                        label: 'Als je je niet meer kan ontwikkelen is het tijd om iets anders te gaan doen.',
-                        value: 'Altijd blijven ontwikkelen\n',
+                        name: 'Altijd blijven ontwikkelen',
+                        description: 'Als je je niet meer kunt ontwikkelen is het tijd om iets anders te gaan doen.',
+                        icon: <ArrowTrendingUpIcon />,
                     },
                 ]}
             />
             <StatsImage
+                image={
+                    <Image
+                        src={'/images/spirit-staffing-visual2.jpg'}
+                        alt="Professionals die het verschil maken"
+                        width={896}
+                        height={1280}
+                        sizes="(max-width: 768px) 100vw, 384px"
+                    />
+                }
                 title="Professionals die het verschil maken"
-                description="Het vinden van een juiste werkomgeving is uitdagend. Dat realiseren wij ons iedere dag.
-                             Het betekent veel meer dan een plek om alleen te werken. Het gaat over het ontwikkelen
-                             van jouw talent, het ontdekken van nieuwe mogelijkheden en het maken van impact. Het
-                             gaat om het maken van connecties, waarbij je ook een goede balans tussen jouw privéleven
-                             en professionele ambities realiseert. Binnen SpiritStaffing begeleiden we twee groepen
-                             professionals: de startende professionals binnen SpiritStart, en de meer ervaren medior
-                             en senior professionals binnen SpiritPro."
+                description={
+                    'Het vinden van een juiste werkomgeving is uitdagend. \n' +
+                    '\n' +
+                    'Het betekent veel meer dan een plek om alleen te werken. Het gaat over het ontwikkelen van talent. Het ontdekken van nieuwe mogelijkheden. Het maken van impact. \n' +
+                    '\n' +
+                    'Het gaat om het maken van connecties, binnen een goede balans van privé en professionele ambities. '
+                }
+                variant="light"
+                link={[
+                    {
+                        title: 'SpiritStart',
+                        href: `${routes.candidates}/#spiritStart`,
+                    },
+                    {
+                        title: 'SpiritPro',
+                        href: `${routes.candidates}/#spiritPro`,
+                    },
+                ]}
             />
             <CallToAction
                 title="Ben jij klaar voor een carrière met de juiste Spirit?"
@@ -56,7 +103,7 @@ export default function Page() {
                 link={[
                     {
                         title: 'Bel me terug',
-                        to: '/contact',
+                        href: routes.contact,
                     },
                 ]}
             />
@@ -67,6 +114,7 @@ export default function Page() {
 }
 
 export const metadata: Metadata = {
-    title: 'Home',
-    description: 'Homr',
+    title: 'Jouw IT carrière met impact! | SpiritStaffing',
+    description:
+        'Jouw IT carrière met impact! Onze mensen maken het verschil binnen de digitale transitie van Nederland',
 }

@@ -1,6 +1,6 @@
 type links = {
     title: string
-    to: string
+    href: string
 }
 
 export type CallToActionProps = {

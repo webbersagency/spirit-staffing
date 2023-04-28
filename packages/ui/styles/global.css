@@ -4,7 +4,7 @@
 
 @layer base {
     body {
-        @apply font-silka font-normal text-base text-dark bg-white scroll-smooth;
+        @apply font-silka font-normal text-base text-dark bg-white;
     }
 
     *:focus {
@@ -27,11 +27,11 @@
     h4,
     h5,
     h6 {
-        @apply text-green800;
+        @apply text-green800 font-medium font-recoleta text-4xl;
     }
 
     a {
-        @apply text-green800 font-semibold
+        @apply text-green800
     }
 
     p {
@@ -48,6 +48,10 @@
 
     p {
         @apply text-base font-normal leading-6 font-silka;
+    }
+
+    .container {
+        @apply py-16 lg:py-20 xl:py-28 mx-auto px-6 lg:px-8 xl:px-10;
     }
 }
 
