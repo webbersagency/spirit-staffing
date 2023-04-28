@@ -7,6 +7,7 @@ import * as React from 'react'
 import { usePathname } from 'next/navigation'
 import useAnimations from 'web/src/utils/animations/useAnimations'
 import { fadeIn, slideInBottom } from 'web/src/utils/animations/'
+import { routes } from 'web/src/lib/routes'
 
 export const Hero = ({ title, description, link, coverImage }: HeroProps) => {
     const { ref, inView } = useAnimations()
@@ -18,7 +19,9 @@ export const Hero = ({ title, description, link, coverImage }: HeroProps) => {
                 <div
                     className={classNames(
                         'container flex items-center',
-                        pathName === '/' ? 'h-full xl:min-h-[98vh]' : 'h-full sm:h-[70vh]'
+                        [routes.home, routes.services].includes(pathName)
+                            ? 'h-full xl:min-h-[98vh]'
+                            : 'h-full sm:h-[70vh]'
                     )}
                 >
                     <div className="relative z-10 pt-14 lg:w-full lg:max-w-2xl">

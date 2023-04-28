@@ -12,10 +12,11 @@ export default function Page() {
                     <Image
                         src={'/images/spirit-staffing-visual1.jpg'}
                         alt="cover image"
-                        width={900}
-                        height={1200}
+                        width={1920}
+                        height={1280}
                         priority
                         loading={'eager'}
+                        sizes="(max-width: 768px) 100vw, 50vw"
                     />
                 }
                 title="*Vacature Titel*"

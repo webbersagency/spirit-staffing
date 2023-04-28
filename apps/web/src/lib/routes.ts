@@ -1,4 +1,5 @@
 export const routes = {
+    home: '/',
     about: '/over',
     services: '/opdrachtgevers',
     subjectsAreas: '/vakgebieden',

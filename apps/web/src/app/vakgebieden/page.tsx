@@ -12,6 +12,7 @@ import {
     LockClosedIcon,
 } from '@heroicons/react/24/outline'
 import Image from 'next/image'
+import { routes } from '../../lib/routes'
 
 export default function Page() {
     return (
@@ -90,7 +91,7 @@ export default function Page() {
                 link={[
                     {
                         title: 'Neem dan contact op!',
-                        href: '/contact',
+                        href: routes.contact,
                     },
                 ]}
             />

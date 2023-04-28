@@ -3,6 +3,7 @@ import { ContactForm } from 'ui/components/ContactForm'
 import { Metadata } from 'next'
 import Image from 'next/image'
 import React from 'react'
+import { routes } from '../../lib/routes'
 
 export default function Page() {
     return (
@@ -26,11 +27,11 @@ export default function Page() {
                 link={[
                     {
                         title: 'Open sollicitatie',
-                        href: '/contact/#contactform',
+                        href: `${routes.contact}/#contactform`,
                     },
                     {
                         title: 'Bel mij terug',
-                        href: '/contact/#contactform',
+                        href: `${routes.contact}/#contactform`,
                     },
                 ]}
             />

@@ -8,6 +8,7 @@ import { StatsImage } from 'ui/components/StatsImage'
 import { Metadata } from 'next'
 import { FeatureColumns } from 'ui/components/FeatureColumns'
 import { ArrowTrendingUpIcon, BoltIcon, RocketLaunchIcon } from '@heroicons/react/24/outline'
+import { routes } from '../lib/routes'
 
 export default function Page() {
     return (
@@ -33,11 +34,11 @@ export default function Page() {
                 link={[
                     {
                         title: 'SpiritStart',
-                        href: '/kandidaten/#spiritStart',
+                        href: `${routes.candidates}/#spiritStart`,
                     },
                     {
                         title: 'SpiritPro',
-                        href: '/kandidaten/#spiritPro',
+                        href: `${routes.candidates}/#spiritPro`,
                     },
                 ]}
             />
@@ -88,11 +89,11 @@ export default function Page() {
                 link={[
                     {
                         title: 'SpiritStart',
-                        href: '/kandidaten/#spiritStart',
+                        href: `${routes.candidates}/#spiritStart`,
                     },
                     {
                         title: 'SpiritPro',
-                        href: '/kandidaten/#spiritPro',
+                        href: `${routes.candidates}/#spiritPro`,
                     },
                 ]}
             />
@@ -102,7 +103,7 @@ export default function Page() {
                 link={[
                     {
                         title: 'Bel me terug',
-                        href: '/contact',
+                        href: routes.contact,
                     },
                 ]}
             />

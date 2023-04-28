@@ -6,6 +6,7 @@ import { StatsImage } from 'ui/components/StatsImage'
 import { FeatureColumns } from 'ui/components/FeatureColumns'
 import { AcademicCapIcon, DocumentTextIcon, FaceSmileIcon, ShieldCheckIcon } from '@heroicons/react/24/outline'
 import Image from 'next/image'
+import { routes } from '../../lib/routes'
 
 export default function Page() {
     return (
@@ -26,17 +27,20 @@ export default function Page() {
                 description={
                     'Bij SpiritStaffing staat de mens echt centraal. Wij geloven in talent, constante ontwikkeling en investeren daarom enorm in onze professionals. \n' +
                     '\n' +
-                    'Via SpiritStart creëren we een begeleid ontwikkelplan, waarbij naast uitdagende opdrachten ook een HBO-niveau opleidingstraject opgezet wordt. Dus, direct geld verdienen en doorstuderen tegelijk! Binnen SpiritPro bouwen we door op jouw kennis. We traininen jouw hard- en softskills, om door te ontwikkelen naar de professional die jij wilt zijn. Dus, direct jouw impact vergroten via verschillende opdrachtgevers!\n' +
-                    '\n Dat maakt werken bij SpiritStaffing zo geweldig. '
+                    'Via SpiritStart creëren we een begeleid ontwikkelplan, waarbij naast uitdagende opdrachten ook een HBO-niveau opleidingstraject opgezet wordt. Dus, direct geld verdienen en doorstuderen tegelijk! \n' +
+                    '\n' +
+                    'Binnen SpiritPro bouwen we door op jouw kennis. We traininen jouw hard- en softskills, om door te ontwikkelen naar de professional die jij wilt zijn. Dus, direct jouw impact vergroten via verschillende opdrachtgevers!\n' +
+                    '\n' +
+                    'Dat maakt werken bij SpiritStaffing zo geweldig. '
                 }
                 link={[
                     {
                         title: 'SpiritStart',
-                        href: '/kandidaten/#spiritStart',
+                        href: `${routes.candidates}/#spiritStart`,
                     },
                     {
                         title: 'SpiritPro',
-                        href: '/kandidaten/#spiritPro',
+                        href: `${routes.candidates}/#spiritPro`,
                     },
                 ]}
             />
@@ -97,7 +101,7 @@ export default function Page() {
                 link={[
                     {
                         title: 'Wij bellen jou graag terug!',
-                        href: '/contact',
+                        href: routes.contact,
                     },
                 ]}
                 variant="light"
@@ -129,7 +133,7 @@ export default function Page() {
                 link={[
                     {
                         title: 'Wij bellen jou graag terug!',
-                        href: '/contact',
+                        href: routes.contact,
                     },
                 ]}
                 mirrored
@@ -140,7 +144,7 @@ export default function Page() {
                 link={[
                     {
                         title: 'Bel mij terug!',
-                        href: '/contact',
+                        href: routes.contact,
                     },
                 ]}
             />

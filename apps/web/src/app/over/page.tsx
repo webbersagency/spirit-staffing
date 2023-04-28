@@ -2,9 +2,10 @@ import { CallToAction } from 'ui/components/CallToAction'
 import { FeatureColumns } from 'ui/components/FeatureColumns'
 import { Hero } from 'ui/components/Hero'
 import { Metadata } from 'next'
-import { InboxIcon, TrashIcon, UsersIcon } from '@heroicons/react/24/outline'
+import { BoltIcon, StarIcon, UsersIcon } from '@heroicons/react/24/outline'
 import Image from 'next/image'
 import React from 'react'
+import { routes } from '../../lib/routes'
 
 export default function Page() {
     return (
@@ -30,7 +31,7 @@ export default function Page() {
                 link={[
                     {
                         title: 'Bekijk onze dienstverlening',
-                        href: '/opdrachtgevers',
+                        href: routes.services,
                     },
                 ]}
             />
@@ -41,20 +42,20 @@ export default function Page() {
                 features={[
                     {
                         name: 'De mens staat bij ons echt centraal',
-                        description: `Samen is alles mogelijk. Dat is waar wij in geloven! \n \nInvesteren in ontwikkeling. Vanuit elke achtergrond. Binnen een uitdagende werk- en leeromgeving. Privé en werk in balans. Dat is onze basis.`,
-                        icon: <InboxIcon />,
+                        description: `Samen is alles mogelijk. Dat is waar wij in geloven! Investeren in ontwikkeling. Vanuit elke achtergrond. Binnen een uitdagende werk- en leeromgeving. Privé en werk in balans. Dat is onze basis.`,
+                        icon: <UsersIcon />,
                     },
                     {
                         name: 'Impact maken',
                         description:
                             'Voor onze mensen is de werkomgeving niet zomaar een plek om te werken. Wij maken graag impact door samen te werken. Vaak kunnen we door anders te denken nieuwe inzichten bieden en echt het verschil maken.',
-                        icon: <UsersIcon />,
+                        icon: <BoltIcon />,
                     },
                     {
                         name: 'Inspirerend zijn',
                         description:
                             'Wij denken altijd in mogelijkheden en zoeken naar oplossingen. Wij denken niet in vaste patronen, maar juist in oplossingen die nog niet geïmplementeerd zijn. Wij laten ons niet tegenhouden. Dat zorgt voor een positieve dynamiek, en een inspirerende werkomgeving.',
-                        icon: <TrashIcon />,
+                        icon: <StarIcon />,
                     },
                 ]}
             />
@@ -64,7 +65,7 @@ export default function Page() {
                 link={[
                     {
                         title: 'Bel mij terug',
-                        href: '/contact',
+                        href: routes.contact,
                     },
                 ]}
             />

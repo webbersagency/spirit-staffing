@@ -6,6 +6,7 @@ import React from 'react'
 import { StatsImage } from 'ui/components/StatsImage'
 import { FeatureGrid } from 'ui/components/FeatureGrid'
 import Image from 'next/image'
+import { routes } from '../../lib/routes'
 
 export default function Page() {
     return (
@@ -31,11 +32,11 @@ export default function Page() {
                 link={[
                     {
                         title: 'SpiritStart',
-                        href: '/opdrachtgevers/#spiritStart',
+                        href: `${routes.services}/#spiritStart`,
                     },
                     {
                         title: 'SpiritPro',
-                        href: '/opdrachtgevers/#spiritPro',
+                        href: `${routes.services}/#spiritPro`,
                     },
                 ]}
             />
@@ -63,7 +64,7 @@ export default function Page() {
                 link={[
                     {
                         title: 'Meer weten? Lets go!',
-                        href: '/contact',
+                        href: routes.contact,
                     },
                 ]}
                 variant="light"
@@ -90,7 +91,7 @@ export default function Page() {
                 link={[
                     {
                         title: 'Meer weten? Lets go!',
-                        href: '/contact',
+                        href: routes.contact,
                     },
                 ]}
                 variant="dark"
@@ -131,7 +132,7 @@ export default function Page() {
                 link={[
                     {
                         title: 'Bel mij terug',
-                        href: '/contact',
+                        href: routes.contact,
                     },
                 ]}
             />
