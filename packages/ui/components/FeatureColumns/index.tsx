@@ -1,8 +1,8 @@
 'use client'
 
-import useAnimations from 'web/src/app/utils/animations/useAnimations'
+import useAnimations from 'web/src/utils/animations/useAnimations'
 import classNames from 'classnames'
-import { slideInLeft, stagger } from 'web/src/app/utils/animations'
+import { slideInLeft, stagger } from 'web/src/utils/animations'
 import { FeatureColumnProps } from './types'
 
 export const FeatureColumns = ({ title, description, features }: FeatureColumnProps) => {

@@ -1,9 +1,9 @@
 'use client'
 import { EnvelopeIcon, PhoneIcon } from '@heroicons/react/24/outline'
 import Button from '../Button'
-import { fadeIn, slideInBottom, slideInLeft } from 'web/src/app/utils/animations'
+import { fadeIn, slideInBottom, slideInLeft } from 'web/src/utils/animations'
 import classNames from 'classnames'
-import useAnimations from 'web/src/app/utils/animations/useAnimations'
+import useAnimations from 'web/src/utils/animations/useAnimations'
 
 export const ContactForm = () => {
     const { ref, inView } = useAnimations()

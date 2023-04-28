@@ -13,12 +13,13 @@ export default function Page() {
             <Hero
                 coverImage={
                     <Image
-                        src={'/images/heroCoverImage.png'}
-                        alt="cover image"
-                        width={900}
-                        height={1200}
+                        src={'/images/spirit-staffing-visual7.jpg'}
+                        alt="Spirit Staffing kandidaten"
+                        width={1920}
+                        height={1280}
                         priority
                         loading={'eager'}
+                        sizes="(max-width: 768px) 100vw, 50vw"
                     />
                 }
                 title="Kandidaten"
@@ -68,7 +69,15 @@ export default function Page() {
                 ]}
             />
             <StatsImage
-                image={<Image src={'/images/heroCoverImage.png'} alt="cover image" width={1000} height={1000} />}
+                image={
+                    <Image
+                        src={'/images/spirit-staffing-visual6.jpg'}
+                        alt="Jouw carrière begeleid van Start"
+                        width={1920}
+                        height={1280}
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                    />
+                }
                 id="spiritStart"
                 title="Jouw carrière begeleid van Start"
                 subtitle="SpiritStart"
@@ -94,7 +103,15 @@ export default function Page() {
                 variant="light"
             />
             <StatsImage
-                image={<Image src={'/images/heroCoverImage.png'} alt="cover image" width={1000} height={1000} />}
+                image={
+                    <Image
+                        src={'/images/spirit-staffing-visual4.jpg'}
+                        alt="Uitdagende opdrachten om door te groeien als professional"
+                        width={1920}
+                        height={1280}
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                    />
+                }
                 id="spiritPro"
                 title="Uitdagende opdrachten om door te groeien als professional"
                 subtitle="SpiritPro"

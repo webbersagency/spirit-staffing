@@ -12,12 +12,13 @@ export default function Page() {
             <Hero
                 coverImage={
                     <Image
-                        src={'/images/heroCoverImage.png'}
-                        alt="cover image"
-                        width={900}
-                        height={1200}
+                        src={'/images/spirit-staffing-visual5.jpg'}
+                        alt="SpiritStaffing"
                         priority
                         loading={'eager'}
+                        width={1920}
+                        height={1280}
+                        sizes="(max-width: 768px) 100vw, 50vw"
                     />
                 }
                 title="Welkom bij SpiritStaffing"

@@ -3,8 +3,8 @@ import { CheckIcon } from '@heroicons/react/24/outline'
 import React from 'react'
 import { StatsDescriptionProps } from './types'
 import classNames from 'classnames'
-import useAnimations from 'web/src/app/utils/animations/useAnimations'
-import { slideInLeft, slideInTop, stagger } from 'web/src/app/utils/animations/'
+import useAnimations from 'web/src/utils/animations/useAnimations'
+import { slideInLeft, slideInTop, stagger } from 'web/src/utils/animations/'
 
 export const StatsDescription = ({ title, description, stats, features }: StatsDescriptionProps) => {
     const { ref, inView } = useAnimations()

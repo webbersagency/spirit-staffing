@@ -3,8 +3,8 @@ import { CheckIcon } from '@heroicons/react/20/solid'
 import classNames from 'classnames'
 import Button from '../Button'
 import Link from 'next/link'
-import useAnimations from 'web/src/app/utils/animations/useAnimations'
-import { slideInBottom, slideInTop } from 'web/src/app/utils/animations/'
+import useAnimations from 'web/src/utils/animations/useAnimations'
+import { slideInBottom, slideInTop } from 'web/src/utils/animations/'
 
 const tiers = [
     {

@@ -2,9 +2,9 @@
 import { CallToActionProps } from './types'
 import Button from '../Button'
 import Link from 'next/link'
-import useAnimations from 'web/src/app/utils/animations/useAnimations'
+import useAnimations from 'web/src/utils/animations/useAnimations'
 import classNames from 'classnames'
-import { slideInBottom } from 'web/src/app/utils/animations/'
+import { slideInBottom } from 'web/src/utils/animations/'
 
 export const CallToAction = ({ title, description, link }: CallToActionProps) => {
     const { ref, inView } = useAnimations()

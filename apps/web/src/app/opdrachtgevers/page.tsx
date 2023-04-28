@@ -13,12 +13,13 @@ export default function Page() {
             <Hero
                 coverImage={
                     <Image
-                        src={'/images/heroCoverImage.png'}
-                        alt="cover image"
-                        width={900}
-                        height={1200}
+                        src={'/images/spirit-staffing-visual5.jpg'}
+                        alt="Spirit Staffing dienstverlenging"
+                        width={1920}
+                        height={1280}
                         priority
                         loading={'eager'}
+                        sizes="(max-width: 768px) 100vw, 50vw"
                     />
                 }
                 title="Onze dienstverlening"
@@ -39,7 +40,15 @@ export default function Page() {
                 ]}
             />
             <StatsImage
-                image={<Image src={'/images/heroCoverImage.png'} alt="cover image" width={1000} height={1000} />}
+                image={
+                    <Image
+                        src={'/images/spirit-staffing-visual1.jpg'}
+                        alt="SpiritStart"
+                        width={1920}
+                        height={1280}
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                    />
+                }
                 id="spiritStart"
                 title="SpiritStart"
                 description={
@@ -60,7 +69,15 @@ export default function Page() {
                 variant="light"
             />
             <StatsImage
-                image={<Image src={'/images/heroCoverImage.png'} alt="cover image" width={1000} height={1000} />}
+                image={
+                    <Image
+                        src={'/images/spirit-staffing-visual3.jpg'}
+                        alt="SpiritPro"
+                        width={1920}
+                        height={1280}
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                    />
+                }
                 id="spiritPro"
                 title="SpiritPro"
                 description={

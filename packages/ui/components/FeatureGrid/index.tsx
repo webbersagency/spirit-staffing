@@ -1,8 +1,8 @@
 'use client'
 import { FeatureGridProps } from './types'
 import classNames from 'classnames'
-import { slideInBottom, slideInTop, stagger } from 'web/src/app/utils/animations/'
-import useAnimations from 'web/src/app/utils/animations/useAnimations'
+import { slideInBottom, slideInTop, stagger } from 'web/src/utils/animations/'
+import useAnimations from 'web/src/utils/animations/useAnimations'
 
 export const FeatureGrid = ({ title, description, features }: FeatureGridProps) => {
     const { ref, inView } = useAnimations()

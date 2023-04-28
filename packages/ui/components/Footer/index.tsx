@@ -3,8 +3,8 @@
 import Link from 'next/link'
 import { SpiritStaffingLogoGreen } from '../../static/SpiritStaffingLogoFullGreen'
 import classNames from 'classnames'
-import { slideInBottom } from 'web/src/app/utils/animations/'
-import useAnimations from 'web/src/app/utils/animations/useAnimations'
+import { slideInBottom } from 'web/src/utils/animations/'
+import useAnimations from 'web/src/utils/animations/useAnimations'
 
 const navigation = {
     main: [

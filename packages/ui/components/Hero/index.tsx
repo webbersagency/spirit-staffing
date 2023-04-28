@@ -5,8 +5,8 @@ import { HeroProps } from './types'
 import classNames from 'classnames'
 import * as React from 'react'
 import { usePathname } from 'next/navigation'
-import useAnimations from 'web/src/app/utils/animations/useAnimations'
-import { fadeIn, slideInBottom } from 'web/src/app/utils/animations/'
+import useAnimations from 'web/src/utils/animations/useAnimations'
+import { fadeIn, slideInBottom } from 'web/src/utils/animations/'
 
 export const Hero = ({ title, description, link, coverImage }: HeroProps) => {
     const { ref, inView } = useAnimations()
@@ -47,9 +47,7 @@ export const Hero = ({ title, description, link, coverImage }: HeroProps) => {
                         <polygon points="0,0 90,0 50,100 0,100" />
                     </svg>
                     <div className="bg-heroGradient absolute inset-0 z-[1] hidden h-[300px] w-full lg:block"></div>
-                    <div className="[&>img]lg:aspect-auto  [&>img]lg:w-full lg:h-full [&>img]:aspect-[3/2] [&>img]:object-cover [&>img]:lg:h-full">
-                        {coverImage}
-                    </div>
+                    <div className="w-full h-full [&_img]:w-full [&_img]:h-full [&_img]:object-cover">{coverImage}</div>
                 </div>
             </div>
         </div>

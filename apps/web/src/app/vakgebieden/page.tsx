@@ -19,12 +19,13 @@ export default function Page() {
             <Hero
                 coverImage={
                     <Image
-                        src={'/images/heroCoverImage.png'}
-                        alt="cover image"
-                        width={900}
-                        height={1200}
+                        src={'/images/spirit-staffing-visual1.jpg'}
+                        alt="Vakgebieden waar Spirit Staffing impact maakt"
+                        width={1920}
+                        height={1280}
                         priority
                         loading={'eager'}
+                        sizes="(max-width: 768px) 100vw, 50vw"
                     />
                 }
                 title="Vakgebieden waar wij impact maken"

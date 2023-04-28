@@ -8,7 +8,7 @@ export default {
 export const statsImage = () => {
     return (
         <StatsImage
-            image={<img src={'/images/heroCoverImage.png'} alt="cover image" />}
+            image={<img src={'/images/spirit-staffing-visual1.jpg'} alt="cover image" />}
             title="Professionals die het verschil maken"
             description={
                 'Het vinden van een juiste werkomgeving is uitdagend. \n' +

@@ -15,12 +15,13 @@ export default function Page() {
             <Hero
                 coverImage={
                     <Image
-                        src={'/images/heroCoverImage.png'}
-                        alt="cover image"
-                        width={900}
-                        height={1200}
+                        src={'/images/spirit-staffing-visual1.jpg'}
+                        alt="Jouw IT carrière met impact"
+                        width={1920}
+                        height={1280}
                         priority
                         loading={'eager'}
+                        sizes="(max-width: 768px) 100vw, 50vw"
                     />
                 }
                 title="Jouw IT carrière met impact!"
@@ -66,7 +67,15 @@ export default function Page() {
                 ]}
             />
             <StatsImage
-                image={<Image src={'/images/heroCoverImage.png'} alt="cover image" width={1000} height={1000} />}
+                image={
+                    <Image
+                        src={'/images/spirit-staffing-visual2.jpg'}
+                        alt="Professionals die het verschil maken"
+                        width={1920}
+                        height={1280}
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                    />
+                }
                 title="Professionals die het verschil maken"
                 description={
                     'Het vinden van een juiste werkomgeving is uitdagend. \n' +
@@ -104,6 +113,7 @@ export default function Page() {
 }
 
 export const metadata: Metadata = {
-    title: 'Home | SpiritStaffing',
-    description: 'Home | SpiritStaffing',
+    title: 'Jouw IT carrière met impact! | SpiritStaffing',
+    description:
+        'Jouw IT carrière met impact! Onze mensen maken het verschil binnen de digitale transitie van Nederland',
 }

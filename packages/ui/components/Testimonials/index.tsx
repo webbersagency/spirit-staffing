@@ -1,7 +1,9 @@
 'use client'
-import useAnimations from 'web/src/app/utils/animations/useAnimations'
+import useAnimations from 'web/src/utils/animations/useAnimations'
 import classNames from 'classnames'
-import { fadeIn, slideInTop } from 'web/src/app/utils/animations/'
+import { fadeIn, slideInTop } from 'web/src/utils/animations/'
+import React from 'react'
+import Image from 'next/image'
 
 export const Testimonials = () => {
     const { ref, inView } = useAnimations()
@@ -17,10 +19,14 @@ export const Testimonials = () => {
                                 fadeIn(inView)
                             )}
                         >
-                            <img
+                            <Image
                                 className="absolute inset-0 h-full w-full rounded-2xl object-cover shadow-2xl"
-                                src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2102&q=80"
-                                alt=""
+                                src={'/images/spirit-staffing-visual6_portrait.jpg'}
+                                alt="cover image"
+                                width={900}
+                                height={1200}
+                                priority
+                                loading={'eager'}
                             />
                         </div>
                     </div>

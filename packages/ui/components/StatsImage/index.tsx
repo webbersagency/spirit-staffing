@@ -3,9 +3,9 @@ import Button from '../Button'
 import React from 'react'
 import Link from 'next/link'
 import { StatsImageProps } from './types'
-import useAnimations from 'web/src/app/utils/animations/useAnimations'
+import useAnimations from 'web/src/utils/animations/useAnimations'
 import classNames from 'classnames'
-import { fadeIn, slideInLeft } from 'web/src/app/utils/animations/'
+import { fadeIn, slideInLeft } from 'web/src/utils/animations/'
 
 export const StatsImage = ({ title, description, link, variant, mirrored, subtitle, id, image }: StatsImageProps) => {
     const { ref, inView } = useAnimations()
