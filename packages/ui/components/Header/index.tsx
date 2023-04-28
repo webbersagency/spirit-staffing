@@ -33,7 +33,7 @@ export const Header = () => {
             ref={ref}
             className={classNames(
                 'fixed inset-x-0 top-0 z-50 transition-all duration-200',
-                navbarScroll ? 'bg-dark' : 'bg-transparent'
+                navbarScroll ? 'bg-green800 shadow-md' : 'bg-transparent'
             )}
         >
             <div className="container py-2">

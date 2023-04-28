@@ -27,7 +27,7 @@ export default function Page() {
                 description={
                     'Wij zijn SpiritStaffing en onze mensen maken het verschil binnen de digitale transitie van Nederland. Samen is alles mogelijk. Dat is waar wij in geloven! \n' +
                     '\n' +
-                    'Investeren in ontwikkeling, binnen een uitdagende werk- en leeromgeving. Dat is onze basis. Met de juiste Spirit en de perfecte privé- werkbalans. Zo kunnen we elke dag de beste versie van onszelf zijn. Dat geldt voor elke professional, op elk niveau, gedurende de hele carrière.Onze starters krijgen extra begeleiding om succesvol door te groeien! Daarom onderscheiden wij SpiritStart en SpiritPro.'
+                    'Investeren in ontwikkeling, binnen een uitdagende werk- en leeromgeving. Dat is onze basis. Met de juiste Spirit en de perfecte privé- werkbalans. Zo kunnen we elke dag de beste versie van onszelf zijn. Dat geldt voor elke professional, op elk niveau, gedurende de hele carrière. Onze starters krijgen extra begeleiding om succesvol door te groeien! Daarom onderscheiden wij SpiritStart en SpiritPro.'
                 }
                 link={[
                     {

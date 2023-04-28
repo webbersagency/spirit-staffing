@@ -77,7 +77,7 @@ export const Footer = () => {
                             <span className="sr-only">Spirit Staffing</span>
                             <SpiritStaffingLogoGreen className="w-[200px] md:w-[220px]" />
                         </Link>
-                        <p className="text-md mb-8 leading-6 md:w-3/4">Samen is alles mogelijk</p>
+                        <p className="text-md mb-8 leading-6 md:w-3/4 text-green800">Samen is alles mogelijk</p>
                         <div className="flex space-x-6">
                             {navigation.social.map(item => (
                                 <Link
@@ -96,10 +96,10 @@ export const Footer = () => {
                     <div className="space-y-8">
                         <h3 className="text-green800 text-xl font-semibold leading-6">Contact</h3>
                         <div>
-                            <p>
+                            <p className="text-green800">
                                 M <a href="mailto:info@spiritstaffing.nl">info@spiritstaffing.nl</a>
                             </p>
-                            <p>
+                            <p className="text-green800">
                                 T <a href="tel:+31 6 15543235">+31 6 15543235</a>
                             </p>
                         </div>
