@@ -23,9 +23,9 @@ export default function Page() {
                 }
                 title="Onze dienstverlening"
                 description={
-                    'Onze opdrachtgevers hebben te maken diverse ICT vraagstukken. Onze dienstverlening is per definitie maatwerk.\n' +
+                    'Onze opdrachtgevers hebben te maken diverse IT vraagstukken. Onze dienstverlening is per definitie maatwerk.\n' +
                     '\n' +
-                    'Voor ondersteuning van ICT professionals, mensen met ervaring, hebben we SpiritPro opgericht. Onze opdrachtgevers realiseren zich ook dat de doorstroom van talent minstens zo belangrijk is. Daarom zijn ze bereid met ons samen te investeren in de ontwikkeling van startende professionals. Met een MBO niveau 4 achtergrond, gedurende een leer- werktraject op HBO-niveau, echt impact creëren. Dat is wat onze professionals doen via SpiritStart!'
+                    'Voor ondersteuning van IT professionals, mensen met ervaring, hebben we SpiritPro opgericht. Onze opdrachtgevers realiseren zich ook dat de doorstroom van talent minstens zo belangrijk is. Daarom zijn ze bereid met ons samen te investeren in de ontwikkeling van startende professionals. Met een MBO niveau 4 achtergrond, gedurende een leer- werktraject op HBO-niveau, echt impact creëren. Dat is wat onze professionals doen via SpiritStart!'
                 }
                 link={[
                     {

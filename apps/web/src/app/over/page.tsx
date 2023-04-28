@@ -24,7 +24,7 @@ export default function Page() {
                 description={
                     'Veel werkprocessen digitaliseren digitaliseren. Fantastisch natuurlijk, met een wereld vol kansen. Maar het vraagt ook om aanpassingsvermogen.\n' +
                     '\n' +
-                    'Onze missie is dan ook de beste ICT professionals te vinden om de digitalisering van Nederland te accelereren.'
+                    'Onze missie is dan ook de beste IT professionals te vinden om de digitalisering van Nederland te accelereren.'
                 }
                 link={[
                     {

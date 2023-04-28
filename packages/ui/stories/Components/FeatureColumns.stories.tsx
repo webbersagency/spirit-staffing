@@ -13,7 +13,7 @@ export const featureColumns = () => {
             description={
                 'Veel werkprocessen digitaliseren. Fantastisch natuurlijk, met een wereld vol kansen. Maar het vraagt ook om aanpassingsvermogen.\n' +
                 '\n' +
-                'Onze missie is om de beste ICT professionals te vinden om de digitalisering te accelereren, door permanente ontwikkeling van onze professionals, door persoonlijke begeleiding.'
+                'Onze missie is om de beste IT professionals te vinden om de digitalisering te accelereren, door permanente ontwikkeling van onze professionals, door persoonlijke begeleiding.'
             }
             features={[
                 {
