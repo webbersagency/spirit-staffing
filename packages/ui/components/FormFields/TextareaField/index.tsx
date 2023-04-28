@@ -8,7 +8,7 @@ import { useFormContext } from 'react-hook-form'
 import FieldWrapper from '../FieldWrapper'
 
 const InputField = forwardRef<HTMLTextAreaElement, TextAreaFieldProps>(
-    ({ className, placeholder, type = 'text', name, label, ...props }, ref) => {
+    ({ className, placeholder, name, label, ...props }, ref) => {
         const { getFieldState } = useFormContext()
         const { error } = getFieldState(name)
 

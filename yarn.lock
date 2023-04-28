@@ -3756,6 +3756,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/nodemailer@npm:^6.4.7":
+  version: 6.4.7
+  resolution: "@types/nodemailer@npm:6.4.7"
+  dependencies:
+    "@types/node": "*"
+  checksum: dc2a33a89135e04a5bea4921e8645e8453b90e3c3b05f0646f05071c5951ab697ea49ea1e503a690f04cb0a6abfc54967325c5a4036356793cfbb64ba64fb141
+  languageName: node
+  linkType: hard
+
 "@types/normalize-package-data@npm:^2.4.0":
   version: 2.4.1
   resolution: "@types/normalize-package-data@npm:2.4.1"
@@ -13395,6 +13404,7 @@ turbo@latest:
   dependencies:
     "@hookform/resolvers": ^3.1.0
     "@types/node": ^17.0.12
+    "@types/nodemailer": ^6.4.7
     "@types/react": ^18.0.22
     "@types/react-dom": ^18.0.7
     eslint-config-custom: "*"

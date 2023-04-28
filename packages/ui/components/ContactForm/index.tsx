@@ -9,10 +9,12 @@ import { FormProvider, useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { getBaseUrl } from 'web/src/utils/getBaseUrl'
 import { routes } from 'web/src/lib/routes'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import InputField from '../FormFields/InputField'
 import TextareaField from '../FormFields/TextareaField'
 import SnackBar from '../SnackBar'
+import FileUploadField from '../FormFields/FileUploadField'
+import { getBase64 } from '../../utils/getBase64'
 
 export const ContactForm = () => {
     const { ref, inView } = useAnimations()
@@ -26,6 +28,7 @@ export const ContactForm = () => {
         formState: { errors, isSubmitting },
         register,
         reset,
+        watch,
         handleSubmit,
     } = methods
 
@@ -36,15 +39,20 @@ export const ContactForm = () => {
         })
     }
 
-    const onSubmit = async (data: any) => {
+    const onSubmit = async (data: ContactFormSchema) => {
         setFormMessage(undefined)
+
+        const attachment = data.attachment as FileList
+        data.attachment =
+            attachment && attachment.length
+                ? {
+                      fileName: attachment[0].name,
+                      data: await getBase64(attachment[0]),
+                  }
+                : undefined
 
         await fetch(`${getBaseUrl()}/${routes.contact}/request`, {
             method: 'POST',
-            headers: {
-                Accept: 'application/json',
-                'Content-Type': 'application/json',
-            },
             body: JSON.stringify(data),
         })
             .then(response => response.json())
@@ -126,6 +134,9 @@ export const ContactForm = () => {
                                     </div>
                                     <div className="sm:col-span-2">
                                         <TextareaField {...register('message')} label="Bericht" />
+                                    </div>
+                                    <div className="col-span-full">
+                                        <FileUploadField {...register('attachment')} label="Bijlage" />
                                     </div>
                                 </div>
                                 <div className="mt-8 flex justify-end">

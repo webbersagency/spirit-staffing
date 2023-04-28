@@ -1,8 +1,8 @@
 import React, { ReactNode } from 'react'
 
-export type TextAreaFieldProps = {
+export type FileUploadFieldProps = {
     name: string
     id?: string
     label?: string
     required?: boolean
-} & Partial<React.TextareaHTMLAttributes<HTMLTextAreaElement>>
+} & Partial<React.InputHTMLAttributes<HTMLInputElement>>

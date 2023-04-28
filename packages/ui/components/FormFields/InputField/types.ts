@@ -9,5 +9,4 @@ export type InputFieldProps = {
     error?: string | FieldError | Merge<FieldError, FieldErrorsImpl<any>>
     errors?: FieldErrors
     required?: boolean
-    button?: ReactNode
 } & Partial<React.InputHTMLAttributes<HTMLInputElement>>

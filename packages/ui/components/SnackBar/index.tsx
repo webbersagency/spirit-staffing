@@ -5,7 +5,7 @@ import { CheckIcon, XMarkIcon } from '@heroicons/react/24/solid'
 const SnackBar = ({
     isSuccess,
     message,
-    autoHide, // = 3000,
+    autoHide = 3000,
 }: {
     isSuccess: boolean
     message: string
@@ -17,7 +17,7 @@ const SnackBar = ({
         let submittedTimeout: NodeJS.Timeout
 
         // Add a micro delay on the shown property, to make sure the fadeIn animation works
-        submittedTimeout = setTimeout(() => setIsShown(true), 1)
+        submittedTimeout = setTimeout(() => setIsShown(true), 100)
 
         if (autoHide) {
             submittedTimeout = setTimeout(() => setIsShown(false), autoHide)
@@ -42,7 +42,7 @@ const SnackBar = ({
             )}
         >
             {isSuccess ? <CheckIcon className="w-6 h-6" /> : <XMarkIcon className="w-6 h-6" />}
-            <p className="ml-3.5 font-medium text-inherit pt-0.5">{message}</p>
+            <p className="ml-3.5 font-medium text-inherit pt-0.5 leading-tight">{message}</p>
         </div>
     )
 }
