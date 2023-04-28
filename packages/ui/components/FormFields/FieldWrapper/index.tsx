@@ -16,7 +16,7 @@ const FieldWrapper = ({ name, label, children }: FieldWrapperProps) => {
                 </label>
             )}
             {children}
-            {error && <p className="mt-2 text-white">{error?.message}</p>}
+            {error && <p className="mt-2 text-sm text-red-600">{error?.message}</p>}
         </>
     )
 }

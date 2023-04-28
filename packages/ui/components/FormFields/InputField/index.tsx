@@ -21,7 +21,7 @@ const InputField = forwardRef<HTMLInputElement, InputFieldProps>(
                     className={classNames(
                         'block w-full rounded-md h-11 border-0 py-1.5 text-brand-dark shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-brand-dark/70 focus:ring-2 focus:ring-inset focus:ring-green800 px-3',
                         {
-                            'border-red-500 placeholder-red-700 focus:border-red-500 focus:ring-red-500': error,
+                            'ring-red-500 placeholder-red-700 focus:border-red-500 focus:ring-red-500': error,
                         },
                         className
                     )}

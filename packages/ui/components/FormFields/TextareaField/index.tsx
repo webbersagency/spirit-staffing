@@ -22,7 +22,7 @@ const InputField = forwardRef<HTMLTextAreaElement, TextAreaFieldProps>(
                     className={classNames(
                         'block w-full rounded-md border-0 py-2.5 text-brand-dark shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-brand-dark/70 focus:ring-2 focus:ring-inset focus:ring-green800 px-3 resize-none',
                         {
-                            'border-red-500 placeholder-red-700 focus:border-red-500 focus:ring-red-500': error,
+                            'ring-red-500 placeholder-red-700 focus:border-red-500 focus:ring-red-500': error,
                         },
                         className
                     )}
