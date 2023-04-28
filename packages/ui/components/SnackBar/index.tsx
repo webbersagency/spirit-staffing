@@ -5,7 +5,7 @@ import { CheckIcon, XMarkIcon } from '@heroicons/react/24/solid'
 const SnackBar = ({
     isSuccess,
     message,
-    autoHide = 3000,
+    autoHide, // = 3000,
 }: {
     isSuccess: boolean
     message: string
@@ -37,12 +37,12 @@ const SnackBar = ({
                 },
                 {
                     'bg-red-600 text-white': !isSuccess,
-                    'bg-green-400 text-white': isSuccess,
+                    'bg-green800 text-white': isSuccess,
                 }
             )}
         >
             {isSuccess ? <CheckIcon className="w-6 h-6" /> : <XMarkIcon className="w-6 h-6" />}
-            <p className={'ml-3.5 font-medium'}>{message}</p>
+            <p className="ml-3.5 font-medium text-inherit pt-0.5">{message}</p>
         </div>
     )
 }
