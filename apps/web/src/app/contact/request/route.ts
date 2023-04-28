@@ -1,13 +1,10 @@
 import { type NextRequest, NextResponse } from 'next/server'
 import { message, sendMail, table } from '../../../utils/email'
 import { ContactFormSchema, contactFormSchema } from 'ui/components/ContactForm/schema'
-import * as fs from 'fs'
 import { EmailAttachment } from '../../../utils/email/sendMail'
 
 export async function POST(req: NextRequest) {
     const { attachment, ...data }: ContactFormSchema = await req.json()
-
-    console.log(data)
 
     try {
         await contactFormSchema.validate(data)
