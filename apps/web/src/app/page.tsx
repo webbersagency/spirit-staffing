@@ -72,9 +72,9 @@ export default function Page() {
                     <Image
                         src={'/images/spirit-staffing-visual2.jpg'}
                         alt="Professionals die het verschil maken"
-                        width={1920}
+                        width={896}
                         height={1280}
-                        sizes="(max-width: 768px) 100vw, 50vw"
+                        sizes="(max-width: 768px) 100vw, 384px"
                     />
                 }
                 title="Professionals die het verschil maken"
