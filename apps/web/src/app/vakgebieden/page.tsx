@@ -85,6 +85,9 @@ export default function Page() {
                         icon: <ComputerDesktopIcon />,
                     },
                 ]}
+                animationOptions={{
+                    rootMargin: '0%',
+                }}
             />
             <CallToAction
                 title="Wil jij ook impact maken, of wil jij weten wat SpiritStaffing voor jou kan betekenen?"

@@ -4,8 +4,8 @@ import classNames from 'classnames'
 import { slideInBottom, slideInTop, stagger } from 'web/src/utils/animations/'
 import useAnimations from 'web/src/utils/animations/useAnimations'
 
-export const FeatureGrid = ({ title, description, features }: FeatureGridProps) => {
-    const { ref, inView } = useAnimations()
+export const FeatureGrid = ({ title, description, features, animationOptions }: FeatureGridProps) => {
+    const { ref, inView } = useAnimations(animationOptions)
     const staggerDelay = 100
 
     return (
