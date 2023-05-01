@@ -21,7 +21,7 @@ export const Hero = ({ title, description, link, coverImage }: HeroProps) => {
                         'container flex items-center',
                         [routes.home, routes.services].includes(pathName)
                             ? 'h-full xl:min-h-[98vh]'
-                            : 'h-full sm:h-[70vh]'
+                            : 'h-full sm:min-h-[70vh]'
                     )}
                 >
                     <div className="relative z-10 pt-14 lg:w-full lg:max-w-2xl">
