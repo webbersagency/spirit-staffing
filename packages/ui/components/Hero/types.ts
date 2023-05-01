@@ -2,7 +2,9 @@ import { ReactNode } from 'react'
 
 type links = {
     title: string
-    href: string
+    href?: string
+    onClick?: () => void
+    scroll?: boolean
 }
 
 export type HeroProps = {

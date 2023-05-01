@@ -11,7 +11,7 @@ export default function Page() {
             <Hero
                 coverImage={
                     <Image
-                        src={'/images/spirit-staffing-visual1.jpg'}
+                        src={'/images/spirit-staffing-visual9.jpg'}
                         alt="cover image"
                         width={900}
                         height={1200}
@@ -27,11 +27,11 @@ export default function Page() {
                 link={[
                     {
                         title: 'Open sollicitatie',
-                        href: `${routes.contact}/#contactform`,
+                        href: `${routes.contact}/#contactForm`,
                     },
                     {
                         title: 'Bel mij terug',
-                        href: `${routes.contact}/#contactform`,
+                        href: `${routes.contact}/#contactForm`,
                     },
                 ]}
             />

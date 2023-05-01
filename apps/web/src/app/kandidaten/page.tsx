@@ -14,7 +14,7 @@ export default function Page() {
             <Hero
                 coverImage={
                     <Image
-                        src={'/images/spirit-staffing-visual7.jpg'}
+                        src={'/images/spirit-staffing-visual8.jpg'}
                         alt="Spirit Staffing kandidaten"
                         width={1920}
                         height={1280}
@@ -37,10 +37,12 @@ export default function Page() {
                     {
                         title: 'SpiritStart',
                         href: `${routes.candidates}/#spiritStart`,
+                        scroll: false,
                     },
                     {
                         title: 'SpiritPro',
                         href: `${routes.candidates}/#spiritPro`,
+                        scroll: false,
                     },
                 ]}
             />
@@ -75,8 +77,8 @@ export default function Page() {
             <StatsImage
                 image={
                     <Image
-                        src={'/images/spirit-staffing-visual6.jpg'}
-                        alt="Jouw carrière begeleid van Start"
+                        src={'/images/spirit-staffing-visual2.jpg'}
+                        alt="Jouw carrière begeleid vanaf de Start"
                         width={1920}
                         height={1280}
                         sizes="(max-width: 768px) 100vw, 50vw"
@@ -86,7 +88,7 @@ export default function Page() {
                 title="Jouw carrière begeleid van Start"
                 subtitle="SpiritStart"
                 description={
-                    'Wij begeleiden jou bij de start van jouw carrière. Via een traineeship bij verschillende opdrachtgevers. \n' +
+                    'Wij begeleiden jou bij de start van jouw carrière. Na een MBO niveau 4 opleiding, via een traineeship bij verschillende opdrachtgevers. \n' +
                     '\n' +
                     'We maken samen een meerjarig plan, om door te ontwikkelen naar de professional die jij wilt worden. \n' +
                     '\n' +

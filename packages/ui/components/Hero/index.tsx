@@ -30,9 +30,9 @@ export const Hero = ({ title, description, link, coverImage }: HeroProps) => {
                                 <h1 className="text-4xl font-medium tracking-tight text-white sm:text-6xl">{title}</h1>
                                 <p className="mt-6 whitespace-pre-wrap text-white">{description}</p>
                                 <div className="mt-10 flex items-center gap-x-6">
-                                    {link?.map((item, index) => (
-                                        <Button as={Link} key={index} href={item.href} variant="primary">
-                                            {item.title}
+                                    {link?.map(({ title, ...item }, index) => (
+                                        <Button as={Link} key={index} variant="primary" {...item}>
+                                            {title}
                                         </Button>
                                     ))}
                                 </div>

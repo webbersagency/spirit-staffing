@@ -70,7 +70,7 @@ export const ContactForm = () => {
 
     return (
         <>
-            <div ref={ref} className="relative isolate bg-white">
+            <div id="contactForm" ref={ref} className="relative isolate bg-white">
                 <div className="mx-auto grid grid-cols-1 xl:container lg:grid-cols-2">
                     <div className="bg-green200 relative lg:static">
                         <div className="container xl:py-0">

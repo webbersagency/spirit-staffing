@@ -13,7 +13,7 @@ export default function Page() {
             <Hero
                 coverImage={
                     <Image
-                        src={'/images/spirit-staffing-visual5.jpg'}
+                        src={'/images/spirit-staffing-visual3.jpg'}
                         alt="SpiritStaffing"
                         priority
                         loading={'eager'}
