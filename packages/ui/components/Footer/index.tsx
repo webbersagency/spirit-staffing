@@ -1,31 +1,23 @@
+'use client'
+
 import Link from 'next/link'
-import { SpiritStaffingLogoBlack } from '../../static/SpiritStaffingLogoFullBlack'
+import { SpiritStaffingLogoGreen } from '../../static/SpiritStaffingLogoFullGreen'
+import classNames from 'classnames'
+import { slideInBottom } from 'web/src/utils/animations/'
+import useAnimations from 'web/src/utils/animations/useAnimations'
 
 const navigation = {
     main: [
-        { name: 'Over', href: '/over' },
-        { name: 'Dienstverlening', href: '/dienstverlening' },
+        { name: 'Opdrachtgevers', href: '/opdrachtgevers' },
         { name: 'Vakgebieden', href: '/vakgebieden' },
         { name: 'Kandidaten', href: '/kandidaten' },
+        { name: 'Over SpiritStaffing', href: '/over' },
         { name: 'Contact', href: '/contact' },
     ],
     social: [
         {
-            name: 'Facebook',
-            href: '#',
-            icon: (props: any) => (
-                <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
-                    <path
-                        fillRule="evenodd"
-                        d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
-                        clipRule="evenodd"
-                    />
-                </svg>
-            ),
-        },
-        {
             name: 'Instagram',
-            href: '#',
+            href: 'https://www.instagram.com/spiritstaffing/',
             icon: (props: any) => (
                 <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
                     <path
@@ -37,17 +29,8 @@ const navigation = {
             ),
         },
         {
-            name: 'Twitter',
-            href: '#',
-            icon: (props: any) => (
-                <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
-                    <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
-                </svg>
-            ),
-        },
-        {
             name: 'Mail',
-            href: '#',
+            href: 'mailto:info@spiritstaffing.nl',
             icon: (props: any) => (
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -63,7 +46,7 @@ const navigation = {
         },
         {
             name: 'LinkedIn',
-            href: '#',
+            href: 'https://www.linkedin.com/company/spiritstaffing',
             icon: (props: any) => (
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -80,41 +63,45 @@ const navigation = {
 }
 
 export const Footer = () => {
+    const { ref, inView } = useAnimations()
+
     return (
-        <footer className="bg-white" aria-labelledby="footer-heading">
+        <footer ref={ref} className="container bg-white py-6 pt-8 lg:pt-28" aria-labelledby="footer-heading">
             <h2 id="footer-heading" className="sr-only">
                 Footer
             </h2>
-            <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-10">
-                <div className="space-y-12 xl:grid xl:grid-cols-4 xl:gap-8">
+            <div>
+                <div className={classNames('space-y-12 xl:grid xl:grid-cols-4 xl:gap-8', slideInBottom(inView))}>
                     <div className="col-span-2">
                         <Link href="/" className="-m-1.5 p-1.5">
                             <span className="sr-only">Spirit Staffing</span>
-                            <SpiritStaffingLogoBlack className="w-[200px] md:w-[250px]" />
+                            <SpiritStaffingLogoGreen className="w-[200px] md:w-[220px]" />
                         </Link>
-                        <p className="mb-8 text-sm leading-6 md:w-3/4">*Placeholder tekst*</p>
+                        <p className="text-md mb-8 leading-6 md:w-3/4 text-green800">Samen is alles mogelijk</p>
                         <div className="flex space-x-6">
                             {navigation.social.map(item => (
-                                <a key={item.name} href={item.href} className="hover:text-green800">
+                                <Link
+                                    key={item.name}
+                                    href={item.href}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="hover:text-green800"
+                                >
                                     <span className="sr-only">{item.name}</span>
                                     <item.icon className="h-6 w-6" aria-hidden="true" />
-                                </a>
+                                </Link>
                             ))}
                         </div>
                     </div>
                     <div className="space-y-8">
-                        <h3 className="text-green800 text-xl font-semibold leading-6">Bezoekadres</h3>
+                        <h3 className="text-green800 text-xl font-semibold leading-6">Contact</h3>
                         <div>
-                            <p>*Placeholder plaats*</p>
-                            <p>*Placeholder adres*</p>
-                        </div>
-                        <div>
-                            <p>*Placeholder plaats*</p>
-                            <p>*Placeholder adres*</p>
-                        </div>
-                        <div>
-                            <p>*Placeholder plaats*</p>
-                            <p>*Placeholder adres*</p>
+                            <p className="text-green800">
+                                M <a href="mailto:info@spiritstaffing.nl">info@spiritstaffing.nl</a>
+                            </p>
+                            <p className="text-green800">
+                                T <a href="tel:+31 6 15543235">+31 6 15543235</a>
+                            </p>
                         </div>
                     </div>
                     <div>
@@ -123,17 +110,48 @@ export const Footer = () => {
                             <ul role="list" className="mt-6 space-y-4">
                                 {navigation.main.map(item => (
                                     <li key={item.name}>
-                                        <a href={item.href} className="hover:text-green800 text-sm leading-6">
+                                        <Link href={item.href} className="hover:text-green800 text-sm leading-6">
                                             {item.name}
-                                        </a>
+                                        </Link>
                                     </li>
                                 ))}
                             </ul>
                         </div>
                     </div>
                 </div>
-                <div className="mt-16 border-t border-gray-900/10 pt-8 sm:mt-20 lg:mt-24">
-                    <p className="text-xs leading-5">&copy; 2023 Spirit Staffing, Inc. All rights reserved.</p>
+                <div className="mt-16 border-t border-gray-900/10 pt-8 sm:mt-20 lg:mt-24 md:flex">
+                    <p className="text-sm md:text-xs leading-5">
+                        &copy; 2023 Spirit Staffing, Inc. All rights reserved.
+                    </p>
+                    <ul className="md:flex text-sm md:text-xs ml-auto space-y-2 mt-4 md:space-x-4 md:mt-0 md:space-y-0">
+                        <li>
+                            <Link
+                                href="/files/Privacy_statement-SpiritStaffing-20230501.pdf"
+                                target="_blank"
+                                className="hover:underline"
+                            >
+                                Privacy Statement
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                href="/files/Disclaimer-SpiritStaffing-20230501.pdf"
+                                target="_blank"
+                                className="hover:underline"
+                            >
+                                Disclaimer
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                href="/files/Anti_discriminatie_statement-SpiritStaffing-20230501.pdf"
+                                target="_blank"
+                                className="hover:underline"
+                            >
+                                Anti Discriminatie Statement
+                            </Link>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </footer>

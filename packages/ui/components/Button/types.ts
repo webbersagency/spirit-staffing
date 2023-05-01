@@ -9,6 +9,7 @@ type ButtonComponentProps<T extends ButtonElementType> = ComponentPropsWithoutRe
     loading?: boolean
     variant?: 'primary' | 'outline' | 'cta'
     children: ReactNode
+    small?: boolean
 }
 
 export type ButtonProps<T extends ButtonElementType> = ButtonComponentProps<T> &

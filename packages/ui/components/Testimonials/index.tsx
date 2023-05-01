@@ -1,18 +1,41 @@
+'use client'
+import useAnimations from 'web/src/utils/animations/useAnimations'
+import classNames from 'classnames'
+import { fadeIn, slideInTop } from 'web/src/utils/animations/'
+import React from 'react'
+import Image from 'next/image'
+
 export const Testimonials = () => {
+    const { ref, inView } = useAnimations()
+
     return (
-        <div className="bg-white pb-16 pt-24 sm:pb-24 sm:pt-32 xl:pb-32">
-            <div className="bg-green200 pb-20 sm:pb-24 xl:pb-0">
-                <div className="mx-auto flex max-w-7xl flex-col items-center gap-x-8 gap-y-10 px-6 sm:gap-y-8 lg:px-8 xl:flex-row xl:items-stretch">
-                    <div className="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
-                        <div className="relative aspect-[2/1] h-full md:-mx-8 xl:mx-0 xl:aspect-auto">
-                            <img
+        <div ref={ref} className="mt-10 bg-white md:mt-0">
+            <div className="bg-green200 pb-20 sm:pb-14 xl:pb-0">
+                <div className="container mx-auto flex flex-col items-center gap-x-8 gap-y-10 py-0 sm:gap-y-8 xl:flex-row xl:items-stretch">
+                    <div className="-mt-8 w-full xl:-mb-8 xl:w-96 xl:flex-none ">
+                        <div
+                            className={classNames(
+                                'relative aspect-[2/1] h-full md:-mx-8 xl:mx-0 xl:aspect-auto',
+                                fadeIn(inView)
+                            )}
+                        >
+                            <Image
                                 className="absolute inset-0 h-full w-full rounded-2xl object-cover shadow-2xl"
-                                src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2102&q=80"
-                                alt=""
+                                src={'/images/spirit-staffing-visual6_portrait.jpg'}
+                                alt="cover image"
+                                width={900}
+                                height={1200}
+                                priority
+                                loading={'eager'}
                             />
                         </div>
                     </div>
-                    <div className="w-full max-w-2xl xl:max-w-none xl:flex-auto xl:px-16 xl:py-24">
+                    <div
+                        className={classNames(
+                            'w-full xl:max-w-none xl:flex-auto xl:px-16 xl:py-24',
+                            slideInTop(inView)
+                        )}
+                    >
                         <figure className="relative isolate pt-6 sm:pt-12">
                             <svg
                                 viewBox="0 0 162 128"
@@ -26,22 +49,18 @@ export const Testimonials = () => {
                                 />
                                 <use href="#b56e9dab-6ccb-4d32-ad02-6b4bb5d9bbeb" x={86} />
                             </svg>
-                            <h2 className="mb-4 text-2xl">Voor opdrachtgevers die impact willen maken</h2>
+                            <h2 className="mb-4 text-3xl font-medium lg:text-5xl">
+                                Voor opdrachtgevers die impact willen maken
+                            </h2>
                             <blockquote className="text-xl font-semibold leading-8 text-white sm:text-2xl sm:leading-9">
                                 <p>
-                                    Wij bouwen samen aan duurzame relaties met onze klanten. Dat doen we door eerst goed
-                                    te luisteren en daarna mensen te verbinden die passen bij de organisatie en de
-                                    opdracht. Onze professionals werken met de juiste Spirit, om jullie verder te
-                                    helpen. Wij schakelen snel om huidige teams te versterken en nieuwe inzichten te
-                                    bieden, of gewoon om tijdelijk de inhuur van vakmensen te verzorgen.
-                                    <br /> <br />
-                                    Wij zijn SpiritStaffing, en onze mensen maken het verschil!
+                                    Samen bouwen we aan duurzame relaties met onze opdrachtgevers. <br /> <br /> Dat
+                                    doen we door eerst goed te luisteren en daarna mensen te verbinden die passen bij de
+                                    organisatie en de opdracht. <br /> <br /> Onze professionals werken met de juiste
+                                    Spirit. Ze schakelen snel. Versterken teams. En bieden altijd nieuwe inzichten.
+                                    <br /> <br /> Wij zijn SpiritStaffing, en onze mensen maken het verschil!
                                 </p>
                             </blockquote>
-                            <figcaption className="mt-8 text-base">
-                                <div className="font-semibold ">Kevin Jochems</div>
-                                <div className="mt-1 ">Partner SpiritStaffing</div>
-                            </figcaption>
                         </figure>
                     </div>
                 </div>

@@ -1,0 +1,22 @@
+@font-face {
+    font-family: "recoleta";
+    font-style: normal;
+    font-display: swap;
+    font-weight: 500;
+    src: url('../../../../apps/web/src/app/fonts/RecoletaMedium.woff2') format('woff2'), url('../../../../apps/web/src/app/fonts/RecoletaMedium.woff') format('woff');
+}
+
+@font-face {
+    font-family: "recoleta";
+    font-style: normal;
+    font-display: swap;
+    font-weight: 700;
+    src: url('../../../../apps/web/src/app/fonts/RecoletaBold.woff2') format('woff2'), url('../../../../apps/web/src/app/fonts/RecoletaBold.woff') format('woff');
+}
+
+
+:root {
+    --font-recoleta: "recoleta";
+}
+
+

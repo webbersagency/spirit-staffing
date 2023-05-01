@@ -1,21 +1,37 @@
 import { Hero } from 'ui/components/Hero'
 import { ContactForm } from 'ui/components/ContactForm'
 import { Metadata } from 'next'
+import Image from 'next/image'
+import React from 'react'
+import { routes } from '../../lib/routes'
 
 export default function Page() {
     return (
         <>
             <Hero
+                coverImage={
+                    <Image
+                        src={'/images/spirit-staffing-visual9.jpg'}
+                        alt="cover image"
+                        width={900}
+                        height={1200}
+                        priority
+                        loading={'eager'}
+                    />
+                }
                 title="Contact opnemen"
-                description="Wil je meer weten over SpiritStaffing, onze vacatures, opdrachtgevers, of onze
-                             diensten? Laten we een afspraak maken, om gewoon een keer kennis te maken. We
-                             komen graag met je in contact. Als je graag wilt solliciteren, maar je ziet nog
-                             geen passende vacature, stuur ons dan een open sollicitatie. We kijken dan samen
-                             naar de mogelijkheden die bij jou passen."
+                description={
+                    'Wil je meer weten over SpiritStaffing, onze vacatures of opdrachtgevers? Laten we een afspraak maken, om gewoon een keer kennis te maken. We komen graag met je in contact. \n' +
+                    '\n'
+                }
                 link={[
                     {
                         title: 'Open sollicitatie',
-                        href: '/contact',
+                        href: `${routes.contact}/#contactForm`,
+                    },
+                    {
+                        title: 'Bel mij terug',
+                        href: `${routes.contact}/#contactForm`,
                     },
                 ]}
             />
@@ -25,6 +41,6 @@ export default function Page() {
 }
 
 export const metadata: Metadata = {
-    title: 'Contact',
-    description: 'Contact',
+    title: 'Contact | SpiritStaffing',
+    description: 'Contact | SpiritStaffing',
 }
