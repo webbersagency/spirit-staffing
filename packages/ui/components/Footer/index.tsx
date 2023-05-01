@@ -119,8 +119,39 @@ export const Footer = () => {
                         </div>
                     </div>
                 </div>
-                <div className="mt-16 border-t border-gray-900/10 pt-8 sm:mt-20 lg:mt-24">
-                    <p className="text-xs leading-5">&copy; 2023 Spirit Staffing, Inc. All rights reserved.</p>
+                <div className="mt-16 border-t border-gray-900/10 pt-8 sm:mt-20 lg:mt-24 md:flex">
+                    <p className="text-sm md:text-xs leading-5">
+                        &copy; 2023 Spirit Staffing, Inc. All rights reserved.
+                    </p>
+                    <ul className="md:flex text-sm md:text-xs ml-auto space-y-2 mt-4 md:space-x-4 md:mt-0 md:space-y-0">
+                        <li>
+                            <Link
+                                href="/files/Privacy_statement-SpiritStaffing-20230501.pdf"
+                                target="_blank"
+                                className="hover:underline"
+                            >
+                                Privacy Statement
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                href="/files/Disclaimer-SpiritStaffing-20230501.pdf"
+                                target="_blank"
+                                className="hover:underline"
+                            >
+                                Disclaimer
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                href="/files/Anti_discriminatie_statement-SpiritStaffing-20230501.pdf"
+                                target="_blank"
+                                className="hover:underline"
+                            >
+                                Anti Discriminatie Statement
+                            </Link>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </footer>
