@@ -8,9 +8,10 @@ import { usePathname } from 'next/navigation'
 import useAnimations from 'web/src/utils/animations/useAnimations'
 import { fadeIn, slideInBottom } from 'web/src/utils/animations/'
 import { routes } from 'web/src/lib/routes'
+import { useEffect } from 'react'
 
 export const Hero = ({ title, description, link, coverImage }: HeroProps) => {
-    const { ref, inView } = useAnimations()
+    const { ref, inView } = useAnimations({ rootMargin: '0%' })
     const pathName = usePathname()
 
     return (
