@@ -24,7 +24,7 @@ export default function Page() {
                 }
                 title="Welkom bij SpiritStaffing"
                 description={
-                    'Veel werkprocessen digitaliseren digitaliseren. Fantastisch natuurlijk, met een wereld vol kansen. Maar het vraagt ook om aanpassingsvermogen.\n' +
+                    'Veel werkprocessen digitaliseren. Fantastisch natuurlijk, met een wereld vol kansen. Maar het vraagt ook om aanpassingsvermogen.\n' +
                     '\n' +
                     'Onze missie is dan ook de beste IT professionals te vinden om de digitalisering van Nederland te accelereren.'
                 }
