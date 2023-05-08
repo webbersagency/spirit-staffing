@@ -59,6 +59,7 @@ export const metadata = {
         width: 'device-width',
         initialScale: 1,
     },
+    ...(process.env.NEXT_PUBLIC_ENV === 'production' ? {} : { robots: { index: false, follow: false } }),
     icons: {
         icon: [
             { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },

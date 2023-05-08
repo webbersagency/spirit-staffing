@@ -47,5 +47,8 @@
     "tsconfig": "1.1.0",
     "tsconfig-paths-webpack-plugin": "^4.0.1",
     "webpack": "^5.81.0"
+  },
+  "dependencies": {
+    "@tailwindcss/forms": "^0.5.3"
   }
 }

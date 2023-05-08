@@ -130,7 +130,7 @@ export const ContactForm = () => {
                                         <InputField {...register('email')} type="email" label="E-mail" />
                                     </div>
                                     <div className="sm:col-span-2">
-                                        <InputField {...register('phone')} type="phone" label="Telefoonnummer" />
+                                        <InputField {...register('phone')} type="tel" label="Telefoonnummer" />
                                     </div>
                                     <div className="sm:col-span-2">
                                         <TextareaField {...register('message')} label="Bericht" />
