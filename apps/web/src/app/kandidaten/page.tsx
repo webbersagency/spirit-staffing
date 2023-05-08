@@ -85,7 +85,7 @@ export default function Page() {
                     />
                 }
                 id="spiritStart"
-                title="Jouw carrière begeleid van Start"
+                title="Jouw carrière begeleid vanaf de Start"
                 subtitle="SpiritStart"
                 description={
                     'Wij begeleiden jou bij de start van jouw carrière. Na een MBO niveau 4 opleiding, via een traineeship bij verschillende opdrachtgevers. \n' +
