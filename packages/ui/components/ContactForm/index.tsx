@@ -51,7 +51,7 @@ export const ContactForm = () => {
                   }
                 : undefined
 
-        await fetch(`${getBaseUrl()}/${routes.contact}/request`, {
+        await fetch(`${getBaseUrl()}${routes.contact}/request`, {
             method: 'POST',
             body: JSON.stringify(data),
         })
