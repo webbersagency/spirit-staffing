@@ -88,7 +88,7 @@ export default function Page() {
                 title="Jouw carrière begeleid vanaf de Start"
                 subtitle="SpiritStart"
                 description={
-                    'Wij begeleiden jou bij de start van jouw carrière. Na een MBO niveau 4 opleiding, via een traineeship bij verschillende opdrachtgevers. \n' +
+                    'Wij begeleiden jou bij de start van jouw carrière. Na een MBO niveau 4 of associate degree (Ad) opleiding, via een doorstroomprogramma bij verschillende opdrachtgevers. \n' +
                     '\n' +
                     'We maken samen een meerjarig plan, om door te ontwikkelen naar de professional die jij wilt worden. \n' +
                     '\n' +
