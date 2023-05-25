@@ -29,7 +29,7 @@ export default function Page() {
                     '\n' +
                     'Via SpiritStart creëren we een begeleid ontwikkelplan, waarbij naast uitdagende opdrachten ook een HBO-niveau opleidingstraject opgezet wordt. Dus, direct geld verdienen en doorstuderen tegelijk! \n' +
                     '\n' +
-                    'Binnen SpiritPro bouwen we door op jouw kennis. We traininen jouw hard- en softskills, om door te ontwikkelen naar de professional die jij wilt zijn. Dus, direct jouw impact vergroten via verschillende opdrachtgevers!\n' +
+                    'Binnen SpiritPro bouwen we door op jouw kennis. We trainen jouw hard- en softskills, om door te ontwikkelen naar de professional die jij wilt zijn. Dus, direct jouw impact vergroten via verschillende opdrachtgevers!\n' +
                     '\n' +
                     'Dat maakt werken bij SpiritStaffing zo geweldig. '
                 }
