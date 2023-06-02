@@ -82,12 +82,13 @@ export const ContactForm = () => {
                             ></div>
                             <div className={classNames(slideInLeft(inView))}>
                                 <h2 className="text-3xl font-medium tracking-tight sm:text-5xl">
-                                    Stuur ons een bericht{' '}
+                                    Stuur ons een bericht
                                 </h2>
-                                <p className="mt-6 leading-6">
-                                    We komen graag met je in contact. Als je graag wilt solliciteren, maar je ziet nog
-                                    geen passende vacature, stuur ons dan een open sollicitatie. We kijken dan samen
-                                    naar de mogelijkheden die bij jou passen.
+                                <p className="mt-6 max-w-xl leading-6">
+                                    We komen graag met je in contact. Meld je eenvoudig aan en we kijken samen naar de
+                                    mogelijkheden die bij jou passen. Wil je meer weten over SpiritStaffing, onze
+                                    vacatures, opdrachtgevers of heb je interesse in een van onze traineeships? Laat dan
+                                    jouw gegevens achter en we nemen contact met je op.
                                 </p>
                                 <dl className="text-dark mt-10 space-y-4 text-base leading-7">
                                     <div className="flex gap-x-4">
@@ -136,7 +137,10 @@ export const ContactForm = () => {
                                         <TextareaField {...register('message')} label="Bericht" />
                                     </div>
                                     <div className="col-span-full">
-                                        <FileUploadField {...register('attachment')} label="Bijlage" />
+                                        <FileUploadField
+                                            {...register('attachment')}
+                                            label="Upload hier jouw CV en motivatiebrief (optioneel)"
+                                        />
                                     </div>
                                 </div>
                                 <div className="mt-8 flex justify-end">

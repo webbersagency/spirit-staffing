@@ -25,13 +25,9 @@ export default function Page() {
                 }
                 title="Kandidaten"
                 description={
-                    'Bij SpiritStaffing staat de mens echt centraal. Wij geloven in talent, constante ontwikkeling en investeren daarom enorm in onze professionals. \n' +
+                    'SpiritStaffing biedt verschillende IT Traineeships, zowel voor SpiritStart als SpiritPro: Software Development, IT Specialist, Data Management en Cybersecurity. Onze IT Traineeships zijn toegankelijk voor starters op elk niveau. \n' +
                     '\n' +
-                    'Via SpiritStart creëren we een begeleid ontwikkelplan, waarbij naast uitdagende opdrachten ook een HBO-niveau opleidingstraject opgezet wordt. Dus, direct geld verdienen en doorstuderen tegelijk! \n' +
-                    '\n' +
-                    'Binnen SpiritPro bouwen we door op jouw kennis. We trainen jouw hard- en softskills, om door te ontwikkelen naar de professional die jij wilt zijn. Dus, direct jouw impact vergroten via verschillende opdrachtgevers!\n' +
-                    '\n' +
-                    'Dat maakt werken bij SpiritStaffing zo geweldig. '
+                    'We geloven in talent en investeren constant in onze professionals. We bouwen door op jouw kennis, waarbij we focussen op specifieke hard en soft skills. Onze talenten worden geselecteerd op zelfstandigheid, doorzettingsvermogen en de juiste Spirit. Daarom maken we samen elke dag het verschil! '
                 }
                 link={[
                     {
@@ -48,13 +44,7 @@ export default function Page() {
             />
             <FeatureColumns
                 title="Jouw ontwikkeling staat centraal"
-                description={
-                    'Als je niet meer ontwikkelt, moet je wat anders gaan doen. \n' +
-                    '\n' +
-                    'Doorontwikkelen in een uitdagende werk- en leeromgeving is voor ons de basis. In een dynamisch proces, gedurende de complete periode.\n' +
-                    '\n' +
-                    'Daar maken onze gedreven professionals het verschil.'
-                }
+                description="Continu ontwikkelen is essentieel, anders wordt het tijd voor iets nieuws. Bij ons is doorontwikkeling in een uitdagende werk- en leeromgeving de basis, gedurende het hele proces. We streven ernaar om elke dag de beste versie van onszelf te zijn. Daarin maken onze gedreven professionals het verschil."
                 features={[
                     {
                         name: 'Uitdagende opdrachten',
@@ -87,19 +77,7 @@ export default function Page() {
                 id="spiritStart"
                 title="Jouw carrière begeleid vanaf de Start"
                 subtitle="SpiritStart"
-                description={
-                    'Wij begeleiden jou bij de start van jouw carrière. Na een MBO niveau 4 opleiding, via een traineeship bij verschillende opdrachtgevers. \n' +
-                    '\n' +
-                    'We maken samen een meerjarig plan, om door te ontwikkelen naar de professional die jij wilt worden. \n' +
-                    '\n' +
-                    'Na het maken van de perfecte match tussen jou en onze opdrachtgevers, gaan we samen een traject in om jouw carrière te boosten! \n' +
-                    '\n' +
-                    'We evalueren, we coachen, en sturen bij indien dat nodig is. \n' +
-                    '\n' +
-                    'Zo zijn we straks samen beter dan ooit in staat de juiste keuzes voor jouw carrière te maken. \n' +
-                    '\n' +
-                    'We bouwen samen aan onze mind-like professionals community. Dit doen we door het verzorgen van fantastisch leerzame community momenten en via gezellige borrels!'
-                }
+                description="SpiritStart biedt een op maat gemaakt ontwikkeltraject voor starters. Instromen kan vanaf verschillende niveaus waarbij de trajecten op maat ontwikkeld worden. Mbo niveau 4, associate degree en hbo afgestudeerde studenten richting IT stromen perfect in. De focus ligt op de ontwikkeling van jouw hard en soft skills. We begeleiden en leiden onze talenten op richting volwaardige IT professionals. Dus, direct geld verdienen en doorstuderen tegelijk. Samen bouwen we aan een like minded community met waardevolle momenten en gezellige borrels. In 18 maanden kickstart je jouw IT carrière!"
                 link={[
                     {
                         title: 'Wij bellen jou graag terug!',
@@ -121,17 +99,7 @@ export default function Page() {
                 id="spiritPro"
                 title="Uitdagende opdrachten om door te groeien als professional"
                 subtitle="SpiritPro"
-                description={
-                    'Bij SpiritStaffing geloven we dat onze professionals het verschil maken. Daarom besteden we veel aandacht aan persoonlijke ontwikkeling. \n' +
-                    '\n' +
-                    'Ook weten we dat organisaties vaak directe uitdagingen hebben en professionals zoeken die snel impact kunnen maken. Daarom is er SpiritPro. \n' +
-                    '\n' +
-                    'Onze SpiritPro professionals zijn specialist op een specifiek onderwerp. Ze zijn scherp, schakelen snel en passen zich direct aan binnen bestaande teams. \n' +
-                    '\n' +
-                    'Via uitdagende projecten bij onze opdrachtgevers maken ze direct impact op de organisatie. Het zijn professionals met de juiste Spirit! \n' +
-                    '\n' +
-                    'Wij zorgen voor interessante specialistische trainingen via onze partners, bouwen samen met jou onze SpiritPro community en laten deze regelmatig bij elkaar komen op gezellige events!'
-                }
+                description="We geloven in de impact van onze professionals en investeren in persoonlijke ontwikkeling. Voor organisaties met directe uitdagingen is er SpiritPro. Onze scherpe en snelle SpiritPro professionals zijn specialisten die direct integreren in bestaande teams. Ze maken impact binnen uitdagende projecten bij onze opdrachtgevers. We bieden interessante specialistische trainingen, bouwen een SpiritPro community op en organiseren regelmatig gezellige events."
                 link={[
                     {
                         title: 'Wij bellen jou graag terug!',

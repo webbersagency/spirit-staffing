@@ -50,14 +50,14 @@ export const Testimonials = () => {
                                 <use href="#b56e9dab-6ccb-4d32-ad02-6b4bb5d9bbeb" x={86} />
                             </svg>
                             <h2 className="mb-4 text-3xl font-medium lg:text-5xl">
-                                Voor opdrachtgevers die impact willen maken
+                                Voor opdrachtgevers die impact maken
                             </h2>
                             <blockquote className="text-xl font-semibold leading-8 text-white sm:text-2xl sm:leading-9">
                                 <p>
-                                    Samen bouwen we aan duurzame relaties met onze opdrachtgevers. <br /> <br /> Dat
-                                    doen we door eerst goed te luisteren en daarna mensen te verbinden die passen bij de
-                                    organisatie en de opdracht. <br /> <br /> Onze professionals werken met de juiste
-                                    Spirit. Ze schakelen snel. Versterken teams. En bieden altijd nieuwe inzichten.
+                                    Samen bouwen we duurzame relaties met opdrachtgevers door goed te luisteren en
+                                    mensen te verbinden die passen bij de organisatie en de opdracht. Onze professionals
+                                    werken met de juiste Spirit, schakelen snel, versterken teams en brengen altijd
+                                    nieuwe inzichten.
                                     <br /> <br /> Wij zijn SpiritStaffing, en onze mensen maken het verschil!
                                 </p>
                             </blockquote>

@@ -26,7 +26,7 @@ export default function Page() {
                 }
                 link={[
                     {
-                        title: 'Open sollicitatie',
+                        title: 'Aanmelden',
                         href: `${routes.contact}/#contactForm`,
                     },
                     {

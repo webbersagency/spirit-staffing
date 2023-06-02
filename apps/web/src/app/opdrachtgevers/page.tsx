@@ -24,11 +24,7 @@ export default function Page() {
                     />
                 }
                 title="Onze dienstverlening"
-                description={
-                    'Onze opdrachtgevers hebben te maken diverse IT vraagstukken. Onze dienstverlening is per definitie maatwerk.\n' +
-                    '\n' +
-                    'Voor ondersteuning van IT professionals, mensen met ervaring, hebben we SpiritPro opgericht. Onze opdrachtgevers realiseren zich ook dat de doorstroom van talent minstens zo belangrijk is. Daarom zijn ze bereid met ons samen te investeren in de ontwikkeling van startende professionals. Met een MBO niveau 4 achtergrond, gedurende een leer- werktraject op HBO-niveau, echt impact creëren. Dat is wat onze professionals doen via SpiritStart!'
-                }
+                description="Onze opdrachtgevers hebben diverse IT-vraagstukken en wij bieden daarom maatwerkoplossingen. Binnen verschillende IT Traineeships ontwikkelen we samen talent om ze perfect door te laten stromen naar onze opdrachtgevers. Onze talenten ontwikkelen zich richting: Software Development, IT Specialist, Data Management en Cybersecurity."
                 link={[
                     {
                         title: 'SpiritStart',
@@ -52,15 +48,7 @@ export default function Page() {
                 }
                 id="spiritStart"
                 title="SpiritStart"
-                description={
-                    'Binnen het SpiritStart wordt er een op maat gemaakt ontwikkeltraject samengesteld voor de startende professional. \n' +
-                    '\n' +
-                    'Een dynamisch proces waarbij de focus ligt op leren via deeltijd studie en het ontwikkelen binnen uitdagende opdrachten bij opdrachtgevers. \n' +
-                    '\n' +
-                    'De professionals worden geselecteerd op zelfstandigheid, doorzettingsvermogen en uiteraard de juiste Spirit! \n' +
-                    '\n' +
-                    'Het zijn talenten die eenvoudig in bestaande teams integreren en direct impact maken richting de toekomst.'
-                }
+                description="SpiritStart biedt startende professionals een op maat gemaakt ontwikkeltraject. In een dynamisch proces brengen we theorie en praktijk bij elkaar. We begeleiden en leiden de talenten op tot volwaardige IT professionals, klaar om direct door te stromen bij onze opdrachtgevers. Geselecteerd op zelfstandigheid, doorzettingsvermogen en de juiste Spirit, integreren deze talenten moeiteloos in bestaande teams, en creëren direct impact voor de toekomst."
                 link={[
                     {
                         title: 'Meer weten? Lets go!',
@@ -81,13 +69,7 @@ export default function Page() {
                 }
                 id="spiritPro"
                 title="SpiritPro"
-                description={
-                    'Onze SpiritPro professionals zijn specialist op een specifiek onderwerp. Ze zijn scherp, schakelen snel en passen zich direct aan binnen bestaande teams. \n' +
-                    '\n' +
-                    'Het zijn gearriveerde professionals die via uitdagende projecten bij onze opdrachtgevers direct impact hebben op de organisatie. \n' +
-                    '\n' +
-                    'Het zijn professionals met de juiste Spirit!'
-                }
+                description="Onze SpiritPro professionals zijn specialisten op een specifiek onderwerp. Scherp, vernieuwend en vinden direct aansluiting bij bestaande teams. Ze zijn ervaren en maken meteen impact op de organisatie via uitdagende projecten bij onze opdrachtgevers. Professionals met de juiste Spirit!"
                 link={[
                     {
                         title: 'Meer weten? Lets go!',
@@ -103,25 +85,25 @@ export default function Page() {
                     {
                         name: 'Invulling voor de flexibele schil',
                         description:
-                            'Voor meer structureel of langdurig extra capaciteit, waarbij de flexibiliteit behouden blijft, voorzien wij onze opdrachtgevers van vakmensen. Wij bieden direct oplossingen voor urgente verzoeken. Dit doen we via detachering.',
+                            'Voor structurele of langdurige extra capaciteit behouden we flexibiliteit door vakmensen te leveren aan onze opdrachtgevers. We bieden snel oplossingen voor urgente verzoeken via detachering.',
                         icon: <ArrowsRightLeftIcon />,
                     },
                     {
                         name: 'Tijdelijk naar vast',
                         description:
-                            'Wij kunnen ons goed voorstellen dat klanten tevreden zijn over onze mensen. Wij bieden dan ook de mogelijkheid om na een flexibele periode een vaste aanstelling voor hen te realiseren. Dit kan na een afgesproken aantal uren gewerkt te hebben.',
+                            'Klanttevredenheid over onze mensen leidt vaak tot vaste aanstellingen na een flexibele periode. Dit kan na het werken van een afgesproken aantal uren.',
                         icon: <DocumentTextIcon />,
                     },
                     {
                         name: 'Tijdelijke inzet op projecten\n',
                         description:
-                            'Voor specifieke projecten, of op piekmomenten, kunnen onze freelance professionals ondersteuning bieden aan uw organisatie. Direct inzetbaar als volwaardige medewerkers. We hanteren een minimale contractduur van drie maanden.',
+                            'Onze freelance professionals bieden ondersteuning voor specifieke projecten of piekmomenten. Ze zijn direct inzetbaar als volwaardige medewerkers, met een minimale contractduur van drie maanden.',
                         icon: <BriefcaseIcon />,
                     },
                     {
                         name: 'Projectteams uitbesteden\n',
                         description:
-                            'Soms is het gewenst om volledige projecten uit te besteden. Wij bieden de mogelijkheid om projectteams te plaatsen. Doelgericht resultaat boeken voor onze klant, binnen de gestelde periode van het project.',
+                            'We bieden projectteams voor het volledig uitbesteden van projecten. Gericht op het behalen van resultaten binnen de gestelde projectperiode.',
                         icon: <UsersIcon />,
                     },
                 ]}

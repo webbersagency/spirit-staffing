@@ -8,7 +8,6 @@ import { usePathname } from 'next/navigation'
 import useAnimations from 'web/src/utils/animations/useAnimations'
 import { fadeIn, slideInBottom } from 'web/src/utils/animations/'
 import { routes } from 'web/src/lib/routes'
-import { useEffect } from 'react'
 
 export const Hero = ({ title, description, link, coverImage }: HeroProps) => {
     const { ref, inView } = useAnimations({ rootMargin: '0%' })
@@ -30,7 +29,7 @@ export const Hero = ({ title, description, link, coverImage }: HeroProps) => {
                             <div className="mx-auto lg:mx-0 lg:max-w-6xl">
                                 <h1 className="text-4xl font-medium tracking-tight text-white sm:text-6xl">{title}</h1>
                                 <p className="mt-6 whitespace-pre-wrap text-white">{description}</p>
-                                <div className="mt-10 flex items-center gap-x-6">
+                                <div className="mt-8 flex items-center gap-x-6">
                                     {link?.map(({ title, ...item }, index) => (
                                         <Button as={Link} key={index} variant="primary" {...item}>
                                             {title}
@@ -51,7 +50,7 @@ export const Hero = ({ title, description, link, coverImage }: HeroProps) => {
                         <polygon points="0,0 90,0 50,100 0,100" />
                     </svg>
                     <div className="bg-heroGradient absolute inset-0 z-[1] hidden h-[300px] w-full lg:block"></div>
-                    <div className="w-full h-full [&_img]:w-full [&_img]:h-full [&_img]:object-cover">{coverImage}</div>
+                    <div className="h-full w-full [&_img]:h-full [&_img]:w-full [&_img]:object-cover">{coverImage}</div>
                 </div>
             </div>
         </div>
