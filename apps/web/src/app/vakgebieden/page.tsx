@@ -30,23 +30,11 @@ export default function Page() {
                     />
                 }
                 title="Vakgebieden waar wij impact maken"
-                description={
-                    'Wij hebben de Spirit om het verschil te maken binnen de digitale transitie van Nederland. \n' +
-                    '\n' +
-                    'Onze professionals werken samen met onze opdrachtgevers om elke dag te accelereren. \n' +
-                    '\n' +
-                    'Zo werken we samen aan een digitale toekomst! '
-                }
+                description="Met de juiste Spirit maken wij het verschil in de digitale transitie van Nederland. Onze professionals werken samen met opdrachtgevers om dagelijks te versnellen. Samen bouwen we aan een digitale toekomst!"
             />
             <FeatureGrid
                 title="Impact maken doen we samen"
-                description={
-                    'De digitale transitie geeft de samenleving veel kansen, maar vraagt ook om zorgvuldigheid. \n' +
-                    '\n' +
-                    'Daarom concentreren onze mensen zich primair op het verbeteren van huidige processen. Het ontwikkelen van nieuwe applicaties. Alles in een veilige digitale omgeving. \n' +
-                    '\n' +
-                    'Dat betekent echt impact maken!'
-                }
+                description="De digitale transitie biedt kansen maar vereist zorgvuldigheid. Onze mensen richten zich op het verbeteren van processen en het ontwikkelen van nieuwe applicaties in een veilige digitale omgeving. Dit zorgt voor echte impact!"
                 features={[
                     {
                         name: 'Fullstack Development',

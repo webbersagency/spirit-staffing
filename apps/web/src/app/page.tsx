@@ -27,9 +27,7 @@ export default function Page() {
                 }
                 title="Jouw IT carrière met impact!"
                 description={
-                    'Wij zijn SpiritStaffing en onze mensen maken het verschil binnen de digitale transitie van Nederland. Samen is alles mogelijk. Dat is waar wij in geloven! \n' +
-                    '\n' +
-                    'Investeren in ontwikkeling, binnen een uitdagende werk- en leeromgeving. Dat is onze basis. Met de juiste Spirit en de perfecte privé- werkbalans. Zo kunnen we elke dag de beste versie van onszelf zijn. Dat geldt voor elke professional, op elk niveau, gedurende de hele carrière. Onze starters krijgen extra begeleiding om succesvol door te groeien! Daarom onderscheiden wij SpiritStart en SpiritPro.'
+                    'SpiritStaffing is ambitieus, vernieuwend en vol energie! Binnen onze IT Traineeships wordt talent via SpiritStart begeleid om een carrière in IT te kickstarten. Ervaren professionals creëren direct impact via SpiritPro. Bij ons staat de ontwikkeling van talent echt centraal. Met de juiste Spirit en de perfecte privé- werkbalans. Zo dragen we elke dag bij aan de doorstroom van IT talent. Dat geldt voor al onze professionals, op elk niveau.'
                 }
                 link={[
                     {
@@ -44,11 +42,7 @@ export default function Page() {
             />
             <FeatureColumns
                 title="Onze missie"
-                description={
-                    'Veel werkprocessen digitaliseren. Fantastisch natuurlijk, met een wereld vol kansen. Maar het vraagt ook om aanpassingsvermogen.\n' +
-                    '\n' +
-                    'Onze missie is om de beste IT professionals te vinden om de digitalisering te accelereren, door permanente ontwikkeling van onze professionals, door persoonlijke begeleiding.'
-                }
+                description="Veel werkprocessen digitaliseren. Fantastisch natuurlijk. Maar het vraagt ook om aanpassingsvermogen. Onze missie is om de beste IT professionals te vinden en door permanente ontwikkeling en persoonlijke begeleiding de digitalisering te accelereren."
                 features={[
                     {
                         name: 'Impact maken',
@@ -78,13 +72,7 @@ export default function Page() {
                     />
                 }
                 title="Professionals die het verschil maken"
-                description={
-                    'Het vinden van een juiste werkomgeving is uitdagend. \n' +
-                    '\n' +
-                    'Het betekent veel meer dan een plek om alleen te werken. Het gaat over het ontwikkelen van talent. Het ontdekken van nieuwe mogelijkheden. Het maken van impact. \n' +
-                    '\n' +
-                    'Het gaat om het maken van connecties, binnen een goede balans van privé en professionele ambities. '
-                }
+                description="Het vinden van de juiste werkomgeving gaat verder dan alleen een werkplek. Het draait om talentontwikkeling, het verkennen van mogelijkheden en het creëren van impact. Het gaat om het opbouwen van relaties en het bereiken van een goede balans tussen privéleven en professionele ambities."
                 variant="light"
                 link={[
                     {

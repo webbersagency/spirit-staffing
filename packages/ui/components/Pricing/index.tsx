@@ -12,10 +12,10 @@ const tiers = [
         id: 'tier-personal',
         href: '/opdrachtgevers',
         features: [
-            'Minimaal een afgeronde MBO niveau 4 studie',
+            'Instroom op verschillende niveaus, vanaf MBO niveau 4',
             'Meerjaren ontwikkelplan',
             'Direct een goed salaris verdienen',
-            'Gratis studeren op HBO niveau',
+            'Gratis doorstuderen op HBO niveau',
             'Uitdagende opdrachten',
             'Doorgroeimogelijkheden',
             'Baangarantie',
