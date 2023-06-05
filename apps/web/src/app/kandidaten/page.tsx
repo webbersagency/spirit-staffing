@@ -27,7 +27,7 @@ export default function Page() {
                 description={
                     'SpiritStaffing biedt verschillende IT Traineeships, zowel voor SpiritStart als SpiritPro: Software Development, IT Specialist, Data Management en Cybersecurity. Onze IT Traineeships zijn toegankelijk voor starters op elk niveau. \n' +
                     '\n' +
-                    'We geloven in talent en investeren constant in onze professionals. We bouwen door op jouw kennis, waarbij we focussen op specifieke hard en soft skills. Onze talenten worden geselecteerd op zelfstandigheid, doorzettingsvermogen en de juiste Spirit. Daarom maken we samen elke dag het verschil! '
+                    'We geloven in talent en investeren constant in onze professionals. We bouwen door op jouw kennis, waarbij we focussen op specifieke hard en soft skills. Onze talenten worden geselecteerd op zelfstandigheid, doorzettingsvermogen en de juiste Spirit. Daarom maken we samen elke dag het verschil!'
                 }
                 link={[
                     {
