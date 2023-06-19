@@ -3,10 +3,18 @@ import { Metadata } from 'next'
 import React from 'react'
 import Image from 'next/image'
 import { routes } from '../../lib/routes'
-import { FeatureColumns } from 'ui/components/FeatureColumns'
-import { AcademicCapIcon, DocumentTextIcon, FaceSmileIcon, ShieldCheckIcon } from '@heroicons/react/24/outline'
+import {
+    CloudIcon,
+    CurrencyEuroIcon,
+    DocumentTextIcon,
+    LightBulbIcon,
+    RocketLaunchIcon,
+    TrophyIcon,
+    UsersIcon,
+} from '@heroicons/react/24/outline'
 import { CallToAction } from 'ui/components/CallToAction'
 import { StatsImage } from 'ui/components/StatsImage'
+import { FeatureGridSteps } from 'ui/components/FeatureGridSteps'
 
 export default function Page() {
     return (
@@ -24,49 +32,61 @@ export default function Page() {
                     />
                 }
                 title="IT Traineeships"
-                description={'TBD'}
+                description={
+                    'Bouw voort op je huidige IT-kennis en train specifieke hard en soft skills die relevant zijn voor jou en de opdrachtgever. Jouw motivatie om jezelf verder te ontwikkelen is essentieel. Bereid je voor op een kick-start van je carrière als IT-professional! \n ' +
+                    '\n' +
+                    'SpiritStaffing biedt verschillende IT Traineeships: Software Development, IT Specialist, Data Management en Cybersecurity. Onze IT Traineeships zijn toegankelijk voor starters op elk niveau.'
+                }
                 link={[
                     {
-                        title: 'TBD',
-                        href: `${routes.traineeships}/#spiritStart`,
-                        scroll: false,
-                    },
-                    {
-                        title: 'TBD',
-                        href: `${routes.traineeships}/#spiritPro`,
-                        scroll: false,
+                        title: 'Bekijk de traineeships',
+                        href: `${routes.traineeships}/#software-development`,
                     },
                 ]}
             />
-            <FeatureColumns
-                title="IT Traineeships"
-                description="TBD"
+            <FeatureGridSteps
+                title="Start jouw IT-carrière met ons 18-maanden durende IT Traineeship!"
+                description="Ontwikkel je technische vaardigheden en behaal verschillende certificaten. Ook leer je binnen zes soft skills trainingen om je persoonlijke kwaliteiten te verbeteren. We begeleiden je intensief en dagen je uit om het beste uit jezelf te halen."
                 features={[
                     {
-                        name: 'Software Development',
+                        description:
+                            'Jouw nieuwe carrière start met de aanmelding en selectieprocedure. Daarna start jouw IT Traineeship!',
+                        icon: <RocketLaunchIcon />,
+                    },
+                    {
+                        description:
+                            'Gedurende het traject behaal je elk zes maanden een hard skill certificaat. Daarnaast gaan we aan de slag met zes soft skills.',
                         icon: <DocumentTextIcon />,
-                        buttonText: 'Software Development',
-                        href: `${routes.traineeships}/#software-development`,
                     },
                     {
-                        name: 'IT Specialist',
-                        icon: <ShieldCheckIcon />,
-                        buttonText: 'IT Specialist',
-                        href: `${routes.traineeships}/#it-specialist`,
+                        description:
+                            'Je werkt aan uitdagende opdrachten waarbij je direct ervaring vanuit de theorie in praktijk kunt brengen.',
+                        icon: <CloudIcon />,
                     },
                     {
-                        name: 'Data Management',
-                        icon: <AcademicCapIcon />,
-                        buttonText: 'Data Management',
-                        href: `${routes.traineeships}/#data-management`,
+                        description:
+                            'Jouw ontwikkeling wordt beloond! Na het behalen van de eerste twee certificaten en het afronden van het eerste jaar gaat jouw salaris flink omhoog!',
+                        icon: <CurrencyEuroIcon />,
                     },
                     {
-                        name: 'Cybersecurity',
-                        icon: <FaceSmileIcon />,
-                        buttonText: 'Cybersecurity',
-                        href: `${routes.traineeships}/#cybersecurity`,
+                        description:
+                            'Tijdens het traject word je intensief begeleid door maandelijkse coaching. We bieden je nieuwe inzichten en sturen bij waar nodig.',
+                        icon: <LightBulbIcon />,
+                    },
+                    {
+                        description:
+                            'Samen met andere trainees bouwen we aan een like minded community waarin we van elkaar leren en vooral ook veel met elkaar lachen!',
+                        icon: <UsersIcon />,
+                    },
+                    {
+                        description:
+                            'Gefeliciteerd! Jouw IT Traineeship is succesvol afgerond. Nu is de keuze aan jou waar jij wilt doorontwikkelen.',
+                        icon: <TrophyIcon />,
                     },
                 ]}
+                animationOptions={{
+                    rootMargin: '0%',
+                }}
             />
             <StatsImage
                 image={
@@ -110,7 +130,9 @@ export default function Page() {
                 description={
                     'Start jouw carrière als veelzijdige IT specialist met dit traineeship! Ontdek een wereld vol mogelijkheden en groei in een dynamische rol waarin je betrokken bent bij netwerkbeheer, softwareontwikkeling, consultancy, databasebeheer, applicatiebeheer en het ontwikkelen en up-to-date houden van nieuwe systemen. \n' +
                     '\n' +
-                    'Ons 18 maanden durende traineeship biedt niet alleen technische kennis en certificaten, maar ook de ontwikkeling van essentiële hard- en softskills. Met persoonlijke begeleiding van jouw toegewijde coach word je gestimuleerd om te groeien in feedback geven en ontvangen, het overwinnen van uitdagingen en het werken binnen een team. Het traineeship biedt de perfecte springplank om jouw carrière een vliegende start te geven. Bereid je voor op een afwisselende rol, waarbij je constant in de kern van de organisatie opereert. Schrijf je vandaag nog in voor het IT Traineeship bij SpiritStaffing en geef jouw loopbaan een krachtige impuls! Voorbeelden van uitstroom functies: Microsoft Engineer, SAP Consultant of IT Consultant.'
+                    'Ons 18 maanden durende traineeship biedt niet alleen technische kennis en certificaten, maar ook de ontwikkeling van essentiële hard- en softskills. Met persoonlijke begeleiding van jouw toegewijde coach word je gestimuleerd om te groeien in feedback geven en ontvangen, het overwinnen van uitdagingen en het werken binnen een team. Het traineeship biedt de perfecte springplank om jouw carrière een vliegende start te geven. Bereid je voor op een afwisselende rol, waarbij je constant in de kern van de organisatie opereert. \n ' +
+                    '\n' +
+                    'Schrijf je vandaag nog in voor het IT Traineeship bij SpiritStaffing en geef jouw loopbaan een krachtige impuls! Voorbeelden van uitstroom functies: Microsoft Engineer, SAP Consultant of IT Consultant.'
                 }
                 link={[
                     {
@@ -136,7 +158,10 @@ export default function Page() {
                 description={
                     'Ontdek het IT Traineeship Data Management! In deze digitale wereld draait alles om data. Als data manager speel jij een centrale rol in het transformeren van data naar waardevolle kennis en inzichten. Ons traineeship richt zich op het ontwikkelen van je hard- en soft skills en biedt de mogelijkheid om belangrijke certificaten te behalen. Denk hierbij aan Microsoft Power BI of werken met AI, waarbij je altijd met Scrum werkt \n' +
                     '\n' +
-                    'Gedurende het 18 maanden durende traject krijg je persoonlijke begeleiding van een coach van SpiritStaffing. Onze soft skills trainingen richten zich op zaken als feedback geven en ontvangen, het omgaan met weerstand en tegenslagen, assertiviteit en effectief functioneren binnen een team. Dit zorgt ervoor dat je niet alleen technisch uitblinkt, maar ook op persoonlijk vlak groeit. Meld je aan voor het IT Traineeship Data Management en bereid je voor op een carrière waarin je impact maakt met data en waardevolle inzichten genereert! Voorbeelden van uitstroom functies: Data Analist, BI-Specialst of Data Engineer.'
+                    'Gedurende het 18 maanden durende traject krijg je persoonlijke begeleiding van een coach van SpiritStaffing. Onze soft skills trainingen richten zich op zaken als feedback geven en ontvangen, het omgaan met weerstand en tegenslagen, assertiviteit en effectief functioneren binnen een team. Dit zorgt ervoor dat je niet alleen technisch uitblinkt, maar ook op persoonlijk vlak groeit. ' +
+                    '\n' +
+                    '\n' +
+                    'Meld je aan voor het IT Traineeship Data Management en bereid je voor op een carrière waarin je impact maakt met data en waardevolle inzichten genereert! Voorbeelden van uitstroom functies: Data Analist, BI-Specialst of Data Engineer.'
                 }
                 link={[
                     {
