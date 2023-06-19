@@ -39,9 +39,11 @@ export const FeatureColumns = ({ title, description, features }: FeatureColumnPr
                             <dd className="mt-1 flex flex-auto flex-col text-base leading-7">
                                 <p className="flex-auto whitespace-pre-wrap leading-7">{feature.description}</p>
                             </dd>
-                            <Button as={Link} variant="primary" href={feature.href} className="w-fit">
-                                {feature.buttonText}
-                            </Button>
+                            {feature.buttonText && (
+                                <Button as={Link} variant="primary" href={feature?.href} className="w-fit">
+                                    {feature?.buttonText}
+                                </Button>
+                            )}
                         </div>
                     ))}
                 </dl>
