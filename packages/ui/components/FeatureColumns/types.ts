@@ -10,4 +10,6 @@ type feature = {
     name: string
     description?: string
     icon: ReactNode
+    buttonText?: string
+    href?: string
 }
