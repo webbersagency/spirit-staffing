@@ -83,6 +83,10 @@ export default function Page() {
                         title: 'Wij bellen jou graag terug!',
                         href: routes.contact,
                     },
+                    {
+                        title: 'Bekijk onze traineeships',
+                        href: routes.traineeships,
+                    },
                 ]}
                 variant="light"
             />

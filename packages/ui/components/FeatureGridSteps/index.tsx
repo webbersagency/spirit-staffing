@@ -24,7 +24,7 @@ export const FeatureGridSteps = ({ title, description, features, animationOption
                         {description}
                     </p>
                 </div>
-                <div className="relative mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
+                <div className="relative mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-20 lg:max-w-4xl">
                     <dl className="grid max-w-xl grid-cols-1 gap-x-20 gap-y-10 after:inset-0 after:h-full after:w-fit after:translate-x-[28rem] after:border-r lg:max-w-none lg:grid-cols-2 lg:gap-y-16 lg:after:absolute">
                         {features.map((feature, index) => (
                             <div

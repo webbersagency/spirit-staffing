@@ -22,7 +22,7 @@ export default function Page() {
             <Hero
                 coverImage={
                     <Image
-                        src={'/images/spirit-staffing-visual8.jpg'}
+                        src={'/images/spirit-staffing-visual10.jpg'}
                         alt="Spirit Staffing kandidaten"
                         width={1920}
                         height={1280}
@@ -33,7 +33,7 @@ export default function Page() {
                 }
                 title="IT Traineeships"
                 description={
-                    'Bouw voort op je huidige IT-kennis en train specifieke hard en soft skills die relevant zijn voor jou en de opdrachtgever. Jouw motivatie om jezelf verder te ontwikkelen is essentieel. Bereid je voor op een kick-start van je carrière als IT-professional! \n ' +
+                    'Bij SpiritStaffing bieden we je de kans om jouw IT carrière een kickstart te geven! Met ons 18-maanden durende, op maat gemaakte programma, ontwikkel jij je snel verder als IT professional. \n ' +
                     '\n' +
                     'SpiritStaffing biedt verschillende IT Traineeships: Software Development, IT Specialist, Data Management en Cybersecurity. Onze IT Traineeships zijn toegankelijk voor starters op elk niveau.'
                 }
@@ -45,8 +45,12 @@ export default function Page() {
                 ]}
             />
             <FeatureGridSteps
-                title="Start jouw IT-carrière met ons 18-maanden durende IT Traineeship!"
-                description="Ontwikkel je technische vaardigheden en behaal verschillende certificaten. Ook leer je binnen zes soft skills trainingen om je persoonlijke kwaliteiten te verbeteren. We begeleiden je intensief en dagen je uit om het beste uit jezelf te halen."
+                title="Start jouw IT carriere met ons IT Traineeship!"
+                description={
+                    'Ontwikkel je technische vaardigheden en behaal verschillende certificaten. Ook leer je binnen zes soft skills trainingen om je persoonlijke kwaliteiten te verbeteren. We begeleiden je intensief en dagen je uit om het beste uit jezelf te halen. \n' +
+                    '\n' +
+                    'Zo ziet jouw traineeship eruit:'
+                }
                 features={[
                     {
                         description:
@@ -91,7 +95,7 @@ export default function Page() {
             <StatsImage
                 image={
                     <Image
-                        src={'/images/spirit-staffing-visual2.jpg'}
+                        src={'/images/spirit-staffing-visual11.jpeg'}
                         alt="Jouw carrière begeleid vanaf de Start"
                         width={1920}
                         height={1280}
@@ -117,7 +121,7 @@ export default function Page() {
             <StatsImage
                 image={
                     <Image
-                        src={'/images/spirit-staffing-visual4.jpg'}
+                        src={'/images/spirit-staffing-visual12.jpeg'}
                         alt="Uitdagende opdrachten om door te groeien als professional"
                         width={1920}
                         height={1280}
@@ -145,7 +149,7 @@ export default function Page() {
             <StatsImage
                 image={
                     <Image
-                        src={'/images/spirit-staffing-visual2.jpg'}
+                        src={'/images/spirit-staffing-visual13.jpeg'}
                         alt="Jouw carrière begeleid vanaf de Start"
                         width={1920}
                         height={1280}
@@ -174,7 +178,7 @@ export default function Page() {
             <StatsImage
                 image={
                     <Image
-                        src={'/images/spirit-staffing-visual2.jpg'}
+                        src={'/images/spirit-staffing-visual14.jpeg'}
                         alt="Jouw carrière begeleid vanaf de Start"
                         width={1920}
                         height={1280}
