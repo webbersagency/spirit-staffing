@@ -178,7 +178,7 @@ export default function Page() {
             <StatsImage
                 image={
                     <Image
-                        src={'/images/spirit-staffing-visual2.jpg'}
+                        src={'/images/spirit-staffing-visual15.jpg'}
                         alt="Jouw carrière begeleid vanaf de Start"
                         width={1920}
                         height={1280}
