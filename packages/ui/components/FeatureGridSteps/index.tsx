@@ -28,7 +28,7 @@ export const FeatureGridSteps = ({ title, description, features, animationOption
                     <dl className="grid max-w-xl grid-cols-1 gap-x-20 gap-y-10 after:inset-0 after:h-full after:w-fit after:translate-x-[28rem] after:border-r lg:max-w-none lg:grid-cols-2 lg:gap-y-16 lg:after:absolute">
                         {features.map((feature, index) => (
                             <div
-                                key={feature.name}
+                                key={index}
                                 style={stagger(index, staggerDelay)}
                                 className={classNames(
                                     'relative flex gap-x-6 lg:odd:flex-row-reverse lg:odd:text-right lg:even:top-16',

@@ -22,7 +22,7 @@ export default function Page() {
             <Hero
                 coverImage={
                     <Image
-                        src={'/images/spirit-staffing-visual10.jpg'}
+                        src={'/images/spirit-staffing-visual14.jpg'}
                         alt="Spirit Staffing kandidaten"
                         width={1920}
                         height={1280}
@@ -45,7 +45,7 @@ export default function Page() {
                 ]}
             />
             <FeatureGridSteps
-                title="Start jouw IT carriere met ons IT Traineeship!"
+                title="Start jouw IT carriere met ons!"
                 description={
                     'Ontwikkel je technische vaardigheden en behaal verschillende certificaten. Ook leer je binnen zes soft skills trainingen om je persoonlijke kwaliteiten te verbeteren. We begeleiden je intensief en dagen je uit om het beste uit jezelf te halen. \n' +
                     '\n' +
@@ -95,7 +95,7 @@ export default function Page() {
             <StatsImage
                 image={
                     <Image
-                        src={'/images/spirit-staffing-visual11.jpeg'}
+                        src={'/images/spirit-staffing-visual11.jpg'}
                         alt="Jouw carrière begeleid vanaf de Start"
                         width={1920}
                         height={1280}
@@ -121,7 +121,7 @@ export default function Page() {
             <StatsImage
                 image={
                     <Image
-                        src={'/images/spirit-staffing-visual12.jpeg'}
+                        src={'/images/spirit-staffing-visual12.jpg'}
                         alt="Uitdagende opdrachten om door te groeien als professional"
                         width={1920}
                         height={1280}
@@ -149,7 +149,7 @@ export default function Page() {
             <StatsImage
                 image={
                     <Image
-                        src={'/images/spirit-staffing-visual13.jpeg'}
+                        src={'/images/spirit-staffing-visual13.jpg'}
                         alt="Jouw carrière begeleid vanaf de Start"
                         width={1920}
                         height={1280}
@@ -178,7 +178,7 @@ export default function Page() {
             <StatsImage
                 image={
                     <Image
-                        src={'/images/spirit-staffing-visual14.jpeg'}
+                        src={'/images/spirit-staffing-visual2.jpg'}
                         alt="Jouw carrière begeleid vanaf de Start"
                         width={1920}
                         height={1280}
