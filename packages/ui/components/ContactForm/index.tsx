@@ -98,7 +98,7 @@ export const ContactForm = () => {
                                         </dt>
                                         <dd>
                                             <a className="hover:text-gray-900" href="tel:+31 6 15543235">
-                                                +31 6 15543235
+                                                +31 6 33046307
                                             </a>
                                         </dd>
                                     </div>
