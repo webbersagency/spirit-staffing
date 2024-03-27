@@ -13,20 +13,21 @@ export default function Page() {
             <Hero
                 coverImage={
                     <Image
-                        src={'/images/spirit-staffing-visual3.jpg'}
+                        src={'/images/over1.jpg'}
                         alt="SpiritStaffing"
                         priority
                         loading={'eager'}
                         width={1920}
                         height={1280}
                         sizes="(max-width: 768px) 100vw, 50vw"
+                        className="object-left"
                     />
                 }
                 title="Welkom bij SpiritStaffing"
                 description={
-                    'Veel werkprocessen digitaliseren. Fantastisch natuurlijk, met een wereld vol kansen. Maar het vraagt ook om aanpassingsvermogen.\n' +
+                    'Veel werkprocessen digitaliseren. Fantastisch natuurlijk, met een wereld vol kansen. Maar het vraag ook om aanpassingsvermogen. \n' +
                     '\n' +
-                    'Onze missie is dan ook de beste IT professionals te vinden om de digitalisering van Nederland te accelereren.'
+                    'SpiritStaffing levert een bijdrage aan de continuïteit van de IT teams bij onze opdrachtgevers. Dit realiseren we door breed te kijken naar kandidaten en samen te investeren in hun verdere ontwikkeling. Zo zijn ze niet alleen direct inzetbaar, maar groeien ze door bij onze opdrachtgevers. Na een detacheringsperiode treden onze mensen daar in dienst.'
                 }
                 link={[
                     {
@@ -37,24 +38,24 @@ export default function Page() {
             />
             <FeatureColumns
                 title="Kernwaarden van SpiritStaffing"
-                description="Wij geloven in ontwikkeling. We denken altijd in mogelijkheden. We schakelen snel en samen maken we
-                    echt impact."
+                description="We denken constructief mee met onze opdrachtgevers en we zeggen waar het op staat. We kijken verder dan alleen het CV en zoeken naar de vraag achter de vraag. We streven ernaar om altijd het beste uit elkaar te halen."
                 features={[
                     {
-                        name: 'De mens staat bij ons echt centraal',
-                        description: `Samen is alles mogelijk. Dat is waar wij in geloven! Investeren in ontwikkeling. Vanuit elke achtergrond. Binnen een uitdagende werk- en leeromgeving. Privé en werk in balans. Dat is onze basis.`,
+                        name: 'Vertrouwen',
+                        description:
+                            'We werken transparant. Dat is voor ons de basis van een duurzame relatie. Door het vertrouwen dat we krijgen kunnen we proactief handelen en het maximale uit onze samenwerkingen halen.',
                         icon: <UsersIcon />,
                     },
                     {
-                        name: 'Impact maken',
+                        name: 'Nieuwsgierig',
                         description:
-                            'Voor onze mensen is de werkomgeving niet zomaar een plek om te werken. Wij maken graag impact door samen te werken. Vaak kunnen we door anders te denken nieuwe inzichten bieden en echt het verschil maken.',
+                            'We zullen altijd nieuwsgierig blijven, naar motivaties en ambities. Nieuwsgierig naar organisaties en waar ze zich naar toe ontwikkelen. We zoeken naar professionals die daar het beste bij passen. We zullen altijd vragen blijven stellen, om jouw organisatie goed te begrijpen.',
                         icon: <BoltIcon />,
                     },
                     {
-                        name: 'Inspirerend zijn',
+                        name: 'Kwaliteit',
                         description:
-                            'Wij denken altijd in mogelijkheden en zoeken naar oplossingen. Wij denken niet in vaste patronen, maar juist in oplossingen die nog niet geïmplementeerd zijn. Wij laten ons niet tegenhouden. Dat zorgt voor een positieve dynamiek, en een inspirerende werkomgeving.',
+                            'We hebben de drive om onszelf en onze mensen uit te dagen. We leggen de lat hoog en we staan voor kwaliteit. Dat geldt voor de kwaliteit van onze processen, onze opleidingen en onze duurzame samenwerkingen.',
                         icon: <StarIcon />,
                     },
                 ]}

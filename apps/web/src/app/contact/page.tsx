@@ -11,7 +11,7 @@ export default function Page() {
             <Hero
                 coverImage={
                     <Image
-                        src={'/images/spirit-staffing-visual9.jpg'}
+                        src={'/images/contact1.jpg'}
                         alt="cover image"
                         width={900}
                         height={1200}

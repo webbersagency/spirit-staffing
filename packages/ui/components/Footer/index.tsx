@@ -77,7 +77,7 @@ export const Footer = () => {
                             <span className="sr-only">Spirit Staffing</span>
                             <SpiritStaffingLogoGreen className="w-[200px] md:w-[220px]" />
                         </Link>
-                        <p className="text-md mb-8 leading-6 md:w-3/4 text-green800">Samen is alles mogelijk</p>
+                        <p className="text-md text-green800 mb-8 leading-6 md:w-3/4">IT's about the people</p>
                         <div className="flex space-x-6">
                             {navigation.social.map(item => (
                                 <Link
@@ -119,11 +119,11 @@ export const Footer = () => {
                         </div>
                     </div>
                 </div>
-                <div className="mt-16 border-t border-gray-900/10 pt-8 sm:mt-20 lg:mt-24 md:flex">
-                    <p className="text-sm md:text-xs leading-5">
+                <div className="mt-16 border-t border-gray-900/10 pt-8 sm:mt-20 md:flex lg:mt-24">
+                    <p className="text-sm leading-5 md:text-xs">
                         &copy; 2023 Spirit Staffing, Inc. All rights reserved.
                     </p>
-                    <ul className="md:flex text-sm md:text-xs ml-auto space-y-2 mt-4 md:space-x-4 md:mt-0 md:space-y-0">
+                    <ul className="ml-auto mt-4 space-y-2 text-sm md:mt-0 md:flex md:space-x-4 md:space-y-0 md:text-xs">
                         <li>
                             <Link
                                 href="/files/Privacy_statement-SpiritStaffing-20230501.pdf"

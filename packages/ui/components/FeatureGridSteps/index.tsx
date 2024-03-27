@@ -4,13 +4,17 @@ import classNames from 'classnames'
 import { slideInBottom, slideInTop, stagger } from 'web/src/utils/animations/'
 import useAnimations from 'web/src/utils/animations/useAnimations'
 
-export const FeatureGridSteps = ({ title, description, features, animationOptions }: FeatureGridStepsProps) => {
+export const FeatureGridSteps = ({ title, description, features, animationOptions, light }: FeatureGridStepsProps) => {
     const { ref, inView } = useAnimations(animationOptions)
     const staggerDelay = 100
 
     return (
-        <div className="container bg-white">
-            <div ref={ref}>
+        <div
+            className={classNames('bg-white', {
+                '!bg-green200': light,
+            })}
+        >
+            <div ref={ref} className="container">
                 <div className="mx-auto max-w-3xl lg:text-center">
                     <h2
                         className={classNames(
@@ -25,7 +29,14 @@ export const FeatureGridSteps = ({ title, description, features, animationOption
                     </p>
                 </div>
                 <div className="relative mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-20 lg:max-w-4xl">
-                    <dl className="grid max-w-xl grid-cols-1 gap-x-20 gap-y-10 after:inset-0 after:h-full after:w-fit after:translate-x-[28rem] after:border-r lg:max-w-none lg:grid-cols-2 lg:gap-y-16 lg:after:absolute">
+                    <dl
+                        className={classNames(
+                            'grid max-w-xl grid-cols-1 gap-x-20 gap-y-10 after:inset-0 after:h-full after:w-fit after:translate-x-[28rem] after:border-r lg:max-w-none lg:grid-cols-2 lg:gap-y-16 lg:after:absolute',
+                            {
+                                'after:!border-r-green800': light,
+                            }
+                        )}
+                    >
                         {features.map((feature, index) => (
                             <div
                                 key={index}

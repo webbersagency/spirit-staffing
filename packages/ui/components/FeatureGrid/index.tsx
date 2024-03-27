@@ -4,7 +4,7 @@ import classNames from 'classnames'
 import { slideInBottom, slideInTop, stagger } from 'web/src/utils/animations/'
 import useAnimations from 'web/src/utils/animations/useAnimations'
 
-export const FeatureGrid = ({ title, description, features, animationOptions }: FeatureGridProps) => {
+export const FeatureGrid = ({ title, description, features, animationOptions, horizontal }: FeatureGridProps) => {
     const { ref, inView } = useAnimations(animationOptions)
     const staggerDelay = 100
 
@@ -24,8 +24,19 @@ export const FeatureGrid = ({ title, description, features, animationOptions }: 
                         {description}
                     </p>
                 </div>
-                <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
-                    <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
+                <div
+                    className={classNames('mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl', {
+                        '!max-w-none': horizontal,
+                    })}
+                >
+                    <dl
+                        className={classNames(
+                            'grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16',
+                            {
+                                'lg:grid-cols-3': horizontal,
+                            }
+                        )}
+                    >
                         {features.map((feature, index) => (
                             <div
                                 key={feature.name}

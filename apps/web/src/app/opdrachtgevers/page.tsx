@@ -1,4 +1,4 @@
-import { ArrowsRightLeftIcon, BriefcaseIcon, DocumentTextIcon, UsersIcon } from '@heroicons/react/24/outline'
+import { ArrowsRightLeftIcon, DocumentTextIcon, UsersIcon } from '@heroicons/react/24/outline'
 import { CallToAction } from 'ui/components/CallToAction'
 import { Hero } from 'ui/components/Hero'
 import { Metadata } from 'next'
@@ -14,7 +14,7 @@ export default function Page() {
             <Hero
                 coverImage={
                     <Image
-                        src={'/images/spirit-staffing-visual5.jpg'}
+                        src={'/images/opdrachtgevers1.jpg'}
                         alt="Spirit Staffing dienstverlenging"
                         width={1920}
                         height={1280}
@@ -24,14 +24,18 @@ export default function Page() {
                     />
                 }
                 title="Onze dienstverlening"
-                description="Onze opdrachtgevers hebben diverse IT-vraagstukken en wij bieden daarom maatwerkoplossingen. Binnen verschillende IT Traineeships ontwikkelen we samen talent om ze perfect door te laten stromen naar onze opdrachtgevers. Onze talenten ontwikkelen zich richting: Software Development, IT Specialist, Data Management en Cybersecurity."
+                description={
+                    'Opdrachtgevers hebben diverse IT-vraagstukken en wij bieden daarom maatwerkoplossingen. Onze professionals gaan direct aan de slag en ontwikkelen zich snel binnen jouw organisatie. Dit traject geven we samen vorm, waarbij SpiritStaffing het proces begeleidt. Het doel is altijd om de professionals uiteindelijk over te dragen aan onze opdrachtgevers.\n' +
+                    '\n' +
+                    'Hoe we dat doen? Door samenwerkingen met het onderwijs en een visie op doorstroom. Daarnaast zijn we ervan overtuigd dat divers samengestelde teams succesvol zijn.'
+                }
                 link={[
                     {
-                        title: 'SpiritStart',
+                        title: 'De kandidaten van SpiritStaffing',
                         href: `${routes.services}/#spiritStart`,
                     },
                     {
-                        title: 'SpiritPro',
+                        title: 'Van tijdelijk naar vast',
                         href: `${routes.services}/#spiritPro`,
                     },
                 ]}
@@ -39,7 +43,7 @@ export default function Page() {
             <StatsImage
                 image={
                     <Image
-                        src={'/images/spirit-staffing-visual1.jpg'}
+                        src={'/images/opdrachtgevers2.jpg'}
                         alt="SpiritStart"
                         width={1920}
                         height={1280}
@@ -47,8 +51,10 @@ export default function Page() {
                     />
                 }
                 id="spiritStart"
-                title="SpiritStart"
-                description="SpiritStart biedt startende professionals een op maat gemaakt ontwikkeltraject. In een dynamisch proces brengen we theorie en praktijk bij elkaar. We begeleiden en leiden de talenten op tot volwaardige IT professionals, klaar om direct door te stromen bij onze opdrachtgevers. Geselecteerd op zelfstandigheid, doorzettingsvermogen en de juiste Spirit, integreren deze talenten moeiteloos in bestaande teams, en creëren direct impact voor de toekomst."
+                title="De kandidaten van SpiritStaffing"
+                description={
+                    'Wij kijken breed naar talent en werken samen met diverse reguliere- en particuliere onderwijsinstellingen. Daarom komen we in een vroegtijdig stadium in contact met kandidaten, van mbo, hbo en wo niveau. Daarnaast werken we met zij-instromers die bewust hebben gekozen om een IT diploma te halen, waarbij ze ook de ervaring vanuit een ander domein meenemen. '
+                }
                 link={[
                     {
                         title: 'Meer weten? Lets go!',
@@ -60,7 +66,7 @@ export default function Page() {
             <StatsImage
                 image={
                     <Image
-                        src={'/images/spirit-staffing-visual3.jpg'}
+                        src={'/images/opdrachtgevers3.jpg'}
                         alt="SpiritPro"
                         width={1920}
                         height={1280}
@@ -68,8 +74,12 @@ export default function Page() {
                     />
                 }
                 id="spiritPro"
-                title="SpiritPro"
-                description="Onze SpiritPro professionals zijn specialisten op een specifiek onderwerp. Scherp, vernieuwend en vinden direct aansluiting bij bestaande teams. Ze zijn ervaren en maken meteen impact op de organisatie via uitdagende projecten bij onze opdrachtgevers. Professionals met de juiste Spirit!"
+                title="Tijdelijk naar vast"
+                description={
+                    'Opdrachtgevers vragen om kandidaten die direct inzetbaar zijn. Dat zijn onze mensen. Daarnaast is het belangrijk om te bouwen aan de bestaande IT teams. Een te grote flexibele schil is niet gewenst. Gedurende een periode van 1,5 jaar ontwikkelen onze mensen zich binnen de organisatie tot specialisten binnen een gekozen domein. \n' +
+                    '\n' +
+                    'Daarna kunnen kandidaten door onze opdrachtgevers in dienst genomen worden. Dat betekent  beschikken over direct inzetbare professionals, maar ook bouwen aan de continuïteit van de eigen IT organisatie. '
+                }
                 link={[
                     {
                         title: 'Meer weten? Lets go!',
@@ -95,22 +105,20 @@ export default function Page() {
                         icon: <DocumentTextIcon />,
                     },
                     {
-                        name: 'Tijdelijke inzet op projecten\n',
-                        description:
-                            'Onze freelance professionals bieden ondersteuning voor specifieke projecten of piekmomenten. Ze zijn direct inzetbaar als volwaardige medewerkers, met een minimale contractduur van drie maanden.',
-                        icon: <BriefcaseIcon />,
-                    },
-                    {
                         name: 'Projectteams uitbesteden\n',
                         description:
                             'We bieden projectteams voor het volledig uitbesteden van projecten. Gericht op het behalen van resultaten binnen de gestelde projectperiode.',
                         icon: <UsersIcon />,
                     },
                 ]}
+                horizontal
             />
             <CallToAction
                 title="Wil jij samen met ons impact maken? Laten we connecten"
-                description="Wil je meer weten over onze dienstverlening? Of ben je benieuwd wat SpiritStaffing voor jou kan betekenen? Wij bellen jou terug!"
+                description={
+                    'Wil je meer weten over onze dienstverlening? Of ben je benieuwd wat SpiritStaffing voor jou kan betekenen?  \n' +
+                    'Wij bellen jou terug!'
+                }
                 link={[
                     {
                         title: 'Bel mij terug',

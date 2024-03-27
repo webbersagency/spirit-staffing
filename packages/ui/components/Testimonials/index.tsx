@@ -21,7 +21,7 @@ export const Testimonials = () => {
                         >
                             <Image
                                 className="absolute inset-0 h-full w-full rounded-2xl object-cover shadow-2xl"
-                                src={'/images/spirit-staffing-visual6_portrait.jpg'}
+                                src={'/images/home3.jpg'}
                                 alt="cover image"
                                 width={900}
                                 height={1200}
@@ -50,15 +50,15 @@ export const Testimonials = () => {
                                 <use href="#b56e9dab-6ccb-4d32-ad02-6b4bb5d9bbeb" x={86} />
                             </svg>
                             <h2 className="mb-4 text-3xl font-medium lg:text-5xl">
-                                Voor opdrachtgevers die impact maken
+                                Heb jij de juiste Spirit om met ons samen aan de slag te gaan?
                             </h2>
                             <blockquote className="text-xl font-semibold leading-8 text-white sm:text-2xl sm:leading-9">
                                 <p>
-                                    Samen bouwen we duurzame relaties met opdrachtgevers door goed te luisteren en
-                                    mensen te verbinden die passen bij de organisatie en de opdracht. Onze professionals
-                                    werken met de juiste Spirit, schakelen snel, versterken teams en brengen altijd
-                                    nieuwe inzichten.
-                                    <br /> <br /> Wij zijn SpiritStaffing, en onze mensen maken het verschil!
+                                    Wij werken samen met organisaties die bereid zijn met ons talent verder te
+                                    ontwikkelen. Daarom selecteren we uitsluitend kandidaten die bereid zijn om een
+                                    extra stap te zetten voor zichzelf en onze opdrachtgevers.
+                                    <br /> <br /> Dat is hoe wij elke dag een bijdrage leveren aan de uitdagingen binnen
+                                    het IT domein!
                                 </p>
                             </blockquote>
                         </figure>

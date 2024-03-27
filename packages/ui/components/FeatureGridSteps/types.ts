@@ -12,4 +12,5 @@ export type FeatureGridStepsProps = {
     description?: string
     features: feature[]
     animationOptions?: IntersectionOptions
+    light?: boolean
 }

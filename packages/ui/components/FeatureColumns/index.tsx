@@ -28,22 +28,26 @@ export const FeatureColumns = ({ title, description, features }: FeatureColumnPr
                         <div
                             key={feature.name}
                             style={stagger(index, staggerDelay)}
-                            className={classNames('flex flex-col', slideInLeft(inView))}
+                            className={classNames('flex h-full flex-col', slideInLeft(inView))}
                         >
-                            <dt className="text-green800 mb-2 text-2xl font-semibold tracking-tight">
-                                <div className="bg-green800 mb-6 flex h-12 w-12 items-center justify-center rounded-lg">
-                                    <div className="h-8 w-8 text-white">{feature.icon}</div>
-                                </div>
-                                {feature.name}
-                            </dt>
-                            <dd className="mt-1 flex flex-auto flex-col text-base leading-7">
-                                <p className="flex-auto whitespace-pre-wrap leading-7">{feature.description}</p>
-                            </dd>
-                            {feature.buttonText && (
-                                <Button as={Link} variant="primary" href={feature?.href} className="w-fit">
-                                    {feature?.buttonText}
-                                </Button>
-                            )}
+                            <div className="flex h-full flex-1 grow flex-col">
+                                <dt className="text-green800 mb-2 text-2xl font-semibold tracking-tight">
+                                    <div className="bg-green800 mb-6 flex h-12 w-12 items-center justify-center rounded-lg">
+                                        <div className="h-8 w-8 text-white">{feature.icon}</div>
+                                    </div>
+                                    {feature.name}
+                                </dt>
+                                {feature.description && (
+                                    <dd className="mt-1 flex flex-auto flex-col text-base leading-7">
+                                        <p className="flex-auto whitespace-pre-wrap leading-7">{feature.description}</p>
+                                    </dd>
+                                )}
+                                {feature.buttonText && (
+                                    <Button as={Link} variant="primary" href={feature?.href} className="w-fit">
+                                        {feature?.buttonText}
+                                    </Button>
+                                )}
+                            </div>
                         </div>
                     ))}
                 </dl>

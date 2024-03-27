@@ -12,4 +12,5 @@ export type FeatureGridProps = {
     description?: string
     features: feature[]
     animationOptions?: IntersectionOptions
+    horizontal?: boolean
 }

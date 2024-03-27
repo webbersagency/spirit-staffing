@@ -8,32 +8,30 @@ import { slideInBottom, slideInTop } from 'web/src/utils/animations/'
 
 const tiers = [
     {
-        name: 'SpiritStart',
+        name: 'IT professional van SpiritStaffing',
         id: 'tier-personal',
         href: '/opdrachtgevers',
         features: [
-            'Instroom op verschillende niveaus, vanaf MBO niveau 4',
-            'Meerjaren ontwikkelplan',
-            'Direct een goed salaris verdienen',
-            'Gratis doorstuderen op HBO niveau',
-            'Uitdagende opdrachten',
-            'Doorgroeimogelijkheden',
-            'Baangarantie',
+            'Young professionals',
+            'Instroom op verschillende opleidingsniveaus',
+            'Regulier onderwijs en zij-instromers',
+            'Direct inzetbaar',
+            'Ambitieus',
+            'Communicatief vaardig',
         ],
         featured: true,
     },
     {
-        name: 'SpiritPro',
+        name: 'Wat kan een kandidaat verwachten? ',
         id: 'tier-team',
         href: '/opdrachtgevers',
         features: [
-            'Medior en senior level',
-            'Direct inzetbaar\n',
-            'Direct goed verdienen',
+            'Doorgroeien naar jouw volgende level',
+            'Ruim opleidingsbudget (hard en soft skills)',
+            'Persoonlijke begeleiding',
             'Uitdagende project opdrachten',
-            'Doorgroeimogelijkheden',
-            'Netwerk events\n',
-            'Hard- softskill trainingen',
+            'Toonaangevende opdrachtgevers',
+            'Netwerk events',
         ],
         featured: false,
     },
@@ -63,12 +61,11 @@ export const Pricing = () => {
                         slideInBottom(inView)
                     )}
                 >
-                    Dit is hoe SpiritStaffing echt impact maakt
+                    Dit is hoe SpiritStaffing het verschil maakt
                 </h2>
             </div>
             <p className={classNames('mx-auto mt-6 max-w-2xl text-center leading-8', slideInBottom(inView))}>
-                SpiritStaffing begeleidt startende professionals binnen SpiritStart, en meer ervaren professionals
-                binnen SpiritPro.
+                SpiritStaffing begeleidt startende IT professionals, met ervaring tot 5 jaar.
             </p>
             <div className="mx-auto mt-16 grid max-w-lg grid-cols-1 gap-y-6 gap-y-8 sm:mt-12 lg:max-w-4xl lg:grid-cols-2">
                 {tiers.map((tier, tierIdx) => (

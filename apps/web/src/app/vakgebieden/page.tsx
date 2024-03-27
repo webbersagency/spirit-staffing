@@ -20,7 +20,7 @@ export default function Page() {
             <Hero
                 coverImage={
                     <Image
-                        src={'/images/spirit-staffing-visual1.jpg'}
+                        src={'/images/vakgebieden1.jpg'}
                         alt="Vakgebieden waar Spirit Staffing impact maakt"
                         width={1920}
                         height={1280}
@@ -29,8 +29,8 @@ export default function Page() {
                         sizes="(max-width: 768px) 100vw, 50vw"
                     />
                 }
-                title="Vakgebieden waar wij impact maken"
-                description="Met de juiste Spirit maken wij het verschil in de digitale transitie van Nederland. Onze professionals werken samen met opdrachtgevers om dagelijks te versnellen. Samen bouwen we aan een digitale toekomst!"
+                title="Vakgebieden waar wij het verschil maken"
+                description="Met de juiste Spirit dragen wij bij aan de digitale ambities van onze opdrachtgevers. Onze professionals werken aan het versnellen en verbeteren van IT processen en kijken met een frisse blik naar complexe vraagstukken"
             />
             <FeatureGrid
                 title="Impact maken doen we samen"
@@ -63,13 +63,13 @@ export default function Page() {
                     {
                         name: 'Cyber Security',
                         description:
-                            'Een security officer kijkt naar data, processen en software vanuit een security oogpunt.',
+                            'Een security specialist kijkt naar data, processen en software vanuit een security oogpunt.',
                         icon: <LockClosedIcon />,
                     },
                     {
-                        name: 'IT Architectuur',
+                        name: 'IT Servicedesk',
                         description:
-                            'IT-architectuur is een verzameling van regels en standaarden op basis waarvan systemen worden ontwikkeld.',
+                            'Het IT service team is vaak het hart van de organisatie waarbij de alle teams ondersteuning krijgen.',
                         icon: <ComputerDesktopIcon />,
                     },
                 ]}
@@ -78,7 +78,7 @@ export default function Page() {
                 }}
             />
             <CallToAction
-                title="Wil jij ook impact maken, of wil jij weten wat SpiritStaffing voor jou kan betekenen?"
+                title="Wil jij weten wat SpiritStaffing voor jou kan betekenen?"
                 link={[
                     {
                         title: 'Neem dan contact op!',
